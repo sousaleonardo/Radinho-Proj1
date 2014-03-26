@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Estacao.h"
 
 @interface ViewController : UIViewController
 

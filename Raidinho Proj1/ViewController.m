@@ -18,6 +18,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    Estacao *estacao=[[Estacao alloc]init:@"www.faceboook.com.br" :89.1];
+    
+    NSLog(@"%f",[estacao nEstacao]);
+    NSLog(@"%@",[estacao streaming]);
 }
 
 - (void)didReceiveMemoryWarning
