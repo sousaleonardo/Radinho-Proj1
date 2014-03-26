@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7557EAF618E34A8000EFC208 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 7557EAF518E34A8000EFC208 /* Video.m */; };
+		7557EAF918E34F4E00EFC208 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 7557EAF818E34F4E00EFC208 /* Player.m */; };
+		7557EAFB18E34FA600EFC208 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7557EAFA18E34FA600EFC208 /* AVFoundation.framework */; };
 		9457213818E345F3004F5496 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9457213718E345F3004F5496 /* Foundation.framework */; };
 		9457213A18E345F3004F5496 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9457213918E345F3004F5496 /* CoreGraphics.framework */; };
 		9457213C18E345F3004F5496 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9457213B18E345F3004F5496 /* UIKit.framework */; };
@@ -39,6 +41,9 @@
 /* Begin PBXFileReference section */
 		7557EAF418E34A8000EFC208 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
 		7557EAF518E34A8000EFC208 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		7557EAF718E34F4E00EFC208 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		7557EAF818E34F4E00EFC208 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		7557EAFA18E34FA600EFC208 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9457213418E345F3004F5496 /* Raidinho Proj1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Raidinho Proj1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9457213718E345F3004F5496 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9457213918E345F3004F5496 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7557EAFB18E34FA600EFC208 /* AVFoundation.framework in Frameworks */,
 				9457213A18E345F3004F5496 /* CoreGraphics.framework in Frameworks */,
 				9457213C18E345F3004F5496 /* UIKit.framework in Frameworks */,
 				9457213818E345F3004F5496 /* Foundation.framework in Frameworks */,
@@ -110,6 +116,7 @@
 		9457213618E345F3004F5496 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7557EAFA18E34FA600EFC208 /* AVFoundation.framework */,
 				9457213718E345F3004F5496 /* Foundation.framework */,
 				9457213918E345F3004F5496 /* CoreGraphics.framework */,
 				9457213B18E345F3004F5496 /* UIKit.framework */,
@@ -128,6 +135,8 @@
 				9457214918E345F3004F5496 /* Main.storyboard */,
 				9457214C18E345F3004F5496 /* ViewController.h */,
 				7557EAF418E34A8000EFC208 /* Video.h */,
+				7557EAF718E34F4E00EFC208 /* Player.h */,
+				7557EAF818E34F4E00EFC208 /* Player.m */,
 				7557EAF518E34A8000EFC208 /* Video.m */,
 				9457214D18E345F3004F5496 /* ViewController.m */,
 				9457214F18E345F3004F5496 /* Images.xcassets */,
@@ -269,6 +278,7 @@
 				9457214E18E345F3004F5496 /* ViewController.m in Sources */,
 				7557EAF618E34A8000EFC208 /* Video.m in Sources */,
 				9457214818E345F3004F5496 /* AppDelegate.m in Sources */,
+				7557EAF918E34F4E00EFC208 /* Player.m in Sources */,
 				9457214418E345F3004F5496 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
