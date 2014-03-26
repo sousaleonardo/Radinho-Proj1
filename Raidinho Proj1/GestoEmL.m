@@ -25,7 +25,7 @@
     
     if (self->pontoInicial.x <= pontoAtual.x-5 || self->pontoInicial.x >= pontoAtual.x+5 ) {
         self->analisaY=NO;
-        self
+        self->segundoPonto=pontoAtual;
     }
     
     if (self->analisaY) {

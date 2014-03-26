@@ -12,7 +12,7 @@
 @interface GestoEmL : UIGestureRecognizer
 {
     CGPoint pontoInicial;
-    CGPoint ultimoPontoY;
+    CGPoint segundoPonto;
     BOOL analisaY;
 }
 @end
