@@ -14,27 +14,43 @@
     UITouch *toque=[touches anyObject];
     
     self->pontoInicial=[toque locationInView:self.view];
-    self->ultimoPonto=[toque locationInView:self.view];
+    //self->ultimoPonto=[toque locationInView:self.view];
+    self->analisaY=YES;
     
 }
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
     //Enquanto o toque e analisado verifica se esta diminuindo o Y
-    
     UITouch *toque=[touches anyObject];
     CGPoint pontoAtual=[toque locationInView:self.view];
-  
-    //if(self->ultimoPonto.y < pontoAtual.y && self->ultimoPonto.x > pontoAtual.x){
-    if (self->pontoInicial.y < pontoAtual.y) {
-        [self setState:UIGestureRecognizerStateFailed];
-        
-        NSLog(@"aumentando Y");
-    }else{
-        
+    
+    if (self->pontoInicial.x <= pontoAtual.x-5 || self->pontoInicial.x >= pontoAtual.x+5 ) {
+        self->analisaY=NO;
+        self
     }
     
-    if (self->pontoInicial.x != pontoAtual.x && self->pontoInicial.y != pontoAtual.y) {
+    if (self->analisaY) {
+        if (self->pontoInicial.y < pontoAtual.y) {
+            [self setState:UIGestureRecognizerStateFailed];
+            NSLog(@"aumentou Y");
+        }
+    }else{
+        if (condition) {
+            <#statements#>
+        }
+    }
+
+    /*
+    if ((self->ultimoPonto.x != pontoAtual.x -50|| self->ultimoPonto.x != pontoAtual.x -50) && (self->ultimoPonto.y != pontoAtual.y +50 || self->ultimoPonto.y != pontoAtual.y -50)){
+        
         [self setState:UIGestureRecognizerStateFailed];
         NSLog(@"Alterou x e Y");
+    }
+    */
+    if (pontoAtual.y == self->ultimoPonto.y) {
+        if (pontoAtual.x>=self->ultimoPonto.x) {
+            [self setState:UIGestureRecognizerStatePossible];
+            NSLog(@"igual");
+        }
     }
     
     
