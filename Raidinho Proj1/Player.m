@@ -13,12 +13,20 @@
 -(id)init{
     if (self = [super init]) {
         
-        [self inicializaVideo:[[NSBundle mainBundle] pathForResource:@"filename"
-                                                             ofType:@"txt"]];
+        //[self inicializaVideo:[[NSBundle mainBundle] pathForResource:@"filename"
+                                                            // ofType:@"txt"]];
         
-        [self inicializaEstacoes:[[NSBundle mainBundle] pathForResource:@"filename"
-                                                                ofType:@"txt"]];
         
+        NSString* path = [[NSBundle mainBundle] pathForResource:@"estacoes"
+                                                         ofType:@"txt"];
+        NSString* content = [NSString stringWithContentsOfFile:path
+                                                      encoding:NSUTF8StringEncoding
+                                                         error:NULL];
+        NSLog(@"%@",content);
+        
+        [self inicializaEstacoes:path];
+        self->videoAtual = 0;
+        self->estacaoAtual = 0;
     }
     
     return self;
@@ -45,7 +53,12 @@
         
         NSRange numero = NSMakeRange(comecoDoNumero.location, final.location);
         
+        NSLog(@"%@",[nomeDaRadio substringWithRange:endereco]);
+        
+        
         numeroDaradio = [nomeDaRadio substringWithRange:numero];
+        
+        NSLog(@"%f",[numeroDaradio floatValue]);
         
         Estacao *estacao = [[Estacao alloc]init:[nomeDaRadio substringWithRange:endereco] :[numeroDaradio floatValue]] ;
         

@@ -10,6 +10,7 @@
 		7557EAF618E34A8000EFC208 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 7557EAF518E34A8000EFC208 /* Video.m */; };
 		7557EAF918E34F4E00EFC208 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 7557EAF818E34F4E00EFC208 /* Player.m */; };
 		7557EAFB18E34FA600EFC208 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7557EAFA18E34FA600EFC208 /* AVFoundation.framework */; };
+		7557EAFD18E3695600EFC208 /* estacoes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7557EAFC18E3695600EFC208 /* estacoes.txt */; };
 		9457213818E345F3004F5496 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9457213718E345F3004F5496 /* Foundation.framework */; };
 		9457213A18E345F3004F5496 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9457213918E345F3004F5496 /* CoreGraphics.framework */; };
 		9457213C18E345F3004F5496 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9457213B18E345F3004F5496 /* UIKit.framework */; };
@@ -44,6 +45,7 @@
 		7557EAF718E34F4E00EFC208 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		7557EAF818E34F4E00EFC208 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		7557EAFA18E34FA600EFC208 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7557EAFC18E3695600EFC208 /* estacoes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = estacoes.txt; sourceTree = "<group>"; };
 		9457213418E345F3004F5496 /* Raidinho Proj1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Raidinho Proj1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9457213718E345F3004F5496 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9457213918E345F3004F5496 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -128,6 +130,7 @@
 		9457213D18E345F3004F5496 /* Raidinho Proj1 */ = {
 			isa = PBXGroup;
 			children = (
+				7557EAFC18E3695600EFC208 /* estacoes.txt */,
 				9457217218E350DD004F5496 /* GestoEmL.h */,
 				9457217318E350DD004F5496 /* GestoEmL.m */,
 				9457214618E345F3004F5496 /* AppDelegate.h */,
@@ -253,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9457215018E345F3004F5496 /* Images.xcassets in Resources */,
+				7557EAFD18E3695600EFC208 /* estacoes.txt in Resources */,
 				9457214218E345F3004F5496 /* InfoPlist.strings in Resources */,
 				9457214B18E345F3004F5496 /* Main.storyboard in Resources */,
 			);

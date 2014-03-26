@@ -28,6 +28,8 @@
     
     GestoEmL *gestoL=[[GestoEmL alloc]initWithTarget:self action:@selector(testeGesto)];
     
+    Player *play = [[Player alloc]init];
+    
     [self.view addGestureRecognizer:gestoL];
 }
 -(void)testeGesto{

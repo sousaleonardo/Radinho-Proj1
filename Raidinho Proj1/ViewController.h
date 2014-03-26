@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Estacao.h"
 #import "GestoEmL.h"
+#import "Player.h"
 
 @interface ViewController : UIViewController
 
