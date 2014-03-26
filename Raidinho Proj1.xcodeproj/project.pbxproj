@@ -27,6 +27,9 @@
 		9457216318E345F3004F5496 /* Raidinho_Proj1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9457216218E345F3004F5496 /* Raidinho_Proj1Tests.m */; };
 		9457216E18E34A27004F5496 /* Estacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 9457216D18E34A27004F5496 /* Estacao.m */; };
 		9457217418E350DD004F5496 /* GestoEmL.m in Sources */ = {isa = PBXBuildFile; fileRef = 9457217318E350DD004F5496 /* GestoEmL.m */; };
+		CD75102518E377DB009DC1BA /* botao.png in Resources */ = {isa = PBXBuildFile; fileRef = CD75102218E377DB009DC1BA /* botao.png */; };
+		CD75102618E377DB009DC1BA /* caixa.png in Resources */ = {isa = PBXBuildFile; fileRef = CD75102318E377DB009DC1BA /* caixa.png */; };
+		CD75102718E377DB009DC1BA /* fundo.png in Resources */ = {isa = PBXBuildFile; fileRef = CD75102418E377DB009DC1BA /* fundo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		9457216D18E34A27004F5496 /* Estacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Estacao.m; sourceTree = "<group>"; };
 		9457217218E350DD004F5496 /* GestoEmL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestoEmL.h; sourceTree = "<group>"; };
 		9457217318E350DD004F5496 /* GestoEmL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestoEmL.m; sourceTree = "<group>"; };
+		CD75102218E377DB009DC1BA /* botao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao.png; sourceTree = "<group>"; };
+		CD75102318E377DB009DC1BA /* caixa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = caixa.png; sourceTree = "<group>"; };
+		CD75102418E377DB009DC1BA /* fundo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fundo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +159,7 @@
 		9457213E18E345F3004F5496 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CD75102118E377DB009DC1BA /* imagens */,
 				9457213F18E345F3004F5496 /* Raidinho Proj1-Info.plist */,
 				9457214018E345F3004F5496 /* InfoPlist.strings */,
 				9457214318E345F3004F5496 /* main.m */,
@@ -177,6 +184,16 @@
 				9457215F18E345F3004F5496 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD75102118E377DB009DC1BA /* imagens */ = {
+			isa = PBXGroup;
+			children = (
+				CD75102218E377DB009DC1BA /* botao.png */,
+				CD75102318E377DB009DC1BA /* caixa.png */,
+				CD75102418E377DB009DC1BA /* fundo.png */,
+			);
+			path = imagens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,9 +272,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD75102718E377DB009DC1BA /* fundo.png in Resources */,
 				9457215018E345F3004F5496 /* Images.xcassets in Resources */,
+				CD75102518E377DB009DC1BA /* botao.png in Resources */,
 				7557EAFD18E3695600EFC208 /* estacoes.txt in Resources */,
 				9457214218E345F3004F5496 /* InfoPlist.strings in Resources */,
+				CD75102618E377DB009DC1BA /* caixa.png in Resources */,
 				9457214B18E345F3004F5496 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
