@@ -19,12 +19,20 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    [self.view setBackgroundColor:[UIColor purpleColor]];
+    
     Estacao *estacao=[[Estacao alloc]init:@"www.faceboook.com.br" :89.1];
     
     NSLog(@"%f",[estacao nEstacao]);
     NSLog(@"%@",[estacao streaming]);
+    
+    GestoEmL *gestoL=[[GestoEmL alloc]initWithTarget:self action:@selector(testeGesto)];
+    
+    [self.view addGestureRecognizer:gestoL];
 }
-
+-(void)testeGesto{
+    NSLog(@"Reconheceu gesto");
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

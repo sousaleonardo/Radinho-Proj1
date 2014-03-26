@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  GestoEmL.h
 //  Raidinho Proj1
 //
 //  Created by LEONARDO DE SOUSA MENDES on 26/03/14.
@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Estacao.h"
-#import "GestoEmL.h"
+#import <UIKit/UIGestureRecognizerSubclass.h>
 
-@interface ViewController : UIViewController
-
+@interface GestoEmL : UIGestureRecognizer
+{
+    CGPoint pontoInicial;
+    CGPoint ultimoPonto;
+}
 @end
