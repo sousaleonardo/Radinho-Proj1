@@ -13,6 +13,7 @@
 {
     CGPoint pontoInicial;
     CGPoint segundoPonto;
+    CGPoint ultimoPonto;
     BOOL analisaY;
 }
 @end

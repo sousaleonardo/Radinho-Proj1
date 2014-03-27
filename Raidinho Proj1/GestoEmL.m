@@ -14,7 +14,7 @@
     UITouch *toque=[touches anyObject];
     
     self->pontoInicial=[toque locationInView:self.view];
-    //self->ultimoPonto=[toque locationInView:self.view];
+    self->ultimoPonto=[toque locationInView:self.view];
     self->analisaY=YES;
     
 }
@@ -23,36 +23,20 @@
     UITouch *toque=[touches anyObject];
     CGPoint pontoAtual=[toque locationInView:self.view];
     
-    if (self->pontoInicial.x <= pontoAtual.x-5 || self->pontoInicial.x >= pontoAtual.x+5 ) {
-        self->analisaY=NO;
-        self->segundoPonto=pontoAtual;
-    }
-    
     if (self->analisaY) {
+        if (self->ultimoPonto.x < pontoAtual.x -5 ) {
+            self->analisaY=NO;
+            self->segundoPonto=pontoAtual;
+        }
+        
         if (self->pontoInicial.y < pontoAtual.y) {
             [self setState:UIGestureRecognizerStateFailed];
-            NSLog(@"aumentou Y");
         }
     }else{
-        if (condition) {
-            <#statements#>
+        if (self->ultimoPonto.y < pontoAtual.y -2 || self->ultimoPonto.y > pontoAtual.y +2 ) {
+            [self setState:UIGestureRecognizerStateFailed];
         }
     }
-
-    /*
-    if ((self->ultimoPonto.x != pontoAtual.x -50|| self->ultimoPonto.x != pontoAtual.x -50) && (self->ultimoPonto.y != pontoAtual.y +50 || self->ultimoPonto.y != pontoAtual.y -50)){
-        
-        [self setState:UIGestureRecognizerStateFailed];
-        NSLog(@"Alterou x e Y");
-    }
-    */
-    if (pontoAtual.y == self->ultimoPonto.y) {
-        if (pontoAtual.x>=self->ultimoPonto.x) {
-            [self setState:UIGestureRecognizerStatePossible];
-            NSLog(@"igual");
-        }
-    }
-    
     
     self->ultimoPonto=[toque locationInView:self.view];
     
@@ -64,9 +48,12 @@
     //Impedir que tap seja confundido com o gesto
     if ([toque tapCount] == 0 ) {
         
-        if ((self->pontoInicial.y > pontoAtual.y && self->pontoInicial.x < pontoAtual.x) && (pontoAtual.y == self->ultimoPonto.y )) {
-            
-            [self setState:UIGestureRecognizerStateRecognized];
+        if (self->pontoInicial.y > pontoAtual.y +2 && self->pontoInicial.x < pontoAtual.x -2 ) {
+            if (self->segundoPonto.y < pontoAtual.y -2 || self->segundoPonto.y > pontoAtual.y +2 ) {
+                [self setState:UIGestureRecognizerStateFailed];
+            }else{
+                [self setState:UIGestureRecognizerStateRecognized];
+            }
         }else
             [self setState:UIGestureRecognizerStateFailed];
     }
