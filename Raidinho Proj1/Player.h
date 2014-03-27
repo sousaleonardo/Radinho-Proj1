@@ -19,6 +19,8 @@
 
 @property NSMutableArray *estacoes;
 @property NSMutableArray *videos;
+@property AVPlayer *player;
+@property AVPlayerLayer *layerDoVideo;
 
 -(id)init;
 -(void)playEstacao;

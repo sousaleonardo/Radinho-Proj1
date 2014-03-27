@@ -19,14 +19,11 @@
         
         NSString* path = [[NSBundle mainBundle] pathForResource:@"estacoes"
                                                          ofType:@"txt"];
-        NSString* content = [NSString stringWithContentsOfFile:path
-                                                      encoding:NSUTF8StringEncoding
-                                                         error:NULL];
-        NSLog(@"%@",content);
         
         [self inicializaEstacoes:path];
         self->videoAtual = 0;
         self->estacaoAtual = 0;
+        self.player =[[AVPlayer alloc]init];
     }
     
     return self;
@@ -35,32 +32,31 @@
 
 -(void)inicializaEstacoes : (NSString*)caminhoDoArquivo{
     
+    NSString* conteudo = [NSString stringWithContentsOfFile:caminhoDoArquivo
+                                                  encoding:NSUTF8StringEncoding
+                                                     error:NULL];
     
-    NSArray *arquivo = [NSArray arrayWithContentsOfFile:caminhoDoArquivo];
-    NSString *nomeDaRadio = [[NSString alloc]init];
+    NSArray *arquivo = [conteudo componentsSeparatedByString:@"\n"];
+    
+    NSString *estacaoDaRadio = [[NSString alloc]init];
     NSString *numeroDaradio = [[NSString alloc]init];
+    NSString *enderecoDaRadio = [[NSString alloc]init];
     
     for (int i = 0; i < arquivo.count; i++) {
-        nomeDaRadio = [arquivo objectAtIndex:i];
+        estacaoDaRadio = [arquivo objectAtIndex:i];
         
-        NSRange comecoDoEndereco = [nomeDaRadio rangeOfString:@"$"];
+        NSRange comecoDoEndereco = [estacaoDaRadio rangeOfString:@" "];
         
-        NSRange comecoDoNumero = [nomeDaRadio rangeOfString:@"#"];
+        NSRange finalEndereco = [estacaoDaRadio rangeOfString:@"*"];
         
-        NSRange final = [nomeDaRadio rangeOfString:@" "];
+        NSRange endereco = NSMakeRange(comecoDoEndereco.location+1 ,(finalEndereco.location-comecoDoEndereco.location)-1);
         
-        NSRange endereco = NSMakeRange(comecoDoEndereco.location , final.location);
+        NSRange numero = NSMakeRange(0, comecoDoEndereco.location);
         
-        NSRange numero = NSMakeRange(comecoDoNumero.location, final.location);
+        numeroDaradio = [estacaoDaRadio substringWithRange:numero];
+        enderecoDaRadio = [estacaoDaRadio substringWithRange:endereco];
         
-        NSLog(@"%@",[nomeDaRadio substringWithRange:endereco]);
-        
-        
-        numeroDaradio = [nomeDaRadio substringWithRange:numero];
-        
-        NSLog(@"%f",[numeroDaradio floatValue]);
-        
-        Estacao *estacao = [[Estacao alloc]init:[nomeDaRadio substringWithRange:endereco] :[numeroDaradio floatValue]] ;
+        Estacao *estacao = [[Estacao alloc]init:enderecoDaRadio :[numeroDaradio floatValue]] ;
         
         [self.estacoes addObject:estacao];
     }
@@ -74,15 +70,13 @@
     for (int i = 0; i < arquivo.count; i++) {
         nomeDoVideo = [arquivo objectAtIndex:i];
         
-        NSRange comecoDaUrl = [nomeDoVideo rangeOfString:@"$"];
+        NSRange comecoDaUrl = [nomeDoVideo rangeOfString:@" "];
         
-        NSRange comecoDoNome = [nomeDoVideo rangeOfString:@"#"];
+        NSRange final = [nomeDoVideo rangeOfString:@"*"];
         
-        NSRange final = [nomeDoVideo rangeOfString:@" "];
+        NSRange nome = NSMakeRange(0 , comecoDaUrl.location);
         
-        NSRange nome = NSMakeRange(comecoDoNome.location , final.location);
-        
-        NSRange url = NSMakeRange(comecoDaUrl.location, final.location);
+        NSRange url = NSMakeRange(comecoDaUrl.location+1, (final.location - comecoDaUrl.location)-1);
         
         Video *video = [[Video alloc]initWithName:[nomeDoVideo substringWithRange:nome] AndUrl:[nomeDoVideo substringWithRange:url]] ;
         
@@ -92,9 +86,37 @@
 
 -(void)playEstacao{
     
-}
--(void)playVideo{
+    NSURL *url =[NSURL URLWithString:[[self.estacoes objectAtIndex:self->estacaoAtual]streaming]];
     
+    AVAudioPlayer *radio = [[AVAudioPlayer alloc]initWithContentsOfURL:url error:nil];
+    
+    [radio prepareToPlay];
+    [radio play];
+}
+-(void)playVideo : (UIView*)view{
+    
+    Video *videoPraTocar =[self.videos objectAtIndex:self->videoAtual];
+    
+    AVPlayerItem *video = [[AVPlayerItem alloc]initWithURL:[NSURL URLWithString:videoPraTocar.url]];
+    
+    self.player = [[AVPlayer alloc]initWithPlayerItem:video];
+    
+    self.layerDoVideo = [AVPlayerLayer playerLayerWithPlayer:self.player];
+    
+    [self.layerDoVideo setFrame:view.frame];
+    [self.player seekToTime:kCMTimeZero];
+    
+    [view.layer addSublayer:self.layerDoVideo];
+
+}
+-(void)pausarVideo{
+    [self.player pause];
+}
+-(void)pararVideo{
+    
+    [self.layerDoVideo removeFromSuperlayer];
+    [self.player pause];
+    [self.player seekToTime:kCMTimeZero];
 }
 -(void)trocarEstacao : (NSString*)fluxo{
     
