@@ -16,6 +16,8 @@
         //[self inicializaVideo:[[NSBundle mainBundle] pathForResource:@"filename"
                                                             // ofType:@"txt"]];
         
+        self.estacoes =[[NSMutableArray alloc]init];
+        self.videos =[[NSMutableArray alloc]init];
         
         NSString* path = [[NSBundle mainBundle] pathForResource:@"estacoes"
                                                          ofType:@"txt"];
@@ -80,19 +82,23 @@
 }
 
 -(void)playEstacao{
+    Estacao *estacaoParaTocar = [self.estacoes objectAtIndex:self->estacaoAtual];
+   
+    NSURL *url = [NSURL URLWithString:estacaoParaTocar.streaming];
     
-    NSURL *url =[NSURL URLWithString:[[self.estacoes objectAtIndex:self->estacaoAtual]streaming]];
+    self.radio = [[AVPlayerItem alloc]initWithURL:url];
     
-    AVAudioPlayer *radio = [[AVAudioPlayer alloc]initWithContentsOfURL:url error:nil];
+    self.player = [[AVPlayer alloc]initWithPlayerItem:self.radio];
     
-    [radio prepareToPlay];
-    [radio play];
+    [self.player setVolume:5.0];
+    [self.player play];
+    
 }
 -(void)playVideo : (UIView*)view{
     
-    Video *videoPraTocar =[self.videos objectAtIndex:self->videoAtual];
+    Video *videoParaTocar =[self.videos objectAtIndex:self->videoAtual];
     
-    AVPlayerItem *video = [[AVPlayerItem alloc]initWithURL:[NSURL URLWithString:videoPraTocar.url]];
+    AVPlayerItem *video = [[AVPlayerItem alloc]initWithURL:[NSURL URLWithString:videoParaTocar.url]];
     
     self.player = [[AVPlayer alloc]initWithPlayerItem:video];
     

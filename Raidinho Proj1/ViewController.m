@@ -30,8 +30,16 @@
     
     Player *play = [[Player alloc]init];
     
+    [play playEstacao];
+    
+    self.player = [play player];
+    
+   
     [self.view addGestureRecognizer:gestoL];
 }
+
+
+
 -(void)testeGesto{
     NSLog(@"Reconheceu gesto");
 }
