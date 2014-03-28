@@ -70,15 +70,10 @@
     for (int i = 0; i < arquivo.count; i++) {
         nomeDoVideo = [arquivo objectAtIndex:i];
         
-        NSRange comecoDaUrl = [nomeDoVideo rangeOfString:@" "];
+        NSString* url = [[NSBundle mainBundle] pathForResource:nomeDoVideo
+                                                         ofType:@"mp4"];
         
-        NSRange final = [nomeDoVideo rangeOfString:@"*"];
-        
-        NSRange nome = NSMakeRange(0 , comecoDaUrl.location);
-        
-        NSRange url = NSMakeRange(comecoDaUrl.location+1, (final.location - comecoDaUrl.location)-1);
-        
-        Video *video = [[Video alloc]initWithName:[nomeDoVideo substringWithRange:nome] AndUrl:[nomeDoVideo substringWithRange:url]] ;
+        Video *video = [[Video alloc]initWithName:nomeDoVideo  AndUrl:url] ;
         
         [self.videos addObject:video];
     }
@@ -120,8 +115,27 @@
 }
 -(void)trocarEstacao : (NSString*)fluxo{
     
+    
+    if ([fluxo isEqual:@"aumentar"] ) {
+        self->estacaoAtual++;
+    }
+    else if (self->estacaoAtual < self.estacoes.count){
+        self->estacaoAtual = 0;
+    }
+    else
+        self->estacaoAtual--;
+    
 }
 -(void)trocarVideo : (NSString*)fluxo{
+    
+    if ([fluxo isEqual:@"aumentar"] ) {
+        self->videoAtual++;
+    }
+    else if (self->videoAtual >= self.videos.count){
+        self->videoAtual = 0;
+    }
+    else
+        self->videoAtual--;
     
 }
 

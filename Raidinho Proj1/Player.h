@@ -24,9 +24,11 @@
 
 -(id)init;
 -(void)playEstacao;
--(void)playVideo;
+-(void)playVideo : (UIView*)view;
 -(void)trocarEstacao : (NSString*)fluxo;
 -(void)trocarVideo : (NSString*)fluxo;
+-(void)pausarVideo;
+-(void)pararVideo;
 
 -(void)inicializaEstacoes : (NSString*) caminhoDoArquivo;
 -(void)inicializaVideo : (NSString*) caminhoDoArquivo;
