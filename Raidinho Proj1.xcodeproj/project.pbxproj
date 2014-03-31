@@ -16,7 +16,6 @@
 		7557EAF918E34F4E00EFC208 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 7557EAF818E34F4E00EFC208 /* Player.m */; };
 		7557EAFB18E34FA600EFC208 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7557EAFA18E34FA600EFC208 /* AVFoundation.framework */; };
 		7557EAFD18E3695600EFC208 /* estacoes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7557EAFC18E3695600EFC208 /* estacoes.txt */; };
-		943EFB7518E9E0FA00486835 /* GestoCircular.m in Sources */ = {isa = PBXBuildFile; fileRef = 943EFB7418E9E0FA00486835 /* GestoCircular.m */; };
 		9457213818E345F3004F5496 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9457213718E345F3004F5496 /* Foundation.framework */; };
 		9457213A18E345F3004F5496 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9457213918E345F3004F5496 /* CoreGraphics.framework */; };
 		9457213C18E345F3004F5496 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9457213B18E345F3004F5496 /* UIKit.framework */; };
@@ -32,13 +31,6 @@
 		9457216318E345F3004F5496 /* Raidinho_Proj1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9457216218E345F3004F5496 /* Raidinho_Proj1Tests.m */; };
 		9457216E18E34A27004F5496 /* Estacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 9457216D18E34A27004F5496 /* Estacao.m */; };
 		9457217418E350DD004F5496 /* GestoEmL.m in Sources */ = {isa = PBXBuildFile; fileRef = 9457217318E350DD004F5496 /* GestoEmL.m */; };
-		CDF3908118E9E300002899C8 /* tela.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF3908018E9E300002899C8 /* tela.png */; };
-		CDF3908518E9E4A1002899C8 /* seta_voltar.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF3908418E9E4A1002899C8 /* seta_voltar.png */; };
-		CDF3908B18E9F05B002899C8 /* squareGesure.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF3908618E9F05B002899C8 /* squareGesure.png */; };
-		CDF3908C18E9F05B002899C8 /* circleGesure.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF3908718E9F05B002899C8 /* circleGesure.png */; };
-		CDF3908D18E9F05B002899C8 /* longGesture.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF3908818E9F05B002899C8 /* longGesture.png */; };
-		CDF3908E18E9F05B002899C8 /* doubleTap.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF3908918E9F05B002899C8 /* doubleTap.png */; };
-		CDF3908F18E9F05B002899C8 /* singleTap.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF3908A18E9F05B002899C8 /* singleTap.png */; };
 		CDF485E218E61D53001A7F45 /* botao.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF485DD18E61D53001A7F45 /* botao.png */; };
 		CDF485E318E61D53001A7F45 /* caixa_btns.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF485DE18E61D53001A7F45 /* caixa_btns.png */; };
 		CDF485E418E61D53001A7F45 /* caixa_titulo.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF485DF18E61D53001A7F45 /* caixa_titulo.png */; };
@@ -69,8 +61,6 @@
 		7557EAF818E34F4E00EFC208 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		7557EAFA18E34FA600EFC208 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7557EAFC18E3695600EFC208 /* estacoes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = estacoes.txt; sourceTree = "<group>"; };
-		943EFB7318E9E0FA00486835 /* GestoCircular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GestoCircular.h; path = ../GestoCircular.h; sourceTree = "<group>"; };
-		943EFB7418E9E0FA00486835 /* GestoCircular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GestoCircular.m; path = ../GestoCircular.m; sourceTree = "<group>"; };
 		9457213418E345F3004F5496 /* Raidinho Proj1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Raidinho Proj1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9457213718E345F3004F5496 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9457213918E345F3004F5496 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -93,13 +83,6 @@
 		9457216D18E34A27004F5496 /* Estacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Estacao.m; sourceTree = "<group>"; };
 		9457217218E350DD004F5496 /* GestoEmL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestoEmL.h; sourceTree = "<group>"; };
 		9457217318E350DD004F5496 /* GestoEmL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestoEmL.m; sourceTree = "<group>"; };
-		CDF3908018E9E300002899C8 /* tela.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tela.png; sourceTree = "<group>"; };
-		CDF3908418E9E4A1002899C8 /* seta_voltar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seta_voltar.png; sourceTree = "<group>"; };
-		CDF3908618E9F05B002899C8 /* squareGesure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squareGesure.png; sourceTree = "<group>"; };
-		CDF3908718E9F05B002899C8 /* circleGesure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circleGesure.png; sourceTree = "<group>"; };
-		CDF3908818E9F05B002899C8 /* longGesture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = longGesture.png; sourceTree = "<group>"; };
-		CDF3908918E9F05B002899C8 /* doubleTap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doubleTap.png; sourceTree = "<group>"; };
-		CDF3908A18E9F05B002899C8 /* singleTap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = singleTap.png; sourceTree = "<group>"; };
 		CDF485DD18E61D53001A7F45 /* botao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao.png; sourceTree = "<group>"; };
 		CDF485DE18E61D53001A7F45 /* caixa_btns.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = caixa_btns.png; sourceTree = "<group>"; };
 		CDF485DF18E61D53001A7F45 /* caixa_titulo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = caixa_titulo.png; sourceTree = "<group>"; };
@@ -179,25 +162,23 @@
 		9457213D18E345F3004F5496 /* Raidinho Proj1 */ = {
 			isa = PBXGroup;
 			children = (
-				9457214618E345F3004F5496 /* AppDelegate.h */,
-				9457214718E345F3004F5496 /* AppDelegate.m */,
-				9457216C18E34A27004F5496 /* Estacao.h */,
-				9457216D18E34A27004F5496 /* Estacao.m */,
+				CDF3907C18E9DEDF002899C8 /* iPad */,
 				7557EAFC18E3695600EFC208 /* estacoes.txt */,
-				943EFB7318E9E0FA00486835 /* GestoCircular.h */,
-				943EFB7418E9E0FA00486835 /* GestoCircular.m */,
 				9457217218E350DD004F5496 /* GestoEmL.h */,
 				9457217318E350DD004F5496 /* GestoEmL.m */,
-				9457214F18E345F3004F5496 /* Images.xcassets */,
-				CDF3907C18E9DEDF002899C8 /* iPad */,
+				9457214618E345F3004F5496 /* AppDelegate.h */,
+				9457214718E345F3004F5496 /* AppDelegate.m */,
 				CDF485E918E61E18001A7F45 /* Main.storyboard */,
-				7557EAF718E34F4E00EFC208 /* Player.h */,
-				7557EAF818E34F4E00EFC208 /* Player.m */,
-				9457213E18E345F3004F5496 /* Supporting Files */,
-				7557EAF418E34A8000EFC208 /* Video.h */,
-				7557EAF518E34A8000EFC208 /* Video.m */,
 				9457214C18E345F3004F5496 /* ViewController.h */,
 				9457214D18E345F3004F5496 /* ViewController.m */,
+				7557EAF418E34A8000EFC208 /* Video.h */,
+				7557EAF718E34F4E00EFC208 /* Player.h */,
+				7557EAF818E34F4E00EFC208 /* Player.m */,
+				7557EAF518E34A8000EFC208 /* Video.m */,
+				9457214F18E345F3004F5496 /* Images.xcassets */,
+				9457216C18E34A27004F5496 /* Estacao.h */,
+				9457216D18E34A27004F5496 /* Estacao.m */,
+				9457213E18E345F3004F5496 /* Supporting Files */,
 			);
 			path = "Raidinho Proj1";
 			sourceTree = "<group>";
@@ -236,13 +217,6 @@
 		CD75102118E377DB009DC1BA /* imagens */ = {
 			isa = PBXGroup;
 			children = (
-				CDF3908618E9F05B002899C8 /* squareGesure.png */,
-				CDF3908718E9F05B002899C8 /* circleGesure.png */,
-				CDF3908818E9F05B002899C8 /* longGesture.png */,
-				CDF3908918E9F05B002899C8 /* doubleTap.png */,
-				CDF3908A18E9F05B002899C8 /* singleTap.png */,
-				CDF3908418E9E4A1002899C8 /* seta_voltar.png */,
-				CDF3908018E9E300002899C8 /* tela.png */,
 				CDF485DD18E61D53001A7F45 /* botao.png */,
 				CDF485DE18E61D53001A7F45 /* caixa_btns.png */,
 				CDF485DF18E61D53001A7F45 /* caixa_titulo.png */,
@@ -336,18 +310,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDF485E518E61D53001A7F45 /* fundo.png in Resources */,
-				CDF3908118E9E300002899C8 /* tela.png in Resources */,
 				CDF485E418E61D53001A7F45 /* caixa_titulo.png in Resources */,
-<<<<<<< HEAD
-				CDF3908E18E9F05B002899C8 /* doubleTap.png in Resources */,
-				CDF3908B18E9F05B002899C8 /* squareGesure.png in Resources */,
-=======
 				752BF56D18E9F4010055E450 /* Videos.txt in Resources */,
 				752BF56818E9F4010055E450 /* Iphone5S.MP4 in Resources */,
->>>>>>> FETCH_HEAD
 				CDF485E618E61D53001A7F45 /* meio.png in Resources */,
-				CDF3908C18E9F05B002899C8 /* circleGesure.png in Resources */,
-				CDF3908F18E9F05B002899C8 /* singleTap.png in Resources */,
 				9457215018E345F3004F5496 /* Images.xcassets in Resources */,
 				752BF56A18E9F4010055E450 /* LightsOutWhosThere.MP4 in Resources */,
 				CDF485E318E61D53001A7F45 /* caixa_btns.png in Resources */,
@@ -356,9 +322,7 @@
 				752BF56C18E9F4010055E450 /* TartarugasNinja.MP4 in Resources */,
 				752BF56B18E9F4010055E450 /* Narwhals.MP4 in Resources */,
 				7557EAFD18E3695600EFC208 /* estacoes.txt in Resources */,
-				CDF3908518E9E4A1002899C8 /* seta_voltar.png in Resources */,
 				9457214218E345F3004F5496 /* InfoPlist.strings in Resources */,
-				CDF3908D18E9F05B002899C8 /* longGesture.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,7 +342,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9457216E18E34A27004F5496 /* Estacao.m in Sources */,
-				943EFB7518E9E0FA00486835 /* GestoCircular.m in Sources */,
 				9457217418E350DD004F5496 /* GestoEmL.m in Sources */,
 				9457214E18E345F3004F5496 /* ViewController.m in Sources */,
 				7557EAF618E34A8000EFC208 /* Video.m in Sources */,
