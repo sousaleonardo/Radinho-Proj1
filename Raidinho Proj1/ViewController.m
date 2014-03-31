@@ -30,12 +30,12 @@
     
     Player *play = [[Player alloc]init];
     
-    [play playEstacao];
+    [play playVideo:self.view];
     
-    self.player = [play player];
+   // self.player = [play player];
     
    
-    [self.view addGestureRecognizer:gestoL];
+    //[self.view addGestureRecognizer:gestoL];
 }
 
 
