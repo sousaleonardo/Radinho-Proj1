@@ -140,6 +140,7 @@
 		9457213D18E345F3004F5496 /* Raidinho Proj1 */ = {
 			isa = PBXGroup;
 			children = (
+				CDF3907C18E9DEDF002899C8 /* iPad */,
 				7557EAFC18E3695600EFC208 /* estacoes.txt */,
 				9457217218E350DD004F5496 /* GestoEmL.h */,
 				9457217318E350DD004F5496 /* GestoEmL.m */,
@@ -200,6 +201,13 @@
 				CDF485E118E61D53001A7F45 /* meio.png */,
 			);
 			path = imagens;
+			sourceTree = "<group>";
+		};
+		CDF3907C18E9DEDF002899C8 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,7 +441,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Raidinho Proj1/Raidinho Proj1-Prefix.pch";
 				INFOPLIST_FILE = "Raidinho Proj1/Raidinho Proj1-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -446,7 +456,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Raidinho Proj1/Raidinho Proj1-Prefix.pch";
 				INFOPLIST_FILE = "Raidinho Proj1/Raidinho Proj1-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
