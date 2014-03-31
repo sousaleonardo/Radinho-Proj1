@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		752BF56818E9F4010055E450 /* Iphone5S.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 752BF56218E9F4010055E450 /* Iphone5S.MP4 */; };
+		752BF56A18E9F4010055E450 /* LightsOutWhosThere.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 752BF56418E9F4010055E450 /* LightsOutWhosThere.MP4 */; };
+		752BF56B18E9F4010055E450 /* Narwhals.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 752BF56518E9F4010055E450 /* Narwhals.MP4 */; };
+		752BF56C18E9F4010055E450 /* TartarugasNinja.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 752BF56618E9F4010055E450 /* TartarugasNinja.MP4 */; };
+		752BF56D18E9F4010055E450 /* Videos.txt in Resources */ = {isa = PBXBuildFile; fileRef = 752BF56718E9F4010055E450 /* Videos.txt */; };
 		7557EAF618E34A8000EFC208 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 7557EAF518E34A8000EFC208 /* Video.m */; };
 		7557EAF918E34F4E00EFC208 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 7557EAF818E34F4E00EFC208 /* Player.m */; };
 		7557EAFB18E34FA600EFC208 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7557EAFA18E34FA600EFC208 /* AVFoundation.framework */; };
@@ -45,6 +50,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		752BF56218E9F4010055E450 /* Iphone5S.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Iphone5S.MP4; sourceTree = "<group>"; };
+		752BF56418E9F4010055E450 /* LightsOutWhosThere.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = LightsOutWhosThere.MP4; sourceTree = "<group>"; };
+		752BF56518E9F4010055E450 /* Narwhals.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Narwhals.MP4; sourceTree = "<group>"; };
+		752BF56618E9F4010055E450 /* TartarugasNinja.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TartarugasNinja.MP4; sourceTree = "<group>"; };
+		752BF56718E9F4010055E450 /* Videos.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Videos.txt; sourceTree = "<group>"; };
 		7557EAF418E34A8000EFC208 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
 		7557EAF518E34A8000EFC208 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
 		7557EAF718E34F4E00EFC208 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
@@ -106,6 +116,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		752BF56118E9F4010055E450 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				752BF56218E9F4010055E450 /* Iphone5S.MP4 */,
+				752BF56418E9F4010055E450 /* LightsOutWhosThere.MP4 */,
+				752BF56518E9F4010055E450 /* Narwhals.MP4 */,
+				752BF56618E9F4010055E450 /* TartarugasNinja.MP4 */,
+				752BF56718E9F4010055E450 /* Videos.txt */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
 		9457212B18E345F3004F5496 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +186,7 @@
 		9457213E18E345F3004F5496 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				752BF56118E9F4010055E450 /* Videos */,
 				CD75102118E377DB009DC1BA /* imagens */,
 				9457213F18E345F3004F5496 /* Raidinho Proj1-Info.plist */,
 				9457214018E345F3004F5496 /* InfoPlist.strings */,
@@ -288,11 +311,16 @@
 			files = (
 				CDF485E518E61D53001A7F45 /* fundo.png in Resources */,
 				CDF485E418E61D53001A7F45 /* caixa_titulo.png in Resources */,
+				752BF56D18E9F4010055E450 /* Videos.txt in Resources */,
+				752BF56818E9F4010055E450 /* Iphone5S.MP4 in Resources */,
 				CDF485E618E61D53001A7F45 /* meio.png in Resources */,
 				9457215018E345F3004F5496 /* Images.xcassets in Resources */,
+				752BF56A18E9F4010055E450 /* LightsOutWhosThere.MP4 in Resources */,
 				CDF485E318E61D53001A7F45 /* caixa_btns.png in Resources */,
 				CDF485E218E61D53001A7F45 /* botao.png in Resources */,
 				CDF485EA18E61E18001A7F45 /* Main.storyboard in Resources */,
+				752BF56C18E9F4010055E450 /* TartarugasNinja.MP4 in Resources */,
+				752BF56B18E9F4010055E450 /* Narwhals.MP4 in Resources */,
 				7557EAFD18E3695600EFC208 /* estacoes.txt in Resources */,
 				9457214218E345F3004F5496 /* InfoPlist.strings in Resources */,
 			);

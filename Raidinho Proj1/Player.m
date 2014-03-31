@@ -19,10 +19,10 @@
         self.estacoes =[[NSMutableArray alloc]init];
         self.videos =[[NSMutableArray alloc]init];
         
-        NSString* path = [[NSBundle mainBundle] pathForResource:@"estacoes"
+        NSString* path = [[NSBundle mainBundle] pathForResource:@"Videos"
                                                          ofType:@"txt"];
         
-        [self inicializaEstacoes:path];
+        [self inicializaVideo:path];
         self->videoAtual = 0;
         self->estacaoAtual = 0;
         self.player =[[AVPlayer alloc]init];
@@ -65,7 +65,11 @@
 }
 -(void)inicializaVideo : (NSString*)caminhoDoArquivo{
     
-    NSArray *arquivo = [NSArray arrayWithContentsOfFile:caminhoDoArquivo];
+    NSString* conteudo = [NSString stringWithContentsOfFile:caminhoDoArquivo
+                                                   encoding:NSUTF8StringEncoding
+                                                      error:NULL];
+    
+    NSArray *arquivo = [conteudo componentsSeparatedByString:@"\r\n"];
     NSString *nomeDoVideo = [[NSString alloc]init];
     
     
@@ -73,7 +77,7 @@
         nomeDoVideo = [arquivo objectAtIndex:i];
         
         NSString* url = [[NSBundle mainBundle] pathForResource:nomeDoVideo
-                                                         ofType:@"mp4"];
+                                                         ofType:@"MP4"];
         
         Video *video = [[Video alloc]initWithName:nomeDoVideo  AndUrl:url] ;
         
@@ -98,7 +102,7 @@
     
     Video *videoParaTocar =[self.videos objectAtIndex:self->videoAtual];
     
-    AVPlayerItem *video = [[AVPlayerItem alloc]initWithURL:[NSURL URLWithString:videoParaTocar.url]];
+    AVPlayerItem *video = [[AVPlayerItem alloc]initWithURL:[NSURL fileURLWithPath:videoParaTocar.url]];
     
     self.player = [[AVPlayer alloc]initWithPlayerItem:video];
     
@@ -108,6 +112,7 @@
     [self.player seekToTime:kCMTimeZero];
     
     [view.layer addSublayer:self.layerDoVideo];
+    [self.player play];
 
 }
 -(void)pausarVideo{
