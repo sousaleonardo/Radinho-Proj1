@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Estacao.h"
+#import "GestoEmL.h"
+#import "Player.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController : UIViewController
+
+
+@property AVPlayer *player;
 
 @end
