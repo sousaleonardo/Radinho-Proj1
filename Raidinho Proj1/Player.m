@@ -102,17 +102,12 @@
     
     Video *videoParaTocar =[self.videos objectAtIndex:self->videoAtual];
     
-    AVPlayerItem *video = [[AVPlayerItem alloc]initWithURL:[NSURL fileURLWithPath:videoParaTocar.url]];
+    MPMoviePlayerController *player = [[MPMoviePlayerController alloc]initWithContentURL:[NSURL fileURLWithPath:videoParaTocar.url]];
+    player.repeatMode = NO;
+    player.controlStyle = MPMovieControlStyleNone;
+    [player play];
     
-    self.player = [[AVPlayer alloc]initWithPlayerItem:video];
-    
-    self.layerDoVideo = [AVPlayerLayer playerLayerWithPlayer:self.player];
-    
-    [self.layerDoVideo setFrame:view.frame];
-    [self.player seekToTime:kCMTimeZero];
-    
-    [view.layer addSublayer:self.layerDoVideo];
-    [self.player play];
+    [view addSubview:player.view];
 
 }
 -(void)pausarVideo{

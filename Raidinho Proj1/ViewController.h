@@ -16,5 +16,6 @@
 
 
 @property AVPlayer *player;
+@property (strong, nonatomic) IBOutlet UIView *viewDoVideo;
 
 @end
