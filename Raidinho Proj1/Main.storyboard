@@ -281,17 +281,8 @@
     </scenes>
     <resources>
         <image name="botao.png" width="90" height="90"/>
-        <image name="botao.png" width="90" height="90"/>
-        <image name="botao.png" width="90" height="90"/>
-        <image name="botao.png" width="90" height="90"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
         <image name="caixa_btns.png" width="550" height="173"/>
         <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
         <image name="fundo.png" width="600" height="800"/>
         <image name="seta_voltar.png" width="89" height="71"/>
         <image name="singleTap.png" width="120" height="155"/>

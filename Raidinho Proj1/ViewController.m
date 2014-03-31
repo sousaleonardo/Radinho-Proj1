@@ -35,7 +35,7 @@
    // self.player = [play player];
     
    
-    [self.view addGestureRecognizer:gestoL];
+    //[self.view addGestureRecognizer:gestoL];
 }
 
 
