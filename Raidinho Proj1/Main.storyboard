@@ -228,10 +228,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tela.png" translatesAutoresizingMaskIntoConstraints="NO" id="OcU-u7-dAI">
-                                <rect key="frame" x="73" y="105" width="175" height="293"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="caixa_btns.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wt7-CE-HYg">
                                 <rect key="frame" x="20" y="510" width="280" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -290,7 +286,6 @@
         <image name="fundo.png" width="600" height="800"/>
         <image name="seta_voltar.png" width="89" height="71"/>
         <image name="singleTap.png" width="120" height="155"/>
-        <image name="tela.png" width="294" height="452"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
