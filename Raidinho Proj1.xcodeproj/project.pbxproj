@@ -37,6 +37,8 @@
 		CD73031918EA07B1002C659F /* seta_voltar.png in Resources */ = {isa = PBXBuildFile; fileRef = CD73031318EA07B1002C659F /* seta_voltar.png */; };
 		CD73031A18EA07B1002C659F /* singleTap.png in Resources */ = {isa = PBXBuildFile; fileRef = CD73031418EA07B1002C659F /* singleTap.png */; };
 		CD73031B18EA07B1002C659F /* squareGesure.png in Resources */ = {isa = PBXBuildFile; fileRef = CD73031518EA07B1002C659F /* squareGesure.png */; };
+		CDEE2B1F18EB3C8F00E4304B /* seta_mais.png in Resources */ = {isa = PBXBuildFile; fileRef = CDEE2B1D18EB3C8F00E4304B /* seta_mais.png */; };
+		CDEE2B2018EB3C8F00E4304B /* seta_menos.png in Resources */ = {isa = PBXBuildFile; fileRef = CDEE2B1E18EB3C8F00E4304B /* seta_menos.png */; };
 		CDF485E218E61D53001A7F45 /* botao.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF485DD18E61D53001A7F45 /* botao.png */; };
 		CDF485E318E61D53001A7F45 /* caixa_btns.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF485DE18E61D53001A7F45 /* caixa_btns.png */; };
 		CDF485E418E61D53001A7F45 /* caixa_titulo.png in Resources */ = {isa = PBXBuildFile; fileRef = CDF485DF18E61D53001A7F45 /* caixa_titulo.png */; };
@@ -95,6 +97,8 @@
 		CD73031318EA07B1002C659F /* seta_voltar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seta_voltar.png; sourceTree = "<group>"; };
 		CD73031418EA07B1002C659F /* singleTap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = singleTap.png; sourceTree = "<group>"; };
 		CD73031518EA07B1002C659F /* squareGesure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squareGesure.png; sourceTree = "<group>"; };
+		CDEE2B1D18EB3C8F00E4304B /* seta_mais.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = seta_mais.png; path = ../../../imagens/seta_mais.png; sourceTree = "<group>"; };
+		CDEE2B1E18EB3C8F00E4304B /* seta_menos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = seta_menos.png; path = ../../../imagens/seta_menos.png; sourceTree = "<group>"; };
 		CDF485DD18E61D53001A7F45 /* botao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botao.png; sourceTree = "<group>"; };
 		CDF485DE18E61D53001A7F45 /* caixa_btns.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = caixa_btns.png; sourceTree = "<group>"; };
 		CDF485DF18E61D53001A7F45 /* caixa_titulo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = caixa_titulo.png; sourceTree = "<group>"; };
@@ -174,7 +178,6 @@
 		9457213D18E345F3004F5496 /* Raidinho Proj1 */ = {
 			isa = PBXGroup;
 			children = (
-				CDF3907C18E9DEDF002899C8 /* iPad */,
 				7557EAFC18E3695600EFC208 /* estacoes.txt */,
 				9457217218E350DD004F5496 /* GestoEmL.h */,
 				9457217318E350DD004F5496 /* GestoEmL.m */,
@@ -229,6 +232,8 @@
 		CD75102118E377DB009DC1BA /* imagens */ = {
 			isa = PBXGroup;
 			children = (
+				CDEE2B1D18EB3C8F00E4304B /* seta_mais.png */,
+				CDEE2B1E18EB3C8F00E4304B /* seta_menos.png */,
 				CD73031018EA07B1002C659F /* circleGesure.png */,
 				CD73031118EA07B1002C659F /* doubleTap.png */,
 				CD73031218EA07B1002C659F /* longGesture.png */,
@@ -242,13 +247,6 @@
 				CDF485E118E61D53001A7F45 /* meio.png */,
 			);
 			path = imagens;
-			sourceTree = "<group>";
-		};
-		CDF3907C18E9DEDF002899C8 /* iPad */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +330,7 @@
 				CDF485E518E61D53001A7F45 /* fundo.png in Resources */,
 				CDF485E418E61D53001A7F45 /* caixa_titulo.png in Resources */,
 				752BF56D18E9F4010055E450 /* Videos.txt in Resources */,
+				CDEE2B2018EB3C8F00E4304B /* seta_menos.png in Resources */,
 				CD73031818EA07B1002C659F /* longGesture.png in Resources */,
 				752BF56818E9F4010055E450 /* Iphone5S.MP4 in Resources */,
 				CDF485E618E61D53001A7F45 /* meio.png in Resources */,
@@ -340,6 +339,7 @@
 				752BF56A18E9F4010055E450 /* LightsOutWhosThere.MP4 in Resources */,
 				CD73031B18EA07B1002C659F /* squareGesure.png in Resources */,
 				CDF485E318E61D53001A7F45 /* caixa_btns.png in Resources */,
+				CDEE2B1F18EB3C8F00E4304B /* seta_mais.png in Resources */,
 				CDF485E218E61D53001A7F45 /* botao.png in Resources */,
 				CD73031918EA07B1002C659F /* seta_voltar.png in Resources */,
 				CDF485EA18E61E18001A7F45 /* Main.storyboard in Resources */,
