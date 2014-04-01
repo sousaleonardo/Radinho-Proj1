@@ -35,6 +35,18 @@
 
 }
 
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    UITouch *toque=[touches anyObject];
+    CGPoint lugarDoToque = [toque locationInView:self.view];
+    CGPoint lugarDoBotao = self.botaoDeAjuda.frame.origin;
+    if (CGPointEqualToPoint(lugarDoToque, lugarDoBotao)) {
+        return;
+    }
+    else{
+        [self.play pausarVideo];
+    }
+}
+
 -(void)testeGesto{
     NSLog(@"Reconheceu gesto");
 }
