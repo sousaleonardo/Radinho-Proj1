@@ -11,7 +11,7 @@
 #import "GestoEmL.h"
 #import "Player.h"
 #import <AVFoundation/AVFoundation.h>
-#import "Video.h"
+
 
 @interface ViewController : UIViewController
 

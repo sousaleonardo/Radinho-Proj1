@@ -26,26 +26,36 @@
     NSLog(@"%f",[estacao nEstacao]);
     NSLog(@"%@",[estacao streaming]);
     
-    GestoEmL *gestoL=[[GestoEmL alloc]initWithTarget:self action:@selector(testeGesto)];
+    //GestoEmL *gestoL=[[GestoEmL alloc]initWithTarget:self action:@selector(testeGesto)];
+  
+    
     
     
     self.play = [[Player alloc]init];
-    
-    [self.play playVideo:self.view];
-
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     UITouch *toque=[touches anyObject];
     CGPoint lugarDoToque = [toque locationInView:self.view];
     CGPoint lugarDoBotao = self.botaoDeAjuda.frame.origin;
-    if (CGPointEqualToPoint(lugarDoToque, lugarDoBotao)) {
+    if (CGPointEqualToPoint(lugarDoToque, lugarDoBotao) ) {
         return;
     }
-    else{
-        [self.play pausarVideo];
+    if ([toque tapCount] < 2) {
+        if (self.play.playerDeVideo != nil) {
+            [self.play pausarVideo];
+        }
+        else
+        [self.play playVideo:self.view];
     }
+    else
+        [self.play pararVideo];
+    
 }
+
+                                                  
+                                                  
+                                                  
 
 -(void)testeGesto{
     NSLog(@"Reconheceu gesto");
