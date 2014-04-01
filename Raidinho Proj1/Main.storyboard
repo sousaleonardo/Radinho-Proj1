@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GtY-tX-fn3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
@@ -73,7 +73,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="CdX-vG-gxU" kind="modal" id="Rdf-Dn-NGx"/>
+                                    <segue destination="CdX-vG-gxU" kind="modal" modalTransitionStyle="crossDissolve" id="Rdf-Dn-NGx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -177,7 +177,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="nYx-ci-3ln" kind="modal" id="fyJ-7R-b1n"/>
+                                    <segue destination="nYx-ci-3ln" kind="modal" modalTransitionStyle="crossDissolve" id="fyJ-7R-b1n"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8TI-xK-omh">
@@ -238,18 +238,28 @@
                                 <rect key="frame" x="20" y="510" width="280" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="15" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Y8-DM-K6K">
+                                <rect key="frame" x="261" y="521" width="28" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="seta_mais.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="R4t-w8-dcI" kind="modal" modalTransitionStyle="crossDissolve" id="Shp-ky-10I"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="singleTap.png" translatesAutoresizingMaskIntoConstraints="NO" id="OCd-fL-SjQ">
-                                <rect key="frame" x="53" y="142" width="190" height="190"/>
+                                <rect key="frame" x="60" y="145" width="190" height="190"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7b-M4-1rC">
-                                <rect key="frame" x="149" y="518" width="22" height="21"/>
+                                <rect key="frame" x="144" y="518" width="22" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="seta_voltar.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" id="Vji-Dp-FpH"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" modalTransitionStyle="crossDissolve" id="Vji-Dp-FpH"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pressione uma vez para tocar ou parar a sua música" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="3AB-aM-xqa">
@@ -292,14 +302,34 @@
                                 <rect key="frame" x="20" y="510" width="280" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="15" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYV-s0-0s7">
+                                <rect key="frame" x="30" y="520" width="30" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="seta_menos.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="R4t-w8-dcI" kind="modal" modalTransitionStyle="crossDissolve" id="gK5-Ln-jtu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="15" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ug9-Qy-PYX">
+                                <rect key="frame" x="261" y="521" width="28" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="seta_mais.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="C5S-f6-QJP" kind="modal" modalTransitionStyle="crossDissolve" id="hl7-64-28E"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4PV-AR-mbl">
-                                <rect key="frame" x="149" y="518" width="22" height="21"/>
+                                <rect key="frame" x="144" y="518" width="22" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="seta_voltar.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" id="As9-6y-2kO"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" modalTransitionStyle="crossDissolve" id="As9-6y-2kO"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="caixa_titulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="1rE-OD-yR3">
@@ -345,6 +375,16 @@
                                 <rect key="frame" x="20" y="510" width="280" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="15" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qke-oP-1hw">
+                                <rect key="frame" x="30" y="520" width="30" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="seta_menos.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="YDg-bp-bzr" kind="modal" modalTransitionStyle="crossDissolve" id="ZDU-1N-xXI"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CiW-St-bZ7">
                                 <rect key="frame" x="144" y="518" width="22" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -352,7 +392,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" id="7Kw-Xf-Top"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" modalTransitionStyle="crossDissolve" id="7Kw-Xf-Top"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="caixa_titulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="TeL-Es-dCA">
@@ -398,6 +438,26 @@
                                 <rect key="frame" x="20" y="510" width="280" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="15" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4w-qw-pbM">
+                                <rect key="frame" x="30" y="520" width="30" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="seta_menos.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="CdX-vG-gxU" kind="modal" modalTransitionStyle="crossDissolve" id="uxo-al-qoK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="15" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAq-nT-Acz">
+                                <rect key="frame" x="261" y="521" width="28" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="seta_mais.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="YDg-bp-bzr" kind="modal" modalTransitionStyle="crossDissolve" id="l1U-I2-RgB"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhv-Mr-dJn">
                                 <rect key="frame" x="144" y="518" width="22" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -405,7 +465,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" id="O6z-SA-gLE"/>
+                                    <segue destination="vXZ-lx-hvc" kind="modal" modalTransitionStyle="crossDissolve" id="O6z-SA-gLE"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="caixa_titulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="i7m-No-Uqb">
@@ -451,18 +511,28 @@
                                 <rect key="frame" x="20" y="510" width="280" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="15" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NRA-VL-AyH">
+                                <rect key="frame" x="261" y="521" width="28" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="seta_mais.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ZwQ-fB-9qn" kind="modal" modalTransitionStyle="crossDissolve" id="3EK-m9-gwJ"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doubleTap.png" translatesAutoresizingMaskIntoConstraints="NO" id="5Ob-jj-LSR">
-                                <rect key="frame" x="53" y="142" width="190" height="190"/>
+                                <rect key="frame" x="60" y="142" width="190" height="190"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGj-CO-zWS">
-                                <rect key="frame" x="149" y="518" width="22" height="21"/>
+                                <rect key="frame" x="144" y="518" width="22" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="seta_voltar.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GtY-tX-fn3" kind="modal" id="iKI-wL-y4A"/>
+                                    <segue destination="GtY-tX-fn3" kind="modal" modalTransitionStyle="crossDissolve" id="iKI-wL-y4A"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pressione duas vezes para iniciar ou pausar o seu vídeo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="khe-84-56d">
@@ -505,14 +575,34 @@
                                 <rect key="frame" x="20" y="510" width="280" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="15" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L71-ro-am5">
+                                <rect key="frame" x="30" y="520" width="30" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="seta_menos.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="p2z-UW-5ai" kind="modal" modalTransitionStyle="crossDissolve" id="EBU-SW-Sgm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="15" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6m7-z3-hJD">
+                                <rect key="frame" x="261" y="521" width="28" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="seta_mais.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Pxh-oO-m6v" kind="modal" modalTransitionStyle="crossDissolve" id="aAN-rf-5MP"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjp-Gm-7Gm">
-                                <rect key="frame" x="149" y="518" width="22" height="21"/>
+                                <rect key="frame" x="144" y="518" width="22" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="seta_voltar.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GtY-tX-fn3" kind="modal" id="dRL-zA-zck"/>
+                                    <segue destination="GtY-tX-fn3" kind="modal" modalTransitionStyle="crossDissolve" id="dRL-zA-zck"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="caixa_titulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="BJ4-rH-yVG">
@@ -558,14 +648,24 @@
                                 <rect key="frame" x="20" y="510" width="280" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="15" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1h-Ww-ntm">
+                                <rect key="frame" x="30" y="520" width="30" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="seta_menos.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UJu-Si-QT1" kind="modal" modalTransitionStyle="crossDissolve" id="tJd-NJ-ciG"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v7v-V2-Lty">
-                                <rect key="frame" x="149" y="518" width="22" height="21"/>
+                                <rect key="frame" x="144" y="518" width="22" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="seta_voltar.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GtY-tX-fn3" kind="modal" id="pz6-6J-v04"/>
+                                    <segue destination="GtY-tX-fn3" kind="modal" modalTransitionStyle="crossDissolve" id="pz6-6J-v04"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="caixa_titulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="RwF-Aw-aQX">
@@ -611,14 +711,34 @@
                                 <rect key="frame" x="20" y="510" width="280" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="15" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zh9-Vi-Y8s">
+                                <rect key="frame" x="30" y="520" width="30" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="seta_menos.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ZwQ-fB-9qn" kind="modal" modalTransitionStyle="crossDissolve" id="CRr-r5-lAT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="15" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sV2-Iu-E6S">
+                                <rect key="frame" x="261" y="521" width="28" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="seta_mais.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UJu-Si-QT1" kind="modal" modalTransitionStyle="crossDissolve" id="4eO-dG-6jf"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GrQ-sw-0z8">
-                                <rect key="frame" x="149" y="518" width="22" height="21"/>
+                                <rect key="frame" x="144" y="518" width="22" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="seta_voltar.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GtY-tX-fn3" kind="modal" id="UeJ-zh-aZw"/>
+                                    <segue destination="GtY-tX-fn3" kind="modal" modalTransitionStyle="crossDissolve" id="UeJ-zh-aZw"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="caixa_titulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="mcc-zD-QtC">
@@ -665,13 +785,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MrU-lT-LOR">
-                                <rect key="frame" x="149" y="518" width="22" height="21"/>
+                                <rect key="frame" x="144" y="518" width="22" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="seta_voltar.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GtY-tX-fn3" kind="modal" id="4Ii-JI-jaA"/>
+                                    <segue destination="GtY-tX-fn3" kind="modal" modalTransitionStyle="crossDissolve" id="4Ii-JI-jaA"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="caixa_titulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="VyN-lK-p8c">
@@ -689,6 +809,26 @@
                                 <rect key="frame" x="60" y="145" width="190" height="190"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="15" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfS-ze-rXL">
+                                <rect key="frame" x="29" y="521" width="30" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="seta_menos.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="nYx-ci-3ln" kind="modal" modalTransitionStyle="crossDissolve" id="K3k-Kk-1bx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="30" placeholderIntrinsicHeight="15" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Oy-dt-F7w">
+                                <rect key="frame" x="260" y="522" width="28" height="14"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="seta_mais.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="p2z-UW-5ai" kind="modal" modalTransitionStyle="crossDissolve" id="3NW-AI-iF2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -700,14 +840,73 @@
     </scenes>
     <resources>
         <image name="botao.png" width="90" height="90"/>
+        <image name="botao.png" width="90" height="90"/>
+        <image name="botao.png" width="90" height="90"/>
+        <image name="botao.png" width="90" height="90"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
         <image name="caixa_btns.png" width="550" height="173"/>
         <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="circleGesure.png" width="120" height="155"/>
+        <image name="circleGesure.png" width="120" height="155"/>
+        <image name="circleGesure.png" width="120" height="155"/>
         <image name="circleGesure.png" width="120" height="155"/>
         <image name="doubleTap.png" width="120" height="155"/>
         <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
         <image name="longGesture.png" width="120" height="155"/>
+        <image name="seta_mais.png" width="89" height="47"/>
+        <image name="seta_mais.png" width="89" height="47"/>
+        <image name="seta_mais.png" width="89" height="47"/>
+        <image name="seta_mais.png" width="89" height="47"/>
+        <image name="seta_mais.png" width="89" height="47"/>
+        <image name="seta_mais.png" width="89" height="47"/>
+        <image name="seta_mais.png" width="89" height="47"/>
+        <image name="seta_menos.png" width="89" height="47"/>
+        <image name="seta_menos.png" width="89" height="47"/>
+        <image name="seta_menos.png" width="89" height="47"/>
+        <image name="seta_menos.png" width="89" height="47"/>
+        <image name="seta_menos.png" width="89" height="47"/>
+        <image name="seta_menos.png" width="89" height="47"/>
+        <image name="seta_menos.png" width="89" height="47"/>
+        <image name="seta_voltar.png" width="89" height="71"/>
+        <image name="seta_voltar.png" width="89" height="71"/>
+        <image name="seta_voltar.png" width="89" height="71"/>
+        <image name="seta_voltar.png" width="89" height="71"/>
+        <image name="seta_voltar.png" width="89" height="71"/>
+        <image name="seta_voltar.png" width="89" height="71"/>
+        <image name="seta_voltar.png" width="89" height="71"/>
+        <image name="seta_voltar.png" width="89" height="71"/>
         <image name="seta_voltar.png" width="89" height="71"/>
         <image name="singleTap.png" width="120" height="155"/>
+        <image name="squareGesure.png" width="120" height="155"/>
         <image name="squareGesure.png" width="120" height="155"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -716,7 +915,14 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="ZDU-1N-xXI"/>
+        <segue reference="7Kw-Xf-Top"/>
+        <segue reference="gK5-Ln-jtu"/>
+        <segue reference="uxo-al-qoK"/>
+        <segue reference="K3k-Kk-1bx"/>
+        <segue reference="3EK-m9-gwJ"/>
+        <segue reference="3NW-AI-iF2"/>
+        <segue reference="4eO-dG-6jf"/>
         <segue reference="iKI-wL-y4A"/>
-        <segue reference="Vji-Dp-FpH"/>
     </inferredMetricsTieBreakers>
 </document>
