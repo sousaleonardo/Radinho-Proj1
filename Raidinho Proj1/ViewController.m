@@ -28,17 +28,12 @@
     
     GestoEmL *gestoL=[[GestoEmL alloc]initWithTarget:self action:@selector(testeGesto)];
     
-    Player *play = [[Player alloc]init];
     
-    [play playVideo:self.view];
+    self.play = [[Player alloc]init];
     
-   // self.player = [play player];
-    
-   
-    //[self.view addGestureRecognizer:gestoL];
+    [self.play playVideo:self.view];
+
 }
-
-
 
 -(void)testeGesto{
     NSLog(@"Reconheceu gesto");

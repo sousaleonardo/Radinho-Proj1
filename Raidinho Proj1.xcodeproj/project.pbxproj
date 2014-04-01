@@ -12,6 +12,7 @@
 		752BF56B18E9F4010055E450 /* Narwhals.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 752BF56518E9F4010055E450 /* Narwhals.MP4 */; };
 		752BF56C18E9F4010055E450 /* TartarugasNinja.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 752BF56618E9F4010055E450 /* TartarugasNinja.MP4 */; };
 		752BF56D18E9F4010055E450 /* Videos.txt in Resources */ = {isa = PBXBuildFile; fileRef = 752BF56718E9F4010055E450 /* Videos.txt */; };
+		752F81C918EB2F9F003AA465 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752F81C818EB2F9F003AA465 /* MediaPlayer.framework */; };
 		7557EAF618E34A8000EFC208 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = 7557EAF518E34A8000EFC208 /* Video.m */; };
 		7557EAF918E34F4E00EFC208 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 7557EAF818E34F4E00EFC208 /* Player.m */; };
 		7557EAFB18E34FA600EFC208 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7557EAFA18E34FA600EFC208 /* AVFoundation.framework */; };
@@ -63,6 +64,7 @@
 		752BF56518E9F4010055E450 /* Narwhals.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Narwhals.MP4; sourceTree = "<group>"; };
 		752BF56618E9F4010055E450 /* TartarugasNinja.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TartarugasNinja.MP4; sourceTree = "<group>"; };
 		752BF56718E9F4010055E450 /* Videos.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Videos.txt; sourceTree = "<group>"; };
+		752F81C818EB2F9F003AA465 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		7557EAF418E34A8000EFC208 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
 		7557EAF518E34A8000EFC208 /* Video.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
 		7557EAF718E34F4E00EFC208 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				752F81C918EB2F9F003AA465 /* MediaPlayer.framework in Frameworks */,
 				7557EAFB18E34FA600EFC208 /* AVFoundation.framework in Frameworks */,
 				9457213A18E345F3004F5496 /* CoreGraphics.framework in Frameworks */,
 				9457213C18E345F3004F5496 /* UIKit.framework in Frameworks */,
@@ -166,6 +169,7 @@
 		9457213618E345F3004F5496 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				752F81C818EB2F9F003AA465 /* MediaPlayer.framework */,
 				7557EAFA18E34FA600EFC208 /* AVFoundation.framework */,
 				9457213718E345F3004F5496 /* Foundation.framework */,
 				9457213918E345F3004F5496 /* CoreGraphics.framework */,

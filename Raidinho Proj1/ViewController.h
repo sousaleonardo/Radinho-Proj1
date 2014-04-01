@@ -11,11 +11,14 @@
 #import "GestoEmL.h"
 #import "Player.h"
 #import <AVFoundation/AVFoundation.h>
+#import "Video.h"
 
 @interface ViewController : UIViewController
 
 
 @property AVPlayer *player;
 @property (strong, nonatomic) IBOutlet UIView *viewDoVideo;
+@property MPMoviePlayerController* playerDeVideo;
+@property Player *play;
 
 @end

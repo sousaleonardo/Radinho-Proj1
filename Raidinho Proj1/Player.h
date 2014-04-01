@@ -19,6 +19,7 @@
 }
 @property AVPlayerItem *radio;
 @property AVPlayer *player;
+@property MPMoviePlayerController* playerDeVideo;
 @property NSMutableArray *estacoes;
 @property NSMutableArray *videos;
 

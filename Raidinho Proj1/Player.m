@@ -26,6 +26,7 @@
         self->videoAtual = 0;
         self->estacaoAtual = 0;
         self.player =[[AVPlayer alloc]init];
+        self.playerDeVideo = [[MPMoviePlayerController alloc]init];
     }
     
     return self;
@@ -101,23 +102,25 @@
 -(void)playVideo : (UIView*)view{
     
     Video *videoParaTocar =[self.videos objectAtIndex:self->videoAtual];
+   
+    MPMoviePlayerViewController *playerView = [[MPMoviePlayerViewController alloc] initWithContentURL: [NSURL fileURLWithPath:videoParaTocar.url]];
+   
+    self.playerDeVideo = playerView.moviePlayer;
+    self.playerDeVideo.scalingMode = MPMovieScalingModeAspectFit;
+    self.playerDeVideo.fullscreen = YES;
+    self.playerDeVideo.repeatMode = NO;
+    self.playerDeVideo.controlStyle = MPMovieControlStyleNone;
     
-    MPMoviePlayerController *player = [[MPMoviePlayerController alloc]initWithContentURL:[NSURL fileURLWithPath:videoParaTocar.url]];
-    player.repeatMode = NO;
-    player.controlStyle = MPMovieControlStyleNone;
-    [player play];
-    
-    [view addSubview:player.view];
-
+    [view addSubview:playerView.view];
 }
 -(void)pausarVideo{
-    [self.player pause];
+    [self.playerDeVideo pause];
 }
 -(void)pararVideo{
     
-    [self.layerDoVideo removeFromSuperlayer];
-    [self.player pause];
-    [self.player seekToTime:kCMTimeZero];
+    [self.playerDeVideo stop];
+    [self.playerDeVideo.view removeFromSuperview];
+    
 }
 -(void)trocarEstacao : (NSString*)fluxo{
     
