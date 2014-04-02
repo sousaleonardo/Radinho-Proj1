@@ -102,31 +102,44 @@
 -(void)playVideo : (UIView*)view{
     
     Video *videoParaTocar =[self.videos objectAtIndex:self->videoAtual];
-    self.playerDeVideo = [[MPMoviePlayerController alloc]init];
-    MPMoviePlayerViewController *playerView = [[MPMoviePlayerViewController alloc] initWithContentURL: [NSURL fileURLWithPath:videoParaTocar.url]];
+    if (self.playerView == nil) {
+        
+    
+    self.playerView = [[MPMoviePlayerViewController alloc] initWithContentURL: [NSURL fileURLWithPath:videoParaTocar.url]];
    
-    self.playerDeVideo = playerView.moviePlayer;
-    self.playerDeVideo.scalingMode = MPMovieScalingModeAspectFit;
-    self.playerDeVideo.fullscreen = YES;
-    self.playerDeVideo.repeatMode = NO;
-    self.playerDeVideo.controlStyle = MPMovieControlStyleNone;
     
+    self.playerView.moviePlayer.scalingMode = MPMovieScalingModeAspectFit;
+    self.playerView.moviePlayer.fullscreen = YES;
+    self.playerView.moviePlayer.repeatMode = NO;
+    self.playerView.moviePlayer.controlStyle = MPMovieControlStyleNone;
+    }
+    else
+    {
+        self.playerView.moviePlayer.contentURL = [NSURL fileURLWithPath:videoParaTocar.url];
+        self.playerView.moviePlayer.scalingMode = MPMovieScalingModeAspectFit;
+        self.playerView.moviePlayer.fullscreen = YES;
+        self.playerView.moviePlayer.repeatMode = NO;
+        self.playerView.moviePlayer.controlStyle = MPMovieControlStyleNone;
+        [self.playerView.moviePlayer play];
+    }
     
-    [view addSubview:playerView.view];
+    [view addSubview:self.playerView.view];
 }
 -(void)pausarVideo{
     
-    if ([self.playerDeVideo playbackState]  == MPMoviePlaybackStatePlaying) {
-        [self.playerDeVideo pause];
+    if ([self.playerView.moviePlayer  playbackState]  == MPMoviePlaybackStatePlaying) {
+        [self.playerView.moviePlayer  pause];
     }
     else
-        [self.playerDeVideo play];
+        [self.playerView.moviePlayer  play];
 }
 -(void)pararVideo{
     
-    [self.playerDeVideo stop];
-    [self.playerDeVideo.view removeFromSuperview];
-    self.playerDeVideo = nil;
+    [self.playerView.moviePlayer  stop];
+    
+    [self.playerView.view removeFromSuperview];
+    [self.playerView.moviePlayer.view removeFromSuperview];
+    self.playerView = nil;
     
     
 }

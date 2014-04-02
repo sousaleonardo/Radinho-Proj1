@@ -41,15 +41,16 @@
     if (CGPointEqualToPoint(lugarDoToque, lugarDoBotao) ) {
         return;
     }
-    if ([toque tapCount] < 2) {
-        if (self.play.playerDeVideo != nil) {
+    if ([toque tapCount] > 1) {
+        [self.play pararVideo];
+        
+        
+    }
+    else if ([self.play.playerView.moviePlayer  playbackState]  != MPMoviePlaybackStateStopped) {
             [self.play pausarVideo];
         }
         else
-        [self.play playVideo:self.view];
-    }
-    else
-        [self.play pararVideo];
+            [self.play playVideo:self.view];
     
 }
 
