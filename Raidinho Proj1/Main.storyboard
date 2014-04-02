@@ -50,7 +50,7 @@
                                 <rect key="frame" x="20" y="20" width="280" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo" translatesAutoresizingMaskIntoConstraints="NO" id="RSw-DR-kfU">
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="RSw-DR-kfU">
                                 <rect key="frame" x="40" y="35" width="215" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -257,8 +257,8 @@
                                     <constraint firstAttribute="centerY" secondItem="rb9-at-cQW" secondAttribute="centerY" id="zFP-8F-Jni"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo" translatesAutoresizingMaskIntoConstraints="NO" id="SQp-XN-SSJ">
-                                <rect key="frame" x="40" y="35" width="215" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="SQp-XN-SSJ">
+                                <rect key="frame" x="39" y="35" width="215" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="215" id="0HK-Gl-QrL"/>
@@ -282,7 +282,7 @@
                             <constraint firstItem="pwE-FM-oxV" firstAttribute="leading" secondItem="sY5-sV-5dY" secondAttribute="leading" constant="20" id="WJY-mn-Edf"/>
                             <constraint firstItem="G3z-4J-wVc" firstAttribute="leading" secondItem="CjJ-uI-rIC" secondAttribute="trailing" constant="8" id="Zzw-Si-ZHN"/>
                             <constraint firstItem="pwE-FM-oxV" firstAttribute="top" secondItem="X2d-wf-QZf" secondAttribute="bottom" id="b7F-K6-HUa"/>
-                            <constraint firstItem="SQp-XN-SSJ" firstAttribute="leading" secondItem="sY5-sV-5dY" secondAttribute="leading" constant="40" id="bCx-Wd-XXJ"/>
+                            <constraint firstItem="SQp-XN-SSJ" firstAttribute="leading" secondItem="sY5-sV-5dY" secondAttribute="leading" constant="39" id="bCx-Wd-XXJ"/>
                             <constraint firstAttribute="trailing" secondItem="8TI-xK-omh" secondAttribute="trailing" constant="20" id="eMe-uh-ZkC"/>
                             <constraint firstItem="kyP-BS-BRJ" firstAttribute="top" secondItem="8TI-xK-omh" secondAttribute="bottom" constant="8" id="fdX-sX-RHc"/>
                             <constraint firstItem="q5Q-cQ-NrH" firstAttribute="top" secondItem="kyP-BS-BRJ" secondAttribute="bottom" constant="20" id="jwb-58-DVU"/>
@@ -374,7 +374,7 @@
                                     <constraint firstAttribute="height" constant="50" id="7Gq-dn-SHS"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo" translatesAutoresizingMaskIntoConstraints="NO" id="cSg-aS-8aw">
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="cSg-aS-8aw">
                                 <rect key="frame" x="53" y="35" width="215" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -485,7 +485,7 @@
                                     <constraint firstAttribute="height" constant="50" id="6qF-kf-4Ss"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo" translatesAutoresizingMaskIntoConstraints="NO" id="2w8-k4-gCt">
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="2w8-k4-gCt">
                                 <rect key="frame" x="53" y="35" width="215" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -597,7 +597,7 @@
                                     <constraint firstAttribute="height" constant="50" id="19J-Mu-5rT"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo" translatesAutoresizingMaskIntoConstraints="NO" id="2Jy-wf-C8h">
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Jy-wf-C8h">
                                 <rect key="frame" x="53" y="35" width="215" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -721,7 +721,7 @@
                                     <constraint firstAttribute="height" constant="50" id="jOw-mx-Mjm"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo" translatesAutoresizingMaskIntoConstraints="NO" id="7Bd-0w-HMi">
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Bd-0w-HMi">
                                 <rect key="frame" x="53" y="35" width="215" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -847,7 +847,7 @@
                                     <constraint firstAttribute="height" constant="50" id="pMs-iv-0FR"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo" translatesAutoresizingMaskIntoConstraints="NO" id="S24-MX-glp">
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="S24-MX-glp">
                                 <rect key="frame" x="53" y="35" width="215" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -946,7 +946,7 @@
                                     <constraint firstAttribute="height" constant="50" id="muZ-0u-F5L"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo" translatesAutoresizingMaskIntoConstraints="NO" id="Fhh-U5-5Vh">
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Fhh-U5-5Vh">
                                 <rect key="frame" x="53" y="35" width="215" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -1070,7 +1070,7 @@
                                     <constraint firstAttribute="height" constant="50" id="BF2-Cw-0BA"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo" translatesAutoresizingMaskIntoConstraints="NO" id="Zbp-wf-f5b">
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Zbp-wf-f5b">
                                 <rect key="frame" x="53" y="35" width="215" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -1194,7 +1194,7 @@
                                     <constraint firstAttribute="height" constant="50" id="OTc-t5-T6B"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo" translatesAutoresizingMaskIntoConstraints="NO" id="Qne-8k-s3V">
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Qne-8k-s3V">
                                 <rect key="frame" x="53" y="35" width="215" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -1292,7 +1292,7 @@
                                     <constraint firstAttribute="height" constant="50" id="KOI-Qh-aPI"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo" translatesAutoresizingMaskIntoConstraints="NO" id="huz-5Z-za1">
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="huz-5Z-za1">
                                 <rect key="frame" x="53" y="35" width="215" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -1379,78 +1379,17 @@
     </scenes>
     <resources>
         <image name="botao.png" width="90" height="90"/>
-        <image name="botao.png" width="90" height="90"/>
-        <image name="botao.png" width="90" height="90"/>
-        <image name="botao.png" width="90" height="90"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
         <image name="caixa_btns.png" width="550" height="173"/>
         <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="circleGesure.png" width="120" height="155"/>
-        <image name="circleGesure.png" width="120" height="155"/>
-        <image name="circleGesure.png" width="120" height="155"/>
         <image name="circleGesure.png" width="120" height="155"/>
         <image name="doubleTap.png" width="120" height="155"/>
         <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="play.png" width="991" height="973"/>
         <image name="play.png" width="991" height="973"/>
         <image name="seta_mais.png" width="89" height="47"/>
-        <image name="seta_mais.png" width="89" height="47"/>
-        <image name="seta_mais.png" width="89" height="47"/>
-        <image name="seta_mais.png" width="89" height="47"/>
-        <image name="seta_mais.png" width="89" height="47"/>
-        <image name="seta_mais.png" width="89" height="47"/>
-        <image name="seta_mais.png" width="89" height="47"/>
-        <image name="seta_menos.png" width="89" height="47"/>
-        <image name="seta_menos.png" width="89" height="47"/>
-        <image name="seta_menos.png" width="89" height="47"/>
-        <image name="seta_menos.png" width="89" height="47"/>
-        <image name="seta_menos.png" width="89" height="47"/>
-        <image name="seta_menos.png" width="89" height="47"/>
         <image name="seta_menos.png" width="89" height="47"/>
         <image name="singleTap.png" width="120" height="155"/>
-        <image name="singleTap.png" width="120" height="155"/>
         <image name="squareGesure.png" width="120" height="155"/>
-        <image name="squareGesure.png" width="120" height="155"/>
-        <image name="titulo" width="958" height="113"/>
-        <image name="titulo" width="958" height="113"/>
-        <image name="titulo" width="958" height="113"/>
-        <image name="titulo" width="958" height="113"/>
-        <image name="titulo" width="958" height="113"/>
-        <image name="titulo" width="958" height="113"/>
-        <image name="titulo" width="958" height="113"/>
-        <image name="titulo" width="958" height="113"/>
-        <image name="titulo" width="958" height="113"/>
-        <image name="titulo" width="958" height="113"/>
-        <image name="titulo" width="958" height="113"/>
+        <image name="titulo.png" width="958" height="113"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -1458,10 +1397,10 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Shp-ky-10I"/>
+        <segue reference="gK5-Ln-jtu"/>
+        <segue reference="ZDU-1N-xXI"/>
+        <segue reference="JUE-9m-v1M"/>
         <segue reference="uxo-al-qoK"/>
-        <segue reference="SYY-yc-kc7"/>
-        <segue reference="l1U-I2-RgB"/>
         <segue reference="fyJ-7R-b1n"/>
         <segue reference="yp7-t2-a5N"/>
         <segue reference="3EK-m9-gwJ"/>
