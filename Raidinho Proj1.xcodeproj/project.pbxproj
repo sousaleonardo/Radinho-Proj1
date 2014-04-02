@@ -20,6 +20,7 @@
 		7557EAFB18E34FA600EFC208 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7557EAFA18E34FA600EFC208 /* AVFoundation.framework */; };
 		7557EAFD18E3695600EFC208 /* estacoes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7557EAFC18E3695600EFC208 /* estacoes.txt */; };
 		9436CE2A18EC8994007266C3 /* GestoCircular.m in Sources */ = {isa = PBXBuildFile; fileRef = 9436CE2918EC8994007266C3 /* GestoCircular.m */; };
+		9436CE2D18EC8AE9007266C3 /* RadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9436CE2C18EC8AE9007266C3 /* RadioViewController.m */; };
 		9457213818E345F3004F5496 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9457213718E345F3004F5496 /* Foundation.framework */; };
 		9457213A18E345F3004F5496 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9457213918E345F3004F5496 /* CoreGraphics.framework */; };
 		9457213C18E345F3004F5496 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9457213B18E345F3004F5496 /* UIKit.framework */; };
@@ -76,6 +77,8 @@
 		7557EAFC18E3695600EFC208 /* estacoes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = estacoes.txt; sourceTree = "<group>"; };
 		9436CE2818EC8994007266C3 /* GestoCircular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestoCircular.h; sourceTree = "<group>"; };
 		9436CE2918EC8994007266C3 /* GestoCircular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestoCircular.m; sourceTree = "<group>"; };
+		9436CE2B18EC8AE9007266C3 /* RadioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioViewController.h; sourceTree = "<group>"; };
+		9436CE2C18EC8AE9007266C3 /* RadioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioViewController.m; sourceTree = "<group>"; };
 		9457213418E345F3004F5496 /* Raidinho Proj1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Raidinho Proj1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9457213718E345F3004F5496 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9457213918E345F3004F5496 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -191,6 +194,8 @@
 				9457214618E345F3004F5496 /* AppDelegate.h */,
 				9457214718E345F3004F5496 /* AppDelegate.m */,
 				CDF485E918E61E18001A7F45 /* Main.storyboard */,
+				9436CE2B18EC8AE9007266C3 /* RadioViewController.h */,
+				9436CE2C18EC8AE9007266C3 /* RadioViewController.m */,
 				9457214C18E345F3004F5496 /* ViewController.h */,
 				9457214D18E345F3004F5496 /* ViewController.m */,
 				7557EAF418E34A8000EFC208 /* Video.h */,
@@ -380,6 +385,7 @@
 				9457214E18E345F3004F5496 /* ViewController.m in Sources */,
 				7557EAF618E34A8000EFC208 /* Video.m in Sources */,
 				9457214818E345F3004F5496 /* AppDelegate.m in Sources */,
+				9436CE2D18EC8AE9007266C3 /* RadioViewController.m in Sources */,
 				7557EAF918E34F4E00EFC208 /* Player.m in Sources */,
 				9457214418E345F3004F5496 /* main.m in Sources */,
 			);

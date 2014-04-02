@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Principal - Radio-->
+        <!--Radio View Controller - Principal - Radio-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController title="Principal - Radio" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="Principal - Radio" id="vXZ-lx-hvc" customClass="RadioViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LXJ-lE-ScF"/>
                         <viewControllerLayoutGuide type="bottom" id="Gy3-bi-juZ"/>
@@ -106,6 +106,8 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
+                        <outlet property="botaoEstacao" destination="TIQ-Av-LWe" id="slP-Il-sZs"/>
+                        <outlet property="botaoVolume" destination="tSN-ND-CJN" id="r3h-xR-Fff"/>
                         <outlet property="viewDoVideo" destination="qqT-Ya-kBX" id="foe-9N-plB"/>
                     </connections>
                 </viewController>
@@ -1203,14 +1205,64 @@
     </scenes>
     <resources>
         <image name="botao.png" width="90" height="90"/>
+        <image name="botao.png" width="90" height="90"/>
+        <image name="botao.png" width="90" height="90"/>
+        <image name="botao.png" width="90" height="90"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
         <image name="caixa_btns.png" width="550" height="173"/>
         <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="circleGesure.png" width="120" height="155"/>
+        <image name="circleGesure.png" width="120" height="155"/>
+        <image name="circleGesure.png" width="120" height="155"/>
         <image name="circleGesure.png" width="120" height="155"/>
         <image name="doubleTap.png" width="120" height="155"/>
         <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="seta_mais.png" width="89" height="47"/>
+        <image name="seta_mais.png" width="89" height="47"/>
+        <image name="seta_mais.png" width="89" height="47"/>
+        <image name="seta_mais.png" width="89" height="47"/>
+        <image name="seta_mais.png" width="89" height="47"/>
+        <image name="seta_mais.png" width="89" height="47"/>
         <image name="seta_mais.png" width="89" height="47"/>
         <image name="seta_menos.png" width="89" height="47"/>
+        <image name="seta_menos.png" width="89" height="47"/>
+        <image name="seta_menos.png" width="89" height="47"/>
+        <image name="seta_menos.png" width="89" height="47"/>
+        <image name="seta_menos.png" width="89" height="47"/>
+        <image name="seta_menos.png" width="89" height="47"/>
+        <image name="seta_menos.png" width="89" height="47"/>
         <image name="singleTap.png" width="120" height="155"/>
+        <image name="singleTap.png" width="120" height="155"/>
+        <image name="squareGesure.png" width="120" height="155"/>
         <image name="squareGesure.png" width="120" height="155"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -1219,14 +1271,14 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="EBU-SW-Sgm"/>
         <segue reference="tJd-NJ-ciG"/>
         <segue reference="CUu-G5-OC1"/>
-        <segue reference="EBU-SW-Sgm"/>
         <segue reference="CRr-r5-lAT"/>
         <segue reference="K3k-Kk-1bx"/>
-        <segue reference="ZDU-1N-xXI"/>
         <segue reference="Shp-ky-10I"/>
-        <segue reference="uxo-al-qoK"/>
+        <segue reference="Rdf-Dn-NGx"/>
         <segue reference="SYY-yc-kc7"/>
+        <segue reference="ZDU-1N-xXI"/>
     </inferredMetricsTieBreakers>
 </document>

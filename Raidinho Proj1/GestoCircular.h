@@ -41,7 +41,7 @@
                 foraRaio: (CGFloat) _foraRaio
                   target: (id <GestocircularDelegate>)_target
         selManipulaArray: (SEL) _selManipulaArray
-        selPlay: (SEL) _selPlay;
+                 selPlay: (SEL) _selPlay;
 
 @end
 
