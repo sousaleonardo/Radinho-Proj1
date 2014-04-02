@@ -29,7 +29,7 @@
 @property AVPlayerLayer *layerDoVideo;
 
 -(id)init;
--(void)playEstacao;
+-(AVPlayer*)playEstacao;
 -(void)playVideo : (UIView*)view;
 -(void)trocarEstacao : (NSString*)fluxo;
 -(void)trocarVideo : (NSString*)fluxo;

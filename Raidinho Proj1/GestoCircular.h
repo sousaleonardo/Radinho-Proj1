@@ -14,8 +14,8 @@
 -(void)anguloFinal :(CGFloat)angulo;
 
 //Controles de volume e estacao
--(void)alterarVolume:(int)valor;
--(void)alterarEstacao:(int)valor;
+-(void)alterarVolume:(NSInteger*)valor;
+-(void)manipulaArray:(NSInteger*)valor;
 -(void)playVideo;
 -(void)playEstacao;
 

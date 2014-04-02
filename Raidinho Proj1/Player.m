@@ -87,7 +87,7 @@
     }
 }
 
--(void)playEstacao{
+-(AVPlayer*)playEstacao{
     Estacao *estacaoParaTocar = [self.estacoes objectAtIndex:self->estacaoAtual];
    
     NSURL *url = [NSURL URLWithString:estacaoParaTocar.streaming];
@@ -98,6 +98,8 @@
     
     [self.player setVolume:5.0];
     [self.player play];
+    
+    return self.player;
     
 }
 -(void)playVideo : (UIView*)view{
@@ -147,11 +149,17 @@
     if ([fluxo isEqual:@"aumentar"] ) {
         self->estacaoAtual++;
     }
-    else if (self->estacaoAtual < self.estacoes.count){
-        self->estacaoAtual = 0;
-    }
-    else
+    
+    if ([fluxo isEqualToString:@"abaixar"]) {
         self->estacaoAtual--;
+    }
+    
+    if (self->estacaoAtual > self.estacoes.count){
+        self->estacaoAtual = 0;
+    
+    }else if(self->estacaoAtual < 0 ){
+        self->estacaoAtual=self.estacoes.count-1;
+    }
     
     self.nomeDaRadioAtual = [[NSString alloc]initWithFormat:@"%.2f",[self.estacoes[self->estacaoAtual] nEstacao] ];
     

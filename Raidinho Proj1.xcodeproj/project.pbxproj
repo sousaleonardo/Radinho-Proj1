@@ -21,6 +21,8 @@
 		7557EAFD18E3695600EFC208 /* estacoes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7557EAFC18E3695600EFC208 /* estacoes.txt */; };
 		9436CE2A18EC8994007266C3 /* GestoCircular.m in Sources */ = {isa = PBXBuildFile; fileRef = 9436CE2918EC8994007266C3 /* GestoCircular.m */; };
 		9436CE2D18EC8AE9007266C3 /* RadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9436CE2C18EC8AE9007266C3 /* RadioViewController.m */; };
+		9436CE3118EC969C007266C3 /* chiado.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9436CE2F18EC969C007266C3 /* chiado.mp3 */; };
+		9436CE3218EC969C007266C3 /* procurando.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9436CE3018EC969C007266C3 /* procurando.mp3 */; };
 		9457213818E345F3004F5496 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9457213718E345F3004F5496 /* Foundation.framework */; };
 		9457213A18E345F3004F5496 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9457213918E345F3004F5496 /* CoreGraphics.framework */; };
 		9457213C18E345F3004F5496 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9457213B18E345F3004F5496 /* UIKit.framework */; };
@@ -82,6 +84,8 @@
 		9436CE2918EC8994007266C3 /* GestoCircular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestoCircular.m; sourceTree = "<group>"; };
 		9436CE2B18EC8AE9007266C3 /* RadioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioViewController.h; sourceTree = "<group>"; };
 		9436CE2C18EC8AE9007266C3 /* RadioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioViewController.m; sourceTree = "<group>"; };
+		9436CE2F18EC969C007266C3 /* chiado.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chiado.mp3; sourceTree = "<group>"; };
+		9436CE3018EC969C007266C3 /* procurando.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = procurando.mp3; sourceTree = "<group>"; };
 		9457213418E345F3004F5496 /* Raidinho Proj1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Raidinho Proj1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9457213718E345F3004F5496 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9457213918E345F3004F5496 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -159,6 +163,15 @@
 			path = Videos;
 			sourceTree = "<group>";
 		};
+		9436CE2E18EC969C007266C3 /* Sons */ = {
+			isa = PBXGroup;
+			children = (
+				9436CE2F18EC969C007266C3 /* chiado.mp3 */,
+				9436CE3018EC969C007266C3 /* procurando.mp3 */,
+			);
+			path = Sons;
+			sourceTree = "<group>";
+		};
 		9457212B18E345F3004F5496 = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +234,7 @@
 		9457213E18E345F3004F5496 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9436CE2E18EC969C007266C3 /* Sons */,
 				752BF56118E9F4010055E450 /* Videos */,
 				CD75102118E377DB009DC1BA /* imagens */,
 				9457213F18E345F3004F5496 /* Raidinho Proj1-Info.plist */,
@@ -350,6 +364,7 @@
 			files = (
 				CD2486DB18EC9FC5004BF507 /* titulo in Resources */,
 				CD73031A18EA07B1002C659F /* singleTap.png in Resources */,
+				9436CE3218EC969C007266C3 /* procurando.mp3 in Resources */,
 				CD73031718EA07B1002C659F /* doubleTap.png in Resources */,
 				CDF485E518E61D53001A7F45 /* fundo.png in Resources */,
 				CDF485E418E61D53001A7F45 /* caixa_titulo.png in Resources */,
@@ -373,6 +388,7 @@
 				752BF56B18E9F4010055E450 /* Narwhals.MP4 in Resources */,
 				7557EAFD18E3695600EFC208 /* estacoes.txt in Resources */,
 				9457214218E345F3004F5496 /* InfoPlist.strings in Resources */,
+				9436CE3118EC969C007266C3 /* chiado.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

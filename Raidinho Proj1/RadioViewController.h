@@ -7,11 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GestoCircular.h"
+#import "Player.h"
+#import <AVFoundation/AVFoundation.h>
 
-@interface RadioViewController : UIViewController
+@interface RadioViewController : UIViewController <GestocircularDelegate>
+{
+    int posicaoAtual;
+}
 
 @property (weak, nonatomic) IBOutlet UIImageView *botaoEstacao;
-
 @property (weak, nonatomic) IBOutlet UIImageView *botaoVolume;
+
+@property Player *playerRadio;
+@property AVPlayer *radioSom;
+@property AVPlayer *somSintonizando;
+
+@property GestoCircular *gestoSintonia;
+@property GestoCircular *gestoVolume;
+
+-(void)setGestoReconizer:(UIImageView*)botao :(GestoCircular*)gesto :(SEL)seletor1 :(SEL)seletor2;
 
 @end
