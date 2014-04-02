@@ -10,7 +10,7 @@
 
 @protocol GestocircularDelegate <NSObject>
 @optional
--(void)rotacao: (CGFloat)angulo;
+-(void)rotacao: (CGFloat)angulo :(NSNumber*)tagBotao;
 -(void)anguloFinal :(CGFloat)angulo;
 
 //Controles de volume e estacao
@@ -34,6 +34,8 @@
     SEL selPlay;
     SEL selManipularArray;
     
+    NSNumber *tagBotao;
+    
 }
 
 -(id) initWithPontoMedio: (CGPoint) _pontoMedio
@@ -41,7 +43,8 @@
                 foraRaio: (CGFloat) _foraRaio
                   target: (id <GestocircularDelegate>)_target
         selManipulaArray: (SEL) _selManipulaArray
-                 selPlay: (SEL) _selPlay;
+                 selPlay: (SEL) _selPlay
+                tagBotao:(int)_tagBotao;
 
 @end
 

@@ -19,12 +19,12 @@
     [super viewDidLoad];
     //GestoEmL *gestoL=[[GestoEmL alloc]initWithTarget:self action:@selector(testeGesto)];
     UITapGestureRecognizer *tapPlay = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(playVideo:)];
-     self.play = [[Player alloc]init];
+    
     [self.viewDoVideo addGestureRecognizer:tapPlay];
     
-    [self.tituloDoVideo setText:self.play.nomeDoVideo];
+    [self.tituloDoVideo setText:self.player.nomeDoVideo];
     [self.tituloDoVideo setTextAlignment:NSTextAlignmentCenter];
-    //[self.tituloDoVideo intrinsicContentSize];
+    
     
 }
 
@@ -32,21 +32,19 @@
     UITouch *toque=[touches anyObject];
     
     if ([toque tapCount] > 1) {
-        [self.play pararVideo];
+        [self.player pararVideo];
     }
-    if ([self.play.playerView.moviePlayer  playbackState]  != MPMoviePlaybackStateStopped) {
-        [self.play pausarVideo];
+    if ([self.player.playerView.moviePlayer  playbackState]  != MPMoviePlaybackStateStopped) {
+        [self.player pausarVideo];
     }
 }
 -(IBAction)playVideo:(UITapGestureRecognizer*)tap{
-    [self.play playVideo:self.view];
-    [self.play trocarVideo:@"aumentar"];
-    [self.tituloDoVideo setText:self.play.nomeDoVideo];
+    [self.player playVideo:self.view];
+    [self.player trocarVideo:@"aumentar"];
+    [self.tituloDoVideo setText:self.player.nomeDoVideo];
     //[self.tituloDoVideo intrinsicContentSize];
 }
--(void)testeGesto{
-    NSLog(@"Reconheceu gesto");
-}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

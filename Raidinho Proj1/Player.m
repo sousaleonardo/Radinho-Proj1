@@ -19,14 +19,17 @@
         self.estacoes =[[NSMutableArray alloc]init];
         self.videos =[[NSMutableArray alloc]init];
         
-        NSString* path = [[NSBundle mainBundle] pathForResource:@"Videos"
+        NSString* caminhoDosVideos = [[NSBundle mainBundle] pathForResource:@"Videos"
+                                                         ofType:@"txt"];
+        NSString* caminhoDasEstacoes = [[NSBundle mainBundle] pathForResource:@"estacoes"
                                                          ofType:@"txt"];
         
-        [self inicializaVideo:path];
+        [self inicializaVideo:caminhoDosVideos];
+        [self inicializaEstacoes:caminhoDasEstacoes];
         self->videoAtual = 0;
         self->estacaoAtual = 0;
         self.player =[[AVPlayer alloc]init];
-        //self.nomeDaRadioAtual = [[NSString alloc]initWithFormat:@"%.2f",[self.estacoes[self->estacaoAtual] nEstacao] ];
+        self.nomeDaRadioAtual = [[NSString alloc]initWithFormat:@"%.2f",[self.estacoes[self->estacaoAtual] nEstacao] ];
         self.nomeDoVideo = [[NSString alloc]initWithString:[self.videos[self->videoAtual]nome]];
     }
     

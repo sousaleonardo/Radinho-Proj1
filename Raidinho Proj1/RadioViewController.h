@@ -11,15 +11,18 @@
 #import "Player.h"
 #import <AVFoundation/AVFoundation.h>
 
+
 @interface RadioViewController : UIViewController <GestocircularDelegate>
 {
     int posicaoAtual;
+    CGFloat anguloBotaoVolume;
+    CGFloat anguloBotaoSintonia;
 }
 
 @property (weak, nonatomic) IBOutlet UIImageView *botaoEstacao;
 @property (weak, nonatomic) IBOutlet UIImageView *botaoVolume;
 
-@property Player *playerRadio;
+@property Player *player;
 @property AVPlayer *radioSom;
 @property AVPlayer *somSintonizando;
 

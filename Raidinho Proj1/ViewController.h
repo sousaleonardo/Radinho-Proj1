@@ -11,15 +11,16 @@
 #import "GestoEmL.h"
 #import "Player.h"
 #import <AVFoundation/AVFoundation.h>
+#import "RadioViewController.h"
 
 
-@interface ViewController : UIViewController
+@interface ViewController : RadioViewController
 
 
-@property AVPlayer *player;
+
 @property (strong, nonatomic) IBOutlet UIView *viewDoVideo;
 @property (strong, nonatomic) IBOutlet UITextView *tituloDoVideo;
 @property MPMoviePlayerController* playerDeVideo;
-@property Player *play;
+
 
 @end

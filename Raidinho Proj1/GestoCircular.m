@@ -22,7 +22,9 @@
                 foraRaio: (CGFloat) _foraRaio
                   target: (id <GestocircularDelegate>)_target
         selManipulaArray: (SEL) _selManipulaArray
-                 selPlay: (SEL) _selPlay{
+                 selPlay: (SEL) _selPlay
+                tagBotao:(int)_tagBotao{
+
     
     if ((self=[super initWithTarget:_target action:Nil])) {
         self-> pontoMedio = _pontoMedio;
@@ -31,6 +33,7 @@
         self-> target = _target;
         self->selManipularArray=_selManipulaArray;
         self->selPlay=_selPlay;
+        self->tagBotao=[NSNumber numberWithInt:tagBotao];
     }
     
     return self;
@@ -94,7 +97,8 @@
         
         //Chama o delegate
         if ([self->target respondsToSelector:@selector(rotacao:)]) {
-            [self->target rotacao:angulo];
+            //[self->target rotacao:angulo];
+            [self->target rotacao:angulo :self->tagBotao ];
         }
         
         NSNumber *anguloConvertido=[[NSNumber alloc]initWithFloat:angulo];
