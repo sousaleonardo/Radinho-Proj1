@@ -19,6 +19,7 @@
 @property AVPlayer *player;
 @property (strong, nonatomic) IBOutlet UIButton *botaoDeAjuda;
 @property (strong, nonatomic) IBOutlet UIView *viewDoVideo;
+@property (strong, nonatomic) IBOutlet UITextView *tituloDoVideo;
 @property MPMoviePlayerController* playerDeVideo;
 @property Player *play;
 

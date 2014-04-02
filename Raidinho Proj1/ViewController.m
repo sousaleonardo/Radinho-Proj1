@@ -17,47 +17,33 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    
-    //[self.view setBackgroundColor:[UIColor purpleColor]];
-    
-    Estacao *estacao=[[Estacao alloc]init:@"www.faceboook.com.br" :89.1];
-    
-    NSLog(@"%f",[estacao nEstacao]);
-    NSLog(@"%@",[estacao streaming]);
-    
     //GestoEmL *gestoL=[[GestoEmL alloc]initWithTarget:self action:@selector(testeGesto)];
-  
+    UITapGestureRecognizer *tapPlay = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(playVideo:)];
+     self.play = [[Player alloc]init];
+    [self.viewDoVideo addGestureRecognizer:tapPlay];
     
+    [self.tituloDoVideo setText:self.play.nomeDoVideo];
+    [self.tituloDoVideo setTextAlignment:NSTextAlignmentCenter];
+    //[self.tituloDoVideo intrinsicContentSize];
     
-    
-    self.play = [[Player alloc]init];
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     UITouch *toque=[touches anyObject];
-    CGPoint lugarDoToque = [toque locationInView:self.view];
-    CGPoint lugarDoBotao = self.botaoDeAjuda.frame.origin;
-    if (CGPointEqualToPoint(lugarDoToque, lugarDoBotao) ) {
-        return;
-    }
+    
     if ([toque tapCount] > 1) {
         [self.play pararVideo];
-        
-        
     }
-    else if ([self.play.playerView.moviePlayer  playbackState]  != MPMoviePlaybackStateStopped) {
-            [self.play pausarVideo];
-        }
-        else
-            [self.play playVideo:self.view];
-    
+    if ([self.play.playerView.moviePlayer  playbackState]  != MPMoviePlaybackStateStopped) {
+        [self.play pausarVideo];
+    }
 }
-
-                                                  
-                                                  
-                                                  
-
+-(IBAction)playVideo:(UITapGestureRecognizer*)tap{
+    [self.play playVideo:self.view];
+    [self.play trocarVideo:@"aumentar"];
+    [self.tituloDoVideo setText:self.play.nomeDoVideo];
+    //[self.tituloDoVideo intrinsicContentSize];
+}
 -(void)testeGesto{
     NSLog(@"Reconheceu gesto");
 }

@@ -26,7 +26,8 @@
         self->videoAtual = 0;
         self->estacaoAtual = 0;
         self.player =[[AVPlayer alloc]init];
-        
+        //self.nomeDaRadioAtual = [[NSString alloc]initWithFormat:@"%.2f",[self.estacoes[self->estacaoAtual] nEstacao] ];
+        self.nomeDoVideo = [[NSString alloc]initWithString:[self.videos[self->videoAtual]nome]];
     }
     
     return self;
@@ -108,7 +109,7 @@
     self.playerView = [[MPMoviePlayerViewController alloc] initWithContentURL: [NSURL fileURLWithPath:videoParaTocar.url]];
    
     
-    self.playerView.moviePlayer.scalingMode = MPMovieScalingModeAspectFit;
+    
     self.playerView.moviePlayer.fullscreen = YES;
     self.playerView.moviePlayer.repeatMode = NO;
     self.playerView.moviePlayer.controlStyle = MPMovieControlStyleNone;
@@ -116,7 +117,6 @@
     else
     {
         self.playerView.moviePlayer.contentURL = [NSURL fileURLWithPath:videoParaTocar.url];
-        self.playerView.moviePlayer.scalingMode = MPMovieScalingModeAspectFit;
         self.playerView.moviePlayer.fullscreen = YES;
         self.playerView.moviePlayer.repeatMode = NO;
         self.playerView.moviePlayer.controlStyle = MPMovieControlStyleNone;
@@ -139,8 +139,6 @@
     
     [self.playerView.view removeFromSuperview];
     [self.playerView.moviePlayer.view removeFromSuperview];
-    self.playerView = nil;
-    
     
 }
 -(void)trocarEstacao : (NSString*)fluxo{
@@ -155,18 +153,26 @@
     else
         self->estacaoAtual--;
     
+    self.nomeDaRadioAtual = [[NSString alloc]initWithFormat:@"%.2f",[self.estacoes[self->estacaoAtual] nEstacao] ];
+    
 }
 -(void)trocarVideo : (NSString*)fluxo{
     
     if ([fluxo isEqual:@"aumentar"] ) {
         self->videoAtual++;
     }
-    else if (self->videoAtual >= self.videos.count){
+    if (self->videoAtual >= self.videos.count){
         self->videoAtual = 0;
     }
-    else
+    if ([fluxo isEqual:@"abaixar"]) {
         self->videoAtual--;
+    }
+    if (self->videoAtual < 0) {
+        self->videoAtual = self.videos.count -1;
+    }
     
+    
+    self.nomeDoVideo = [[NSString alloc]initWithString:[self.videos[self->videoAtual]nome]];
 }
 
 @end

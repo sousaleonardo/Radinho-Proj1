@@ -17,6 +17,8 @@
     int videoAtual;
     int estacaoAtual;
 }
+@property NSString *nomeDaRadioAtual;
+@property NSString *nomeDoVideo;
 @property AVPlayerItem *radio;
 @property AVPlayer *player;
 
