@@ -36,6 +36,9 @@
 		9457216318E345F3004F5496 /* Raidinho_Proj1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9457216218E345F3004F5496 /* Raidinho_Proj1Tests.m */; };
 		9457216E18E34A27004F5496 /* Estacao.m in Sources */ = {isa = PBXBuildFile; fileRef = 9457216D18E34A27004F5496 /* Estacao.m */; };
 		9457217418E350DD004F5496 /* GestoEmL.m in Sources */ = {isa = PBXBuildFile; fileRef = 9457217318E350DD004F5496 /* GestoEmL.m */; };
+		CD2486D918EC9FC5004BF507 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD2486D618EC9FC5004BF507 /* icon.png */; };
+		CD2486DB18EC9FC5004BF507 /* titulo in Resources */ = {isa = PBXBuildFile; fileRef = CD2486D818EC9FC5004BF507 /* titulo */; };
+		CD2486DD18ECA2CE004BF507 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = CD2486DC18ECA2CE004BF507 /* play.png */; };
 		CD73031618EA07B1002C659F /* circleGesure.png in Resources */ = {isa = PBXBuildFile; fileRef = CD73031018EA07B1002C659F /* circleGesure.png */; };
 		CD73031718EA07B1002C659F /* doubleTap.png in Resources */ = {isa = PBXBuildFile; fileRef = CD73031118EA07B1002C659F /* doubleTap.png */; };
 		CD73031818EA07B1002C659F /* longGesture.png in Resources */ = {isa = PBXBuildFile; fileRef = CD73031218EA07B1002C659F /* longGesture.png */; };
@@ -101,6 +104,9 @@
 		9457216D18E34A27004F5496 /* Estacao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Estacao.m; sourceTree = "<group>"; };
 		9457217218E350DD004F5496 /* GestoEmL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestoEmL.h; sourceTree = "<group>"; };
 		9457217318E350DD004F5496 /* GestoEmL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestoEmL.m; sourceTree = "<group>"; };
+		CD2486D618EC9FC5004BF507 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		CD2486D818EC9FC5004BF507 /* titulo */ = {isa = PBXFileReference; lastKnownFileType = file; path = titulo; sourceTree = "<group>"; };
+		CD2486DC18ECA2CE004BF507 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 		CD73031018EA07B1002C659F /* circleGesure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circleGesure.png; sourceTree = "<group>"; };
 		CD73031118EA07B1002C659F /* doubleTap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = doubleTap.png; sourceTree = "<group>"; };
 		CD73031218EA07B1002C659F /* longGesture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = longGesture.png; sourceTree = "<group>"; };
@@ -246,6 +252,9 @@
 		CD75102118E377DB009DC1BA /* imagens */ = {
 			isa = PBXGroup;
 			children = (
+				CD2486DC18ECA2CE004BF507 /* play.png */,
+				CD2486D618EC9FC5004BF507 /* icon.png */,
+				CD2486D818EC9FC5004BF507 /* titulo */,
 				752F81CA18EB4468003AA465 /* seta_mais.png */,
 				752F81CB18EB4468003AA465 /* seta_menos.png */,
 				CD73031018EA07B1002C659F /* circleGesure.png */,
@@ -339,6 +348,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD2486DB18EC9FC5004BF507 /* titulo in Resources */,
 				CD73031A18EA07B1002C659F /* singleTap.png in Resources */,
 				CD73031718EA07B1002C659F /* doubleTap.png in Resources */,
 				CDF485E518E61D53001A7F45 /* fundo.png in Resources */,
@@ -352,12 +362,14 @@
 				752BF56A18E9F4010055E450 /* LightsOutWhosThere.MP4 in Resources */,
 				CD73031B18EA07B1002C659F /* squareGesure.png in Resources */,
 				CDF485E318E61D53001A7F45 /* caixa_btns.png in Resources */,
+				CD2486D918EC9FC5004BF507 /* icon.png in Resources */,
 				752F81CD18EB4468003AA465 /* seta_menos.png in Resources */,
 				CDF485E218E61D53001A7F45 /* botao.png in Resources */,
 				CD73031918EA07B1002C659F /* seta_voltar.png in Resources */,
 				752F81CC18EB4468003AA465 /* seta_mais.png in Resources */,
 				CDF485EA18E61E18001A7F45 /* Main.storyboard in Resources */,
 				752BF56C18E9F4010055E450 /* TartarugasNinja.MP4 in Resources */,
+				CD2486DD18ECA2CE004BF507 /* play.png in Resources */,
 				752BF56B18E9F4010055E450 /* Narwhals.MP4 in Resources */,
 				7557EAFD18E3695600EFC208 /* estacoes.txt in Resources */,
 				9457214218E345F3004F5496 /* InfoPlist.strings in Resources */,
