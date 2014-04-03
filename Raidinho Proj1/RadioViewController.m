@@ -71,15 +71,29 @@
     [self.view addGestureRecognizer:gesto];
 }
 
--(void)alterarVolume:(NSInteger)valor{
-    NSNumber *volume=[NSNumber numberWithInteger:valor/10];
+-(void)alterarVolume:(NSNumber*)valor{
+    //NSNumber *volume=[NSNumber numberWithInteger:valor/10];
     
-    [self.radioSom setVolume:[volume floatValue]];
+    NSLog(@"%f",[valor floatValue]/100);
+    
+    [self.radioSom setVolume:[valor floatValue]/10];
+}
+
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
+    //"Liga" as constraints da view de Texto
+    [self.textoRadio setAutoresizesSubviews:NO];
+    
+    //Liga as constraints
+    [self.botaoEstacao setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.botaoVolume setTranslatesAutoresizingMaskIntoConstraints:NO];
+
 }
 
 -(void)rotacao:(CGFloat)angulo :(NSNumber*)tagBotao{
     
     
+    //"Desliga" as constraints da view de Texto
+    [self.textoRadio setTranslatesAutoresizingMaskIntoConstraints:YES];
     
     if ([tagBotao intValue] == self.botaoEstacao.tag ){
         self->anguloBotaoSintonia +=angulo;

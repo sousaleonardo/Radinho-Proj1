@@ -21,6 +21,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *botaoEstacao;
 @property (weak, nonatomic) IBOutlet UIImageView *botaoVolume;
+@property (weak, nonatomic) IBOutlet UITextView *textoRadio;
 
 @property Player *player;
 @property AVPlayer *radioSom;

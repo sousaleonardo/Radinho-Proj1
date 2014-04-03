@@ -94,7 +94,6 @@
         //soma angulo
         self->anguloAcumulado+=angulo;
         
-        
         //Chama o delegate
         if ([self->target respondsToSelector:@selector(rotacao::)]){
             //[self->target rotacao:angulo];
@@ -115,21 +114,22 @@
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     [super touchesEnded:touches withEvent:event];
-    if([[touches anyObject]tapCount] == 0){
-    if (self.state == UIGestureRecognizerStatePossible) {
-        
-        [self setState:UIGestureRecognizerStateRecognized];
-        
-        if (self->selPlay != Nil) {
-            if ([self->target respondsToSelector:self->selPlay]) {
-                [target performSelector:self->selPlay];
-            }
-        }
-    }else{
-        [self setState:UIGestureRecognizerStateFailed];
-    }
     
-    self->anguloAcumulado =0 ;
+    if([[touches anyObject]tapCount] == 0){
+        if (self.state == UIGestureRecognizerStatePossible) {
+            
+            [self setState:UIGestureRecognizerStateRecognized];
+            
+            if (self->selPlay != Nil) {
+                if ([self->target respondsToSelector:self->selPlay]) {
+                    [target performSelector:self->selPlay];
+                }
+            }
+        }else{
+            [self setState:UIGestureRecognizerStateFailed];
+        }
+        
+        self->anguloAcumulado =0 ;
     }
 }
 
