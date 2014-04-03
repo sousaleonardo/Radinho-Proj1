@@ -46,13 +46,14 @@
                                     <constraint firstAttribute="height" constant="79" id="kJQ-GJ-9GA"/>
                                 </constraints>
                             </imageView>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mb-ZD-XVx">
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mb-ZD-XVx">
                                 <rect key="frame" x="85" y="484" width="149" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.9647059440612793" green="0.81568634510040283" blue="0.60784316062927246" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="xmF-M3-Glw"/>
                                 </constraints>
+                                <color key="textColor" red="0.9647059440612793" green="0.81568634510040283" blue="0.60784316062927246" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -134,6 +135,7 @@
                     <connections>
                         <outlet property="botaoEstacao" destination="tSN-ND-CJN" id="UB6-KH-4K3"/>
                         <outlet property="botaoVolume" destination="TIQ-Av-LWe" id="2f3-Tl-lPC"/>
+                        <outlet property="textoRadio" destination="4mb-ZD-XVx" id="GnY-cd-hV2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -1367,77 +1369,16 @@
     </scenes>
     <resources>
         <image name="botao.png" width="90" height="90"/>
-        <image name="botao.png" width="90" height="90"/>
-        <image name="botao.png" width="90" height="90"/>
-        <image name="botao.png" width="90" height="90"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
         <image name="caixa_btns.png" width="550" height="173"/>
         <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="circleGesure.png" width="120" height="155"/>
-        <image name="circleGesure.png" width="120" height="155"/>
-        <image name="circleGesure.png" width="120" height="155"/>
         <image name="circleGesure.png" width="120" height="155"/>
         <image name="doubleTap.png" width="120" height="155"/>
         <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="play.png" width="991" height="973"/>
         <image name="play.png" width="991" height="973"/>
         <image name="seta_mais.png" width="89" height="47"/>
-        <image name="seta_mais.png" width="89" height="47"/>
-        <image name="seta_mais.png" width="89" height="47"/>
-        <image name="seta_mais.png" width="89" height="47"/>
-        <image name="seta_mais.png" width="89" height="47"/>
-        <image name="seta_mais.png" width="89" height="47"/>
-        <image name="seta_mais.png" width="89" height="47"/>
-        <image name="seta_menos.png" width="89" height="47"/>
-        <image name="seta_menos.png" width="89" height="47"/>
-        <image name="seta_menos.png" width="89" height="47"/>
-        <image name="seta_menos.png" width="89" height="47"/>
-        <image name="seta_menos.png" width="89" height="47"/>
-        <image name="seta_menos.png" width="89" height="47"/>
         <image name="seta_menos.png" width="89" height="47"/>
         <image name="singleTap.png" width="120" height="155"/>
-        <image name="singleTap.png" width="120" height="155"/>
         <image name="squareGesure.png" width="120" height="155"/>
-        <image name="squareGesure.png" width="120" height="155"/>
-        <image name="titulo.png" width="958" height="113"/>
-        <image name="titulo.png" width="958" height="113"/>
-        <image name="titulo.png" width="958" height="113"/>
-        <image name="titulo.png" width="958" height="113"/>
-        <image name="titulo.png" width="958" height="113"/>
-        <image name="titulo.png" width="958" height="113"/>
-        <image name="titulo.png" width="958" height="113"/>
-        <image name="titulo.png" width="958" height="113"/>
-        <image name="titulo.png" width="958" height="113"/>
-        <image name="titulo.png" width="958" height="113"/>
         <image name="titulo.png" width="958" height="113"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

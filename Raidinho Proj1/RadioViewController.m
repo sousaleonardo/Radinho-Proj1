@@ -96,13 +96,13 @@
     [self.botaoEstacao setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view removeGestureRecognizer:self.gestoSintonia];
     
-    self->anguloBotaoSintonia=0;
+    //self->anguloBotaoSintonia=0;
     self.botaoEstacao.transform=CGAffineTransformIdentity;
     
     [self.botaoVolume setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view removeGestureRecognizer:self.gestoVolume];
     
-    self->anguloBotaoVolume=0;
+    //self->anguloBotaoVolume=0;
     
     self.botaoVolume.transform=CGAffineTransformIdentity;
     
@@ -123,11 +123,13 @@
     //Basicamente desliga as constraints
     [self.botaoVolume setTranslatesAutoresizingMaskIntoConstraints:YES];
     
+    //Manter botao no angulo que estava
+    [self rotacao:0.0f :[NSNumber numberWithInt:0]];
+    [self rotacao:0.0f :[NSNumber numberWithInt:1]];
+    
 }
 
 -(void)rotacao:(CGFloat)angulo :(NSNumber*)tagBotao{
-    //"Desliga" as constraints da view de Texto
-    //[self.textoRadio setAutoresizesSubviews:YES];
     
     if ([tagBotao intValue] == self.botaoEstacao.tag ){
         self->anguloBotaoSintonia +=angulo;
@@ -175,7 +177,7 @@
     if (self->posicaoAtual - [valor intValue] == 0) {
         return;
     }
-    
+
     if ([valor intValue] > 0) {
         [self.player trocarEstacao:@"aumentar"];
         self->posicaoAtual++;
@@ -188,9 +190,10 @@
         self->posicaoAtual=0;
     }
     
-    NSLog(@"%i",self->posicaoAtual);
-    
-    
+    //NSLog(@"%i",self->posicaoAtual);
+    [self.textoRadio setTextAlignment:NSTextAlignmentCenter];
+    [self.textoRadio setTextColor:[UIColor colorWithRed:234.0f/255.0f green:198.0f/255.0f blue:148.0f/255.0f alpha:1.0f]];
+    [self.textoRadio setText:self.player.nomeDaRadioAtual];
 }
 
 -(void)playEstacao{
@@ -201,7 +204,7 @@
     [self.player playEstacao];
     self.radioSom = [self.player playEstacao];
     
-    [self.textoRadio setText:self.player.nomeDaRadioAtual];
+    
     
 }
 @end
