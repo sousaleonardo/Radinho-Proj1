@@ -49,6 +49,11 @@
     //Cria o gesto para sintonia
     [self setGestoReconizer:self.botaoEstacao :self.gestoSintonia :@selector(manipulaArray:) :@selector(playEstacao)];
     
+    //Basicamente desliga as constraints
+    [self.botaoEstacao setTranslatesAutoresizingMaskIntoConstraints:YES];
+    
+    //Basicamente desliga as constraints
+    [self.botaoVolume setTranslatesAutoresizingMaskIntoConstraints:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -121,8 +126,6 @@
 }
 
 -(void)rotacao:(CGFloat)angulo :(NSNumber*)tagBotao{
-    
-    
     //"Desliga" as constraints da view de Texto
     //[self.textoRadio setAutoresizesSubviews:YES];
     
@@ -136,7 +139,7 @@
         }
         
         //Basicamente desliga as constraints
-        [self.botaoEstacao setTranslatesAutoresizingMaskIntoConstraints:YES];
+        //[self.botaoEstacao setTranslatesAutoresizingMaskIntoConstraints:YES];
         
         [self.botaoEstacao layoutIfNeeded];
         
@@ -152,7 +155,7 @@
         }
         
         //Basicamente desliga as constraints
-        [self.botaoVolume setTranslatesAutoresizingMaskIntoConstraints:YES];
+        //[self.botaoVolume setTranslatesAutoresizingMaskIntoConstraints:YES];
         
         [self.botaoVolume layoutIfNeeded];
         
