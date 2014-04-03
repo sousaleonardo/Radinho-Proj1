@@ -34,8 +34,11 @@
     self.player =[[Player alloc]init];
     
     //Seta o tag dos botoes para diferenciar na hora de animar
-    self.botaoEstacao.tag=0;
-    self.botaoEstacao.tag=1;
+  //  self.botaoVolume.tag=0;
+//    self.botaoEstacao.tag=1;
+    
+    [self.botaoVolume setTag:0];
+    [self.botaoEstacao setTag:1];
     
     //Cria gesto circular para volume
     [self setGestoReconizer:self.botaoVolume :self.gestoVolume :@selector(alterarVolume:) :nil];
@@ -68,8 +71,8 @@
     [self.view addGestureRecognizer:gesto];
 }
 
--(void)alterarVolume:(NSInteger*)valor{
-    NSNumber *volume=[NSNumber numberWithInteger:*valor/10];
+-(void)alterarVolume:(NSInteger)valor{
+    NSNumber *volume=[NSNumber numberWithInteger:valor/10];
     
     [self.radioSom setVolume:[volume floatValue]];
 }

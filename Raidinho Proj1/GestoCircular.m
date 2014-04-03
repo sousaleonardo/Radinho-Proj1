@@ -33,7 +33,7 @@
         self-> target = _target;
         self->selManipularArray=_selManipulaArray;
         self->selPlay=_selPlay;
-        self->tagBotao=[NSNumber numberWithInt:tagBotao];
+        self->tagBotao=[NSNumber numberWithInt:_tagBotao];
     }
     
     return self;
@@ -96,7 +96,7 @@
         
         
         //Chama o delegate
-        if ([self->target respondsToSelector:@selector(rotacao:)]) {
+        if ([self->target respondsToSelector:@selector(rotacao::)]){
             //[self->target rotacao:angulo];
             [self->target rotacao:angulo :self->tagBotao ];
         }
