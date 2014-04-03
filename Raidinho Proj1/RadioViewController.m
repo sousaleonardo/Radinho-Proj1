@@ -28,15 +28,19 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    self.somSintonizando = [[AVPlayer alloc]initWithURL:[NSURL URLWithString:@"procurando"]];
+    NSURL *url=[[NSBundle mainBundle]pathForResource:@"procurando" ofType:@".mp3"];
+    
+    self.somSintonizando = [[AVPlayer alloc]initWithURL:url];
+    
+    [self.somSintonizando setVolume:1.0f];
+    [self.somSintonizando play];
+    
+    
     self.radioSom =[[AVPlayer alloc]init];
     self->posicaoAtual=0;
     self.player =[[Player alloc]init];
     
-    //Seta o tag dos botoes para diferenciar na hora de animar
-  //  self.botaoVolume.tag=0;
-//    self.botaoEstacao.tag=1;
-    
+    //Seta o tag dos botoes para diferenciar na hora de animar    
     [self.botaoVolume setTag:0];
     [self.botaoEstacao setTag:1];
     
@@ -65,7 +69,7 @@
     
     [botao setCenter:pontoMedio];
     
-    //adiciona o /5 no fora Raio para que ele aceite até no max 1/5 do raio do circ p dentro
+    //adiciona o /3 no fora Raio para que ele aceite até no max 1/3 do raio do circ p dentro
     gesto=[[GestoCircular alloc]initWithPontoMedio:pontoMedio raioMedio:foraRaio/3 foraRaio:foraRaio target:self selManipulaArray:seletor1 selPlay:seletor2 tagBotao:botao.tag];
     
     [self.view addGestureRecognizer:gesto];
@@ -141,20 +145,16 @@
     //Comeca a tocar som de chiado
     [self.somSintonizando play];
     
-    int valorInt=[valor intValue]/10;
-    
-    NSLog(@"%i",[valor intValue]);
-    
-    if (self->posicaoAtual - valorInt == 0) {
+    if (self->posicaoAtual - [valor intValue] == 0) {
         return;
     }
     
-    self->posicaoAtual=valorInt;
-    
-    if (valor > 0) {
+    if ([valor intValue] > 0) {
         [self.player trocarEstacao:@"aumentar"];
-    }else{
+        self->posicaoAtual++;
+    }else if([valor intValue] < 0){
         [self.player trocarEstacao:@"abaixar"];
+        self->posicaoAtual--;
     }
     
     if (self->posicaoAtual > 36) {
@@ -173,5 +173,8 @@
     
     [self.player playEstacao];
     self.radioSom = [self.player playEstacao];
+    
+    [self.textoRadio setText:self.player.nomeDaRadioAtual];
+    
 }
 @end

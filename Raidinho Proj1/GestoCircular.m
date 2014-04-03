@@ -96,7 +96,7 @@
         
         //Chama o delegate
         if ([self->target respondsToSelector:@selector(rotacao::)]){
-            //[self->target rotacao:angulo :self->tagBotao ];
+            [self->target rotacao:angulo :self->tagBotao ];
         }
         
         NSNumber *anguloConvertido=[[NSNumber alloc]initWithFloat:angulo];
