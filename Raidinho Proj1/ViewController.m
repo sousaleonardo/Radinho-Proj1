@@ -21,21 +21,17 @@
     while (self.view.gestureRecognizers.count) {
         [self.view removeGestureRecognizer:[self.view.gestureRecognizers objectAtIndex:0]];
     }
-    [self.mudarVideo setTag:1];
-    self->posicaoAtual = 0;
     //GestoEmL *gestoL=[[GestoEmL alloc]initWithTarget:self action:@selector(testeGesto)];
     UITapGestureRecognizer *tapPlay = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(playVideo:)];
     
     [self.viewDoVideo addGestureRecognizer:tapPlay];
     
-    [super setGestoReconizer:self.mudarVideo :self.gestoSintonia :@selector(manipulaArray:):nil];
-    
+    //super setGestoReconizer:self.volume : : :<#(SEL)#>
     
     [self.tituloDoVideo setText:self.player.nomeDoVideo];
     [self.tituloDoVideo setTextAlignment:NSTextAlignmentCenter];
     
-    self.botaoEstacao = self.mudarVideo;
-    self.botaoVolume = self.volume;
+    
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -50,23 +46,29 @@
 }
 -(IBAction)playVideo:(UITapGestureRecognizer*)tap{
     [self.player playVideo:self.view];
+    [self.player trocarVideo:@"aumentar"];
+    [self.tituloDoVideo setText:self.player.nomeDoVideo];
+    
 }
-
 -(void)manipulaArray:(NSNumber*)valor{
     
-    self->posicaoAtual+=[valor intValue];
+    int valorInt=[valor intValue]/10;
     
-    if (self->posicaoAtual / 25 >= 1 ||self->posicaoAtual / 25 <= -1) {
-        self->posicaoAtual = 0;
-        if (valor > 0) {
-            [self.player trocarVideo:@"aumentar"];
-        }else {
-            [self.player trocarVideo:@"abaixar"];
-        }
-        [self.tituloDoVideo setText:self.player.nomeDoVideo];
+    if (self->posicaoAtual - valorInt == 0) {
+        return;
     }
     
+    self->posicaoAtual=valorInt;
     
+    if (valor > 0) {
+        [self.player trocarVideo:@"aumentar"];
+    }else{
+        [self.player trocarVideo:@"abaixar"];
+    }
+    
+    if (self->posicaoAtual > 36) {
+        self->posicaoAtual=0;
+    }
     
     //NSLog(@"%i",self->posicaoAtual);
 }

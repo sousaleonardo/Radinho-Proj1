@@ -25,7 +25,7 @@
 
 @property Player *player;
 @property AVPlayer *radioSom;
-@property AVAudioPlayer *somSintonizando;
+@property AVPlayer *somSintonizando;
 
 @property GestoCircular *gestoSintonia;
 @property GestoCircular *gestoVolume;
