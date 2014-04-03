@@ -66,7 +66,7 @@
     [botao setCenter:pontoMedio];
     
     //adiciona o /5 no fora Raio para que ele aceite até no max 1/5 do raio do circ p dentro
-    gesto=[[GestoCircular alloc]initWithPontoMedio:pontoMedio raioMedio:foraRaio/5 foraRaio:foraRaio target:self selManipulaArray:seletor1 selPlay:seletor2 tagBotao:botao.tag];
+    gesto=[[GestoCircular alloc]initWithPontoMedio:pontoMedio raioMedio:foraRaio/3 foraRaio:foraRaio target:self selManipulaArray:seletor1 selPlay:seletor2 tagBotao:botao.tag];
     
     [self.view addGestureRecognizer:gesto];
 }
@@ -74,14 +74,17 @@
 -(void)alterarVolume:(NSNumber*)valor{
     //NSNumber *volume=[NSNumber numberWithInteger:valor/10];
     
-    NSLog(@"%f",[valor floatValue]/100);
-    
-    [self.radioSom setVolume:[valor floatValue]/10];
+    if([self.radioSom volume] < 0){
+        [self.radioSom setVolume:0];
+        
+    }else{
+        [self.radioSom setVolume:[self.radioSom volume] + [valor floatValue]/10];
+    }
 }
 
 -(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
     //"Liga" as constraints da view de Texto
-    [self.textoRadio setAutoresizesSubviews:NO];
+    //[self.textoRadio setAutoresizesSubviews:NO];
     
     //Liga as constraints
     [self.botaoEstacao setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -93,7 +96,7 @@
     
     
     //"Desliga" as constraints da view de Texto
-    [self.textoRadio setTranslatesAutoresizingMaskIntoConstraints:YES];
+    //[self.textoRadio setAutoresizesSubviews:YES];
     
     if ([tagBotao intValue] == self.botaoEstacao.tag ){
         self->anguloBotaoSintonia +=angulo;
@@ -138,8 +141,9 @@
     //Comeca a tocar som de chiado
     [self.somSintonizando play];
     
-//    int valorInt=*valor/10;
     int valorInt=[valor intValue]/10;
+    
+    NSLog(@"%i",[valor intValue]);
     
     if (self->posicaoAtual - valorInt == 0) {
         return;
