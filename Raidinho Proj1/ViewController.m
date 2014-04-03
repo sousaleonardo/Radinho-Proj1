@@ -31,11 +31,14 @@
     [super setGestoReconizer:self.mudarVideo :self.gestoSintonia :@selector(manipulaArray:):nil];
     
     
+    
     [self.tituloDoVideo setText:self.player.nomeDoVideo];
     [self.tituloDoVideo setTextAlignment:NSTextAlignmentCenter];
     
     self.botaoEstacao = self.mudarVideo;
-    self.botaoVolume = self.volume;
+    for (int i = 0; i< self.view.gestureRecognizers.count; i++) {
+        [[self.view.gestureRecognizers objectAtIndex:i] setCancelsTouchesInView:NO];
+    }
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
