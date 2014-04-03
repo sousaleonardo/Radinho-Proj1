@@ -115,7 +115,7 @@
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     [super touchesEnded:touches withEvent:event];
-    
+    if([[touches anyObject]tapCount] == 0){
     if (self.state == UIGestureRecognizerStatePossible) {
         
         [self setState:UIGestureRecognizerStateRecognized];
@@ -130,6 +130,7 @@
     }
     
     self->anguloAcumulado =0 ;
+    }
 }
 
 -(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event{

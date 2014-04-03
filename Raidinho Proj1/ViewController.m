@@ -17,6 +17,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    for (int i=0; i < self.view.gestureRecognizers.count; i++) {
+        [self.view removeGestureRecognizer:self.view.gestureRecognizers[i]];
+    }
     //GestoEmL *gestoL=[[GestoEmL alloc]initWithTarget:self action:@selector(testeGesto)];
     UITapGestureRecognizer *tapPlay = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(playVideo:)];
     
@@ -42,7 +45,7 @@
     [self.player playVideo:self.view];
     [self.player trocarVideo:@"aumentar"];
     [self.tituloDoVideo setText:self.player.nomeDoVideo];
-    //[self.tituloDoVideo intrinsicContentSize];
+    
 }
 
 - (void)didReceiveMemoryWarning
