@@ -362,6 +362,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDF485EA18E61E18001A7F45 /* Main.storyboard in Resources */,
 				CD73031A18EA07B1002C659F /* singleTap.png in Resources */,
 				9436CE3218EC969C007266C3 /* procurando.mp3 in Resources */,
 				CD73031718EA07B1002C659F /* doubleTap.png in Resources */,
@@ -382,7 +383,6 @@
 				CDF485E218E61D53001A7F45 /* botao.png in Resources */,
 				CD73031918EA07B1002C659F /* seta_voltar.png in Resources */,
 				752F81CC18EB4468003AA465 /* seta_mais.png in Resources */,
-				CDF485EA18E61E18001A7F45 /* Main.storyboard in Resources */,
 				752BF56C18E9F4010055E450 /* TartarugasNinja.MP4 in Resources */,
 				CD2486DD18ECA2CE004BF507 /* play.png in Resources */,
 				752BF56B18E9F4010055E450 /* Narwhals.MP4 in Resources */,

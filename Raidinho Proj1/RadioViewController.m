@@ -28,19 +28,18 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    NSURL *url=[[NSBundle mainBundle]pathForResource:@"procurando" ofType:@".mp3"];
+    NSURL *url = [[NSBundle mainBundle] URLForResource:@"procurando" withExtension:@"mp3"];
     
-    self.somSintonizando = [[AVPlayer alloc]initWithURL:url];
+    self.somSintonizando = [[AVAudioPlayer alloc]initWithContentsOfURL:url error:Nil];
     
     [self.somSintonizando setVolume:1.0f];
-    [self.somSintonizando play];
-    
+    [self.somSintonizando prepareToPlay];
     
     self.radioSom =[[AVPlayer alloc]init];
     self->posicaoAtual=0;
     self.player =[[Player alloc]init];
     
-    //Seta o tag dos botoes para diferenciar na hora de animar    
+    //Seta o tag dos botoes para diferenciar na hora de animar
     [self.botaoVolume setTag:0];
     [self.botaoEstacao setTag:1];
     
@@ -60,7 +59,7 @@
 
 //Configura o gesto Reconizer e adiciona na view
 -(void)setGestoReconizer:(UIImageView*)botao :(GestoCircular*)gesto :(SEL)seletor1 :(SEL)seletor2 {
-
+    
     //Garante que o centro do ponto seja o correto mesmo que altere o layout
     [botao layoutIfNeeded];
     
@@ -76,7 +75,6 @@
 }
 
 -(void)alterarVolume:(NSNumber*)valor{
-    //NSNumber *volume=[NSNumber numberWithInteger:valor/10];
     
     if([self.radioSom volume] < 0){
         [self.radioSom setVolume:0];
@@ -86,14 +84,40 @@
     }
 }
 
+//Remove o gesto reconizer antes de girar a tela para não configurar a area do circulo de forma errada
 -(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
-    //"Liga" as constraints da view de Texto
-    //[self.textoRadio setAutoresizesSubviews:NO];
     
-    //Liga as constraints
+    //Basicamente liga as constraints
     [self.botaoEstacao setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.view removeGestureRecognizer:self.gestoSintonia];
+    
+    self->anguloBotaoSintonia=0;
+    self.botaoEstacao.transform=CGAffineTransformIdentity;
+    
     [self.botaoVolume setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.view removeGestureRecognizer:self.gestoVolume];
+    
+    self->anguloBotaoVolume=0;
+    
+    self.botaoVolume.transform=CGAffineTransformIdentity;
+    
+}
 
+//Depois do giro da tela configura e adiciona o gesto reconizer
+-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation{
+    
+    //Cria gesto circular para volume
+    [self setGestoReconizer:self.botaoVolume :self.gestoVolume :@selector(alterarVolume:) :nil];
+    
+    //Cria o gesto para sintonia
+    [self setGestoReconizer:self.botaoEstacao :self.gestoSintonia :@selector(manipulaArray:) :@selector(playEstacao)];
+    
+    //Basicamente desliga as constraints
+    [self.botaoEstacao setTranslatesAutoresizingMaskIntoConstraints:YES];
+    
+    //Basicamente desliga as constraints
+    [self.botaoVolume setTranslatesAutoresizingMaskIntoConstraints:YES];
+    
 }
 
 -(void)rotacao:(CGFloat)angulo :(NSNumber*)tagBotao{
@@ -133,11 +157,11 @@
         [self.botaoVolume layoutIfNeeded];
         
         self.botaoVolume.transform =CGAffineTransformMakeRotation(self->anguloBotaoSintonia * M_PI/180);
-    }    
+    }
 }
 
 -(void)anguloFinal:(CGFloat)angulo{
-  
+    
 }
 
 -(void)manipulaArray:(NSNumber*)valor{
@@ -169,7 +193,7 @@
 -(void)playEstacao{
     //Para o som de procurando e toca a est *__*
     [self.somSintonizando pause];
-    [self.somSintonizando seekToTime:kCMTimeZero];
+    //[self.somSintonizando seekToTime:kCMTimeZero];
     
     [self.player playEstacao];
     self.radioSom = [self.player playEstacao];
