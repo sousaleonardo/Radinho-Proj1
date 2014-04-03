@@ -22,5 +22,7 @@
 @property (strong, nonatomic) IBOutlet UITextView *tituloDoVideo;
 @property MPMoviePlayerController* playerDeVideo;
 
+@property (strong, nonatomic) IBOutlet UIImageView *volume;
+@property (strong, nonatomic) IBOutlet UIImageView *mudarVideo;
 
 @end

@@ -17,13 +17,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    for (int i=0; i < self.view.gestureRecognizers.count; i++) {
-        [self.view removeGestureRecognizer:self.view.gestureRecognizers[i]];
+    
+    while (self.view.gestureRecognizers.count) {
+        [self.view removeGestureRecognizer:[self.view.gestureRecognizers objectAtIndex:0]];
     }
     //GestoEmL *gestoL=[[GestoEmL alloc]initWithTarget:self action:@selector(testeGesto)];
     UITapGestureRecognizer *tapPlay = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(playVideo:)];
     
     [self.viewDoVideo addGestureRecognizer:tapPlay];
+    
+    //super setGestoReconizer:self.volume : : :<#(SEL)#>
     
     [self.tituloDoVideo setText:self.player.nomeDoVideo];
     [self.tituloDoVideo setTextAlignment:NSTextAlignmentCenter];
@@ -47,6 +50,30 @@
     [self.tituloDoVideo setText:self.player.nomeDoVideo];
     
 }
+-(void)manipulaArray:(NSNumber*)valor{
+    
+    int valorInt=[valor intValue]/10;
+    
+    if (self->posicaoAtual - valorInt == 0) {
+        return;
+    }
+    
+    self->posicaoAtual=valorInt;
+    
+    if (valor > 0) {
+        [self.player trocarVideo:@"aumentar"];
+    }else{
+        [self.player trocarVideo:@"abaixar"];
+    }
+    
+    if (self->posicaoAtual > 36) {
+        self->posicaoAtual=0;
+    }
+    
+    //NSLog(@"%i",self->posicaoAtual);
+}
+
+
 
 - (void)didReceiveMemoryWarning
 {

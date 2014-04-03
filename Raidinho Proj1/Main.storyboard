@@ -297,8 +297,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="botaoVolume" destination="CjJ-uI-rIC" id="PNU-vX-eYz"/>
+                        <outlet property="mudarVideo" destination="c4Q-Zq-mY5" id="DjL-HO-WVU"/>
                         <outlet property="tituloDoVideo" destination="kJj-Ou-um7" id="eoI-yE-KM4"/>
                         <outlet property="viewDoVideo" destination="8TI-xK-omh" id="Tn0-d8-QQn"/>
+                        <outlet property="volume" destination="CjJ-uI-rIC" id="B8D-ic-eC4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWO-Vh-Lzg" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -157,7 +157,7 @@
         self->estacaoAtual--;
     }
     
-    if (self->estacaoAtual > self.estacoes.count){
+    if (self->estacaoAtual >= self.estacoes.count){
         self->estacaoAtual = 0;
     
     }else if(self->estacaoAtual < 0 ){
