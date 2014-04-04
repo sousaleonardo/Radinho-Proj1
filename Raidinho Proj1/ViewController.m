@@ -30,6 +30,9 @@
     
     [self.viewDoVideo addGestureRecognizer:tapPlay];
     
+    //Liga a Constrants
+    [self.mudarVideo setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
     [super setGestoReconizer:self.mudarVideo :self.gestoSintonia :@selector(manipulaArray:):nil];
     
     
@@ -50,6 +53,9 @@
     GestoEmL *gestoL =[[GestoEmL alloc]initWithTarget:self action:@selector(trocaDeViewController)];
     
     [self.view addGestureRecognizer:gestoL];
+    
+    
+    
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{

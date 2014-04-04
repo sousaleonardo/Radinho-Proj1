@@ -53,11 +53,11 @@
     //Cria o gesto para sintonia
     [self setGestoReconizer:self.botaoEstacao :self.gestoSintonia :@selector(manipulaArray:) :@selector(playEstacao)];
     
-    //Basicamente desliga as constraints
-    [self.botaoEstacao setTranslatesAutoresizingMaskIntoConstraints:YES];
+    //Basicamente liga as constraints
+    [self.botaoEstacao setTranslatesAutoresizingMaskIntoConstraints:NO];
     
-    //Basicamente desliga as constraints
-    [self.botaoVolume setTranslatesAutoresizingMaskIntoConstraints:YES];
+    //Basicamente liga as constraints
+    [self.botaoVolume setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     //Adiciona o nome da segue que deve usar ParaRadioViewController
     self->segueID=[NSString stringWithFormat:@"ParaViewControllerVideo"];
@@ -132,10 +132,10 @@
     [self setGestoReconizer:self.botaoEstacao :self.gestoSintonia :@selector(manipulaArray:) :@selector(playEstacao)];
     
     //Basicamente desliga as constraints
-    [self.botaoEstacao setTranslatesAutoresizingMaskIntoConstraints:YES];
+    //[self.botaoEstacao setTranslatesAutoresizingMaskIntoConstraints:YES];
     
     //Basicamente desliga as constraints
-    [self.botaoVolume setTranslatesAutoresizingMaskIntoConstraints:YES];
+    //[self.botaoVolume setTranslatesAutoresizingMaskIntoConstraints:YES];
     
     //Manter botao no angulo que estava
     [self rotacao:0.0f :[NSNumber numberWithInt:0]];
@@ -155,14 +155,14 @@
         }
         
         //Basicamente desliga as constraints
-        //[self.botaoEstacao setTranslatesAutoresizingMaskIntoConstraints:YES];
+        [self.botaoEstacao setTranslatesAutoresizingMaskIntoConstraints:YES];
         
         [self.botaoEstacao layoutIfNeeded];
         
         self.botaoEstacao.transform =CGAffineTransformMakeRotation(self->anguloBotaoSintonia * M_PI/180);
         
     }else if ([tagBotao intValue]  == self.botaoVolume.tag){
-        self->anguloBotaoSintonia +=angulo;
+        self->anguloBotaoVolume +=angulo;
         
         if (self->anguloBotaoVolume > 360) {
             self->anguloBotaoVolume -=360;
@@ -171,11 +171,11 @@
         }
         
         //Basicamente desliga as constraints
-        //[self.botaoVolume setTranslatesAutoresizingMaskIntoConstraints:YES];
+        [self.botaoVolume setTranslatesAutoresizingMaskIntoConstraints:YES];
         
         [self.botaoVolume layoutIfNeeded];
         
-        self.botaoVolume.transform =CGAffineTransformMakeRotation(self->anguloBotaoSintonia * M_PI/180);
+        self.botaoVolume.transform =CGAffineTransformMakeRotation(self->anguloBotaoVolume * M_PI/180);
     }
 }
 
