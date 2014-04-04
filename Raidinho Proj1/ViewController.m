@@ -54,8 +54,6 @@
     
     [self.view addGestureRecognizer:gestoL];
     
-    
-    
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -84,7 +82,7 @@
     [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
     
     //Basicamente desliga as constraints
-    [self.mudarVideo setTranslatesAutoresizingMaskIntoConstraints:YES];
+    //[self.mudarVideo setTranslatesAutoresizingMaskIntoConstraints:YES];
 }
 
 -(void)manipulaArray:(NSNumber*)valor{

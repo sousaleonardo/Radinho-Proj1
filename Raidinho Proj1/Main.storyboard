@@ -1232,70 +1232,16 @@
     </scenes>
     <resources>
         <image name="botao.png" width="90" height="90"/>
-        <image name="botao.png" width="90" height="90"/>
-        <image name="botao.png" width="90" height="90"/>
-        <image name="botao.png" width="90" height="90"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
-        <image name="caixa_btns.png" width="550" height="173"/>
         <image name="caixa_btns.png" width="550" height="173"/>
         <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="caixa_titulo.png" width="550" height="52"/>
-        <image name="circleGesure.png" width="120" height="155"/>
-        <image name="circleGesure.png" width="120" height="155"/>
         <image name="circleGesure.png" width="120" height="155"/>
         <image name="doubleTap.png" width="120" height="155"/>
         <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="fundo.png" width="600" height="800"/>
-        <image name="play.png" width="991" height="973"/>
         <image name="play.png" width="991" height="973"/>
         <image name="seta_mais.png" width="89" height="47"/>
-        <image name="seta_mais.png" width="89" height="47"/>
-        <image name="seta_mais.png" width="89" height="47"/>
-        <image name="seta_mais.png" width="89" height="47"/>
-        <image name="seta_mais.png" width="89" height="47"/>
-        <image name="seta_mais.png" width="89" height="47"/>
-        <image name="seta_menos.png" width="89" height="47"/>
-        <image name="seta_menos.png" width="89" height="47"/>
-        <image name="seta_menos.png" width="89" height="47"/>
-        <image name="seta_menos.png" width="89" height="47"/>
-        <image name="seta_menos.png" width="89" height="47"/>
         <image name="seta_menos.png" width="89" height="47"/>
         <image name="singleTap.png" width="120" height="155"/>
-        <image name="singleTap.png" width="120" height="155"/>
         <image name="squareGesure.png" width="120" height="155"/>
-        <image name="squareGesure.png" width="120" height="155"/>
-        <image name="titulo.png" width="958" height="113"/>
-        <image name="titulo.png" width="958" height="113"/>
-        <image name="titulo.png" width="958" height="113"/>
-        <image name="titulo.png" width="958" height="113"/>
-        <image name="titulo.png" width="958" height="113"/>
-        <image name="titulo.png" width="958" height="113"/>
-        <image name="titulo.png" width="958" height="113"/>
-        <image name="titulo.png" width="958" height="113"/>
-        <image name="titulo.png" width="958" height="113"/>
         <image name="titulo.png" width="958" height="113"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
