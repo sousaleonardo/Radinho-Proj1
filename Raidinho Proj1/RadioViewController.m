@@ -54,6 +54,9 @@
     
     //Basicamente desliga as constraints
     [self.botaoVolume setTranslatesAutoresizingMaskIntoConstraints:YES];
+    
+    //Remover
+    [self trocaDeViewController];
 }
 
 - (void)didReceiveMemoryWarning
@@ -170,6 +173,8 @@
 }
 
 -(void)manipulaArray:(NSNumber*)valor{
+    //Para o som da raio
+    [self.radioSom pause];
     
     //Comeca a tocar som de chiado
     [self.somSintonizando play];
@@ -199,12 +204,18 @@
 -(void)playEstacao{
     //Para o som de procurando e toca a est *__*
     [self.somSintonizando pause];
-    //[self.somSintonizando seekToTime:kCMTimeZero];
+    [self.somSintonizando stop];
+    [self.somSintonizando prepareToPlay];
     
     [self.player playEstacao];
     self.radioSom = [self.player playEstacao];
     
     
     
+}
+
+
+-(void)trocaDeViewController{
+//    [self performSegueWithIdentifier:@"ParaViewVideo" sender:self];
 }
 @end

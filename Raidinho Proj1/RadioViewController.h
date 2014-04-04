@@ -10,7 +10,8 @@
 #import "GestoCircular.h"
 #import "Player.h"
 #import <AVFoundation/AVFoundation.h>
-
+#import "GestoEmL.h"
+#import "ViewController.h"
 
 @interface RadioViewController : UIViewController <GestocircularDelegate>
 {
