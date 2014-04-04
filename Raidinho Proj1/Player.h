@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
+#import <MediaPlayer/MediaPlayer.h>
 #import "Estacao.h"
 #import "Video.h"
 
@@ -16,15 +17,19 @@
     int videoAtual;
     int estacaoAtual;
 }
+@property NSString *nomeDaRadioAtual;
+@property NSString *nomeDoVideo;
 @property AVPlayerItem *radio;
 @property AVPlayer *player;
+
 @property NSMutableArray *estacoes;
 @property NSMutableArray *videos;
+@property MPMoviePlayerViewController *playerView;
 
 @property AVPlayerLayer *layerDoVideo;
 
 -(id)init;
--(void)playEstacao;
+-(AVPlayer*)playEstacao;
 -(void)playVideo : (UIView*)view;
 -(void)trocarEstacao : (NSString*)fluxo;
 -(void)trocarVideo : (NSString*)fluxo;

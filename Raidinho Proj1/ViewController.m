@@ -17,32 +17,94 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+    while (self.view.gestureRecognizers.count) {
+        [self.view removeGestureRecognizer:[self.view.gestureRecognizers objectAtIndex:0]];
+    }
+
     
-    //[self.view setBackgroundColor:[UIColor purpleColor]];
+    [self.mudarVideo setTag:1];
+    self->posicaoAtual = 0;
+    //GestoEmL *gestoL=[[GestoEmL alloc]initWithTarget:self action:@selector(testeGesto)];
+    UITapGestureRecognizer *tapPlay = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(playVideo:)];
     
-    Estacao *estacao=[[Estacao alloc]init:@"www.faceboook.com.br" :89.1];
+    [self.viewDoVideo addGestureRecognizer:tapPlay];
     
-    NSLog(@"%f",[estacao nEstacao]);
-    NSLog(@"%@",[estacao streaming]);
+    [super setGestoReconizer:self.mudarVideo :self.gestoSintonia :@selector(manipulaArray:):nil];
     
-    GestoEmL *gestoL=[[GestoEmL alloc]initWithTarget:self action:@selector(testeGesto)];
     
-    Player *play = [[Player alloc]init];
     
-    [play playVideo:self.view];
+    [self.tituloDoVideo setText:self.player.nomeDoVideo];
+    [self.tituloDoVideo setTextAlignment:NSTextAlignmentCenter];
     
-   // self.player = [play player];
+    self.botaoEstacao = self.mudarVideo;
+    for (int i = 0; i< self.view.gestureRecognizers.count; i++) {
+        [[self.view.gestureRecognizers objectAtIndex:i] setCancelsTouchesInView:NO];
+    }
     
-   
-    //[self.view addGestureRecognizer:gestoL];
+    //Adiciona o nome da segue que deve usar ParaRadioViewController
+    self->segueID=[NSString stringWithFormat:@"ParaRadioViewController"];
+    
+    //Basicamente desliga as constraints
+    [self.mudarVideo setTranslatesAutoresizingMaskIntoConstraints:YES];
+    
+    //Adiciona Gesto em L
+    GestoEmL *gestoL =[[GestoEmL alloc]initWithTarget:self action:@selector(trocaDeViewController)];
+    
+    [self.view addGestureRecognizer:gestoL];
 }
 
-
-
--(void)testeGesto{
-    NSLog(@"Reconheceu gesto");
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    UITouch *toque=[touches anyObject];
+    
+    if ([toque tapCount] > 1) {
+        [self.player pararVideo];
+    }
+    if ([self.player.playerView.moviePlayer  playbackState]  != MPMoviePlaybackStateStopped) {
+        [self.player pausarVideo];
+    }
 }
+-(IBAction)playVideo:(UITapGestureRecognizer*)tap{
+
+    [self.player playVideo:self.view];
+}
+
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
+    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    
+    //Basicamente liga as constraints
+    [self.mudarVideo setTranslatesAutoresizingMaskIntoConstraints:NO];
+}
+
+-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+    
+    //Basicamente desliga as constraints
+    [self.mudarVideo setTranslatesAutoresizingMaskIntoConstraints:YES];
+}
+
+-(void)manipulaArray:(NSNumber*)valor{
+    
+    self->posicaoAtual+=[valor intValue];
+    
+    if (self->posicaoAtual / 25 >= 1 ||self->posicaoAtual / 25 <= -1) {
+        self->posicaoAtual = 0;
+        if (valor > 0) {
+            [self.player trocarVideo:@"aumentar"];
+        }else {
+            [self.player trocarVideo:@"abaixar"];
+        }
+        [self.tituloDoVideo setText:self.player.nomeDoVideo];
+    }
+    
+    //NSLog(@"%i",self->posicaoAtual);
+}
+
+-(void)playEstacao{
+    //Não tocar a radio ao selecionar o video
+    return;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
