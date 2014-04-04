@@ -14,7 +14,7 @@
 #import "RadioViewController.h"
 
 
-@interface ViewController : RadioViewController
+@interface ViewController : RadioViewController 
 
 
 @property (strong, nonatomic) IBOutlet UIView *viewDoVideo;

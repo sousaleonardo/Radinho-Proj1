@@ -25,7 +25,7 @@
     
     [self.mudarVideo setTag:1];
     self->posicaoAtual = 0;
-    //GestoEmL *gestoL=[[GestoEmL alloc]initWithTarget:self action:@selector(testeGesto)];
+    
     UITapGestureRecognizer *tapPlay = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(playVideo:)];
     
     [self.viewDoVideo addGestureRecognizer:tapPlay];
@@ -33,14 +33,12 @@
     [super setGestoReconizer:self.mudarVideo :self.gestoSintonia :@selector(manipulaArray:):nil];
     
     
-    
+    [self.tituloDoVideo setEditable:NO];
     [self.tituloDoVideo setText:self.player.nomeDoVideo];
     [self.tituloDoVideo setTextAlignment:NSTextAlignmentCenter];
     
     self.botaoEstacao = self.mudarVideo;
-    for (int i = 0; i< self.view.gestureRecognizers.count; i++) {
-        [[self.view.gestureRecognizers objectAtIndex:i] setCancelsTouchesInView:NO];
-    }
+    
     
     //Adiciona o nome da segue que deve usar ParaRadioViewController
     self->segueID=[NSString stringWithFormat:@"ParaRadioViewController"];
@@ -110,5 +108,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end

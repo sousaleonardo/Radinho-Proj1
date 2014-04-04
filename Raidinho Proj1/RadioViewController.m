@@ -28,6 +28,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    while (self.view.gestureRecognizers.count) {
+        [self.view removeGestureRecognizer:[self.view.gestureRecognizers objectAtIndex:0]];
+    }
+    
     NSURL *url = [[NSBundle mainBundle] URLForResource:@"procurando" withExtension:@"mp3"];
     
     self.somSintonizando = [[AVAudioPlayer alloc]initWithContentsOfURL:url error:Nil];
@@ -60,8 +64,10 @@
     
     //Adiciona Gesto em L
     GestoEmL *gestoL =[[GestoEmL alloc]initWithTarget:self action:@selector(trocaDeViewController)];
+    [gestoL setDelegate:self];
     
     [self.view addGestureRecognizer:gestoL];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -200,7 +206,8 @@
         self->posicaoAtual=0;
     }
     
-    //NSLog(@"%i",self->posicaoAtual);
+    
+    [self.textoRadio setEditable:NO];
     [self.textoRadio setTextAlignment:NSTextAlignmentCenter];
     [self.textoRadio setTextColor:[UIColor colorWithRed:234.0f/255.0f green:198.0f/255.0f blue:148.0f/255.0f alpha:1.0f]];
     [self.textoRadio setText:self.player.nomeDaRadioAtual];
@@ -221,4 +228,5 @@
 -(void)trocaDeViewController{
     [self performSegueWithIdentifier:self->segueID sender:Nil];
 }
+
 @end
