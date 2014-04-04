@@ -14,15 +14,15 @@
     if (self = [super init]) {
         
         //[self inicializaVideo:[[NSBundle mainBundle] pathForResource:@"filename"
-                                                            // ofType:@"txt"]];
+        // ofType:@"txt"]];
         
         self.estacoes =[[NSMutableArray alloc]init];
         self.videos =[[NSMutableArray alloc]init];
         
         NSString* caminhoDosVideos = [[NSBundle mainBundle] pathForResource:@"Videos"
-                                                         ofType:@"txt"];
+                                                                     ofType:@"txt"];
         NSString* caminhoDasEstacoes = [[NSBundle mainBundle] pathForResource:@"estacoes"
-                                                         ofType:@"txt"];
+                                                                       ofType:@"txt"];
         
         [self inicializaVideo:caminhoDosVideos];
         [self inicializaEstacoes:caminhoDasEstacoes];
@@ -40,8 +40,8 @@
 -(void)inicializaEstacoes : (NSString*)caminhoDoArquivo{
     
     NSString* conteudo = [NSString stringWithContentsOfFile:caminhoDoArquivo
-                                                  encoding:NSUTF8StringEncoding
-                                                     error:NULL];
+                                                   encoding:NSUTF8StringEncoding
+                                                      error:NULL];
     
     NSArray *arquivo = [conteudo componentsSeparatedByString:@"\n"];
     
@@ -82,7 +82,7 @@
         nomeDoVideo = [arquivo objectAtIndex:i];
         
         NSString* url = [[NSBundle mainBundle] pathForResource:nomeDoVideo
-                                                         ofType:@"MP4"];
+                                                        ofType:@"MP4"];
         
         Video *video = [[Video alloc]initWithName:nomeDoVideo  AndUrl:url] ;
         
@@ -92,7 +92,7 @@
 
 -(AVPlayer*)playEstacao{
     Estacao *estacaoParaTocar = [self.estacoes objectAtIndex:self->estacaoAtual];
-   
+    
     NSURL *url = [NSURL URLWithString:estacaoParaTocar.streaming];
     
     self.radio = [[AVPlayerItem alloc]initWithURL:url];
@@ -108,16 +108,13 @@
 -(void)playVideo : (UIView*)view{
     
     Video *videoParaTocar =[self.videos objectAtIndex:self->videoAtual];
+    
     if (self.playerView == nil) {
         
-    
-    self.playerView = [[MPMoviePlayerViewController alloc] initWithContentURL: [NSURL fileURLWithPath:videoParaTocar.url]];
-   
-    
-    
-    self.playerView.moviePlayer.fullscreen = YES;
-    self.playerView.moviePlayer.repeatMode = NO;
-    self.playerView.moviePlayer.controlStyle = MPMovieControlStyleNone;
+        self.playerView = [[MPMoviePlayerViewController alloc] initWithContentURL: [NSURL fileURLWithPath:videoParaTocar.url]];
+        self.playerView.moviePlayer.fullscreen = YES;
+        self.playerView.moviePlayer.repeatMode = NO;
+        self.playerView.moviePlayer.controlStyle = MPMovieControlStyleNone;
     }
     else
     {
@@ -129,6 +126,7 @@
     }
     
     [view addSubview:self.playerView.view];
+    
 }
 -(void)pausarVideo{
     
@@ -159,7 +157,7 @@
     
     if (self->estacaoAtual >= self.estacoes.count){
         self->estacaoAtual = 0;
-    
+        
     }else if(self->estacaoAtual < 0 ){
         self->estacaoAtual=self.estacoes.count-1;
     }

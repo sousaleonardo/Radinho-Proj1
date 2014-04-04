@@ -11,13 +11,13 @@
 #import "Player.h"
 #import <AVFoundation/AVFoundation.h>
 #import "GestoEmL.h"
-#import "ViewController.h"
 
 @interface RadioViewController : UIViewController <GestocircularDelegate>
 {
     int posicaoAtual;
     CGFloat anguloBotaoVolume;
     CGFloat anguloBotaoSintonia;
+    NSString *segueID;
 }
 
 @property (weak, nonatomic) IBOutlet UIImageView *botaoEstacao;

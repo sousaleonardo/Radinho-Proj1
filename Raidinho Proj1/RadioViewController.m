@@ -55,8 +55,13 @@
     //Basicamente desliga as constraints
     [self.botaoVolume setTranslatesAutoresizingMaskIntoConstraints:YES];
     
-    //Remover
-    [self trocaDeViewController];
+    //Adiciona o nome da segue que deve usar ParaRadioViewController
+    self->segueID=[NSString stringWithFormat:@"ParaViewControllerVideo"];
+    
+    //Adiciona Gesto em L
+    GestoEmL *gestoL =[[GestoEmL alloc]initWithTarget:self action:@selector(trocaDeViewController)];
+    
+    [self.view addGestureRecognizer:gestoL];
 }
 
 - (void)didReceiveMemoryWarning
@@ -216,6 +221,6 @@
 
 
 -(void)trocaDeViewController{
-//    [self performSegueWithIdentifier:@"ParaViewVideo" sender:self];
+    [self performSegueWithIdentifier:self->segueID sender:Nil];
 }
 @end

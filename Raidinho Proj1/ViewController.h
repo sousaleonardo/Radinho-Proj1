@@ -17,7 +17,6 @@
 @interface ViewController : RadioViewController
 
 
-
 @property (strong, nonatomic) IBOutlet UIView *viewDoVideo;
 @property (strong, nonatomic) IBOutlet UITextView *tituloDoVideo;
 @property MPMoviePlayerController* playerDeVideo;

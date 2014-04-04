@@ -17,10 +17,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     while (self.view.gestureRecognizers.count) {
         [self.view removeGestureRecognizer:[self.view.gestureRecognizers objectAtIndex:0]];
     }
+
+    
     [self.mudarVideo setTag:1];
     self->posicaoAtual = 0;
     //GestoEmL *gestoL=[[GestoEmL alloc]initWithTarget:self action:@selector(testeGesto)];
@@ -39,6 +41,12 @@
     for (int i = 0; i< self.view.gestureRecognizers.count; i++) {
         [[self.view.gestureRecognizers objectAtIndex:i] setCancelsTouchesInView:NO];
     }
+    
+    //Adiciona o nome da segue que deve usar ParaRadioViewController
+    self->segueID=[NSString stringWithFormat:@"ParaRadioViewController"];
+    
+    //Basicamente desliga as constraints
+    [self.mudarVideo setTranslatesAutoresizingMaskIntoConstraints:YES];
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -52,7 +60,22 @@
     }
 }
 -(IBAction)playVideo:(UITapGestureRecognizer*)tap{
+
     [self.player playVideo:self.view];
+}
+
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
+    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    
+    //Basicamente liga as constraints
+    [self.mudarVideo setTranslatesAutoresizingMaskIntoConstraints:NO];
+}
+
+-(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+    
+    //Basicamente desliga as constraints
+    [self.mudarVideo setTranslatesAutoresizingMaskIntoConstraints:YES];
 }
 
 -(void)manipulaArray:(NSNumber*)valor{
@@ -69,12 +92,13 @@
         [self.tituloDoVideo setText:self.player.nomeDoVideo];
     }
     
-    
-    
     //NSLog(@"%i",self->posicaoAtual);
 }
 
-
+-(void)playEstacao{
+    //Não tocar a radio ao selecionar o video
+    return;
+}
 
 - (void)didReceiveMemoryWarning
 {
