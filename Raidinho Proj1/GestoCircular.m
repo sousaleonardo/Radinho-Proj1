@@ -80,7 +80,8 @@
     //Garantir que os pontos estão na area certa
     CGFloat distancia = [self distanciaEntrePontos:self->pontoMedio :pontoAtual];
     
-    if ((raioMedio <= distancia) && (distancia <= self-> foraRaio  )) {
+    //if ((raioMedio <= distancia) && (distancia <= self-> foraRaio  )) {
+    if (distancia <= self-> foraRaio) {
         
         //Calcula o angulo de rotação entre os pontos
         CGFloat angulo = [self anguloEntreLinhasEmGraus:self->pontoMedio :pontoAnterior :self->pontoMedio :pontoAtual];

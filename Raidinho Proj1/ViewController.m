@@ -47,6 +47,11 @@
     
     //Basicamente desliga as constraints
     [self.mudarVideo setTranslatesAutoresizingMaskIntoConstraints:YES];
+    
+    //Adiciona Gesto em L
+    GestoEmL *gestoL =[[GestoEmL alloc]initWithTarget:self action:@selector(trocaDeViewController)];
+    
+    [self.view addGestureRecognizer:gestoL];
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
