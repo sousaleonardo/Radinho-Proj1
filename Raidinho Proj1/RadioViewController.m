@@ -226,6 +226,8 @@
 
 
 -(void)trocaDeViewController{
+    //Alterado para parar a radio antes de trocar de view :D
+    [self.radioSom pause];
     [self performSegueWithIdentifier:self->segueID sender:Nil];
 }
 
