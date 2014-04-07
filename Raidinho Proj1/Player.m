@@ -30,6 +30,9 @@
         self->nomeArquivoRadio=[NSString stringWithFormat:@"%@/estacoes.txt",dirArquivo];
         self->nomeArquivoVideo=[NSString stringWithFormat:@"%@/Videos.txt",dirArquivo];
         
+        //Deleta arquivo config REMOVER ANTES DE LANCAR A FInal
+        [self deletarArquivoConfig];
+        
         //Tenta ler do arquivo personalizado do user
         if ([self lerArquivo:self->nomeArquivoRadio ] == Nil) {
             //Não encontrou :(
@@ -43,6 +46,8 @@
             
             //Atualiza o caminho para as radio
             caminhoDasEstacoes = self->nomeArquivoRadio;
+            
+            [self testeAdicao];
         }else{
             //Ele ja tem o arquivo \o
             caminhoDasEstacoes=self->nomeArquivoRadio;
@@ -227,7 +232,7 @@
 }
 
 -(void)escreverArquivo:(NSString *)texto :(NSString*)nomeArquivo{
-
+    //MUDAR POIS ESTAMOS USANDO STRING!!! CABECA!
     //salva o arquivo
     NSMutableArray *arrayConteudoDinamico=[NSMutableArray arrayWithArray:[self lerArquivo :nomeArquivo]];
     
@@ -250,6 +255,21 @@
     NSString *linhaArquivo=[NSString stringWithFormat:@"\n%f %@*",[nRadio floatValue],url];
     
     [self escreverArquivo:linhaArquivo :self->nomeArquivoRadio];
+}
+
+-(void)testeAdicao{
+    NSString *teste=[NSString stringWithFormat:@"http://uk2.internet-radio.com:31216/"];
+    
+    [self adicionarUrlRadio:[NSNumber numberWithInt:1] :teste];
+}
+
+-(void)deletarArquivoConfig{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    if([fileManager fileExistsAtPath:self->nomeArquivoRadio])
+    {
+        [fileManager removeItemAtPath:self->nomeArquivoRadio error:Nil];
+    }
 }
 
 @end
