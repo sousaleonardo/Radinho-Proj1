@@ -38,5 +38,6 @@
 
 -(void)inicializaEstacoes : (NSString*) caminhoDoArquivo;
 -(void)inicializaVideo : (NSString*) caminhoDoArquivo;
-
+-(void)criarRadio: (NSString*)nRadio :(NSString*)streamingRadio;
+-(NSArray*)lerArquivo :(NSString*)nomeArquivo;
 @end

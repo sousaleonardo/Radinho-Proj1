@@ -184,4 +184,26 @@
     self.nomeDoVideo = [[NSString alloc]initWithString:[self.videos[self->videoAtual]nome]];
 }
 
+-(void)escreverArquivo:(NSString *)texto :(NSString*)nomeArquivo{
+    
+    //salva o arquivo
+    NSMutableArray *arrayConteudoDinamico=[NSMutableArray arrayWithArray:[self lerArquivo :nomeArquivo]];
+    
+    [arrayConteudoDinamico addObject:[NSString stringWithFormat:@"%@",texto]];
+    
+    NSArray *arquivoEscrever = arrayConteudoDinamico;
+    
+    BOOL success = [arquivoEscrever writeToFile:nomeArquivo atomically:YES];
+    NSAssert(success, @"writeToFile failed");
+    
+}
+
+-(NSArray*)lerArquivo :(NSString*)nomeArquivo{
+    NSArray *arquivo = [NSArray arrayWithContentsOfFile:nomeArquivo];
+    
+    return arquivo;
+}
+
+
+
 @end
