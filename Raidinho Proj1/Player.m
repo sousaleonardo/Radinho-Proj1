@@ -24,10 +24,49 @@
         NSString* caminhoDasEstacoes = [[NSBundle mainBundle] pathForResource:@"estacoes"
                                                                        ofType:@"txt"];
         
+        //Configura local de salvamente de arquivo
+        self->paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        self->dirArquivo=[paths objectAtIndex:0];
+        self->nomeArquivoRadio=[NSString stringWithFormat:@"@/estacoes.txt",dirArquivo];
+        self->nomeArquivoRadio=[NSString stringWithFormat:@"@/Videos.txt",dirArquivo];
+        
+        //Tenta ler do arquivo personalizado do user
+        if ([self lerArquivo:self->nomeArquivoRadio ] == Nil) {
+            //Não encontrou :(
+            //Pega os arquivo padrão e adiciona no local!0 :]
+            NSArray *arquivoPadrao=[NSArray arrayWithContentsOfFile:caminhoDasEstacoes];
+            
+            [arquivoPadrao writeToFile:self->nomeArquivoRadio atomically:YES];
+            
+            //Atualiza o caminho para as radio
+            caminhoDasEstacoes = self->nomeArquivoRadio;
+        }else{
+            //Ele ja tem o arquivo \o
+            caminhoDasEstacoes=self->nomeArquivoRadio;
+        }
+        
+        //Agora com os de videos :s
+        if ([self lerArquivo:self->nomeArquivoVideo]==nil) {
+            //Não encontrou :(
+            //Pega os arquivo padrão e adiciona no local! :]
+            NSArray *arquivoPadrao=[NSArray arrayWithContentsOfFile:caminhoDosVideos];
+            
+            [arquivoPadrao writeToFile:self->nomeArquivoVideo atomically:YES];
+            
+            //Atualiza o caminho para as radio
+            caminhoDasEstacoes = self->nomeArquivoVideo;
+        }else{
+            //Ele ja tem o arquivo \o
+            caminhoDasEstacoes=self->nomeArquivoVideo;
+        }
+        
+        //Após isso inicializa normalmente
+        
         [self inicializaVideo:caminhoDosVideos];
         [self inicializaEstacoes:caminhoDasEstacoes];
         self->videoAtual = 0;
         self->estacaoAtual = 0;
+        
         self.player =[[AVPlayer alloc]init];
         self.nomeDaRadioAtual = [[NSString alloc]initWithFormat:@"%.2f",[self.estacoes[self->estacaoAtual] nEstacao] ];
         self.nomeDoVideo = [[NSString alloc]initWithString:[self.videos[self->videoAtual]nome]];
@@ -185,7 +224,7 @@
 }
 
 -(void)escreverArquivo:(NSString *)texto :(NSString*)nomeArquivo{
-    
+
     //salva o arquivo
     NSMutableArray *arrayConteudoDinamico=[NSMutableArray arrayWithArray:[self lerArquivo :nomeArquivo]];
     
@@ -204,6 +243,10 @@
     return arquivo;
 }
 
-
+-(void)adicionarUrlRadio:(NSNumber*)nRadio :(NSString *)url {
+    NSString *linhaArquivo=[NSString stringWithFormat:@"%f %@*",[nRadio floatValue],url];
+    
+    [self escreverArquivo:linhaArquivo :self->nomeArquivoRadio];
+}
 
 @end

@@ -16,6 +16,11 @@
 {
     int videoAtual;
     int estacaoAtual;
+    //Configura local de salvamente de arquivo
+    NSArray *paths;
+    NSString *dirArquivo;
+    NSString *nomeArquivoRadio;
+    NSString *nomeArquivoVideo;
 }
 @property NSString *nomeDaRadioAtual;
 @property NSString *nomeDoVideo;
@@ -40,4 +45,6 @@
 -(void)inicializaVideo : (NSString*) caminhoDoArquivo;
 -(void)criarRadio: (NSString*)nRadio :(NSString*)streamingRadio;
 -(NSArray*)lerArquivo :(NSString*)nomeArquivo;
+-(void)adicionarUrlRadio:(NSNumber*)nRadio :(NSString *)url;
+
 @end
