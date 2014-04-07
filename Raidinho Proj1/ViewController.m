@@ -30,8 +30,7 @@
     
     [self.viewDoVideo addGestureRecognizer:tapPlay];
     
-    //Liga a Constrants
-    [self.mudarVideo setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
     
     [super setGestoReconizer:self.mudarVideo :self.gestoSintonia :@selector(manipulaArray:):nil];
     
@@ -41,13 +40,13 @@
     [self.tituloDoVideo setTextAlignment:NSTextAlignmentCenter];
     
     self.botaoEstacao = self.mudarVideo;
-    
+    [self.mudarVideo setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     //Adiciona o nome da segue que deve usar ParaRadioViewController
     self->segueID=[NSString stringWithFormat:@"ParaRadioViewController"];
     
     //Basicamente desliga as constraints
-    [self.mudarVideo setTranslatesAutoresizingMaskIntoConstraints:YES];
+    //[self.mudarVideo setTranslatesAutoresizingMaskIntoConstraints:YES];
     
     //Adiciona Gesto em L
     GestoEmL *gestoL =[[GestoEmL alloc]initWithTarget:self action:@selector(trocaDeViewController)];
@@ -68,22 +67,10 @@
 }
 -(IBAction)playVideo:(UITapGestureRecognizer*)tap{
 
-    [self.player playVideo:self.view];
+    [self.player playVideo:super.view];
 }
 
--(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
-    [super willRotateToInterfaceOrientation:toInterfaceOrientation duration:duration];
-    
-    //Basicamente liga as constraints
-    [self.mudarVideo setTranslatesAutoresizingMaskIntoConstraints:NO];
-}
 
--(void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
-    
-    //Basicamente desliga as constraints
-    //[self.mudarVideo setTranslatesAutoresizingMaskIntoConstraints:YES];
-}
 
 -(void)manipulaArray:(NSNumber*)valor{
     
