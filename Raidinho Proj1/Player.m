@@ -27,14 +27,17 @@
         //Configura local de salvamente de arquivo
         self->paths=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         self->dirArquivo=[paths objectAtIndex:0];
-        self->nomeArquivoRadio=[NSString stringWithFormat:@"@/estacoes.txt",dirArquivo];
-        self->nomeArquivoRadio=[NSString stringWithFormat:@"@/Videos.txt",dirArquivo];
+        self->nomeArquivoRadio=[NSString stringWithFormat:@"%@/estacoes.txt",dirArquivo];
+        self->nomeArquivoVideo=[NSString stringWithFormat:@"%@/Videos.txt",dirArquivo];
         
         //Tenta ler do arquivo personalizado do user
         if ([self lerArquivo:self->nomeArquivoRadio ] == Nil) {
             //Não encontrou :(
             //Pega os arquivo padrão e adiciona no local!0 :]
-            NSArray *arquivoPadrao=[NSArray arrayWithContentsOfFile:caminhoDasEstacoes];
+           // NSArray *arquivoPadrao=[NSArray arrayWithContentsOfFile:caminhoDasEstacoes];
+            NSString* arquivoPadrao = [NSString stringWithContentsOfFile:caminhoDasEstacoes
+                                                           encoding:NSUTF8StringEncoding
+                                                              error:NULL];
             
             [arquivoPadrao writeToFile:self->nomeArquivoRadio atomically:YES];
             
@@ -54,10 +57,10 @@
             [arquivoPadrao writeToFile:self->nomeArquivoVideo atomically:YES];
             
             //Atualiza o caminho para as radio
-            caminhoDasEstacoes = self->nomeArquivoVideo;
+            caminhoDosVideos = self->nomeArquivoVideo;
         }else{
             //Ele ja tem o arquivo \o
-            caminhoDasEstacoes=self->nomeArquivoVideo;
+            caminhoDosVideos=self->nomeArquivoVideo;
         }
         
         //Após isso inicializa normalmente
@@ -244,7 +247,7 @@
 }
 
 -(void)adicionarUrlRadio:(NSNumber*)nRadio :(NSString *)url {
-    NSString *linhaArquivo=[NSString stringWithFormat:@"%f %@*",[nRadio floatValue],url];
+    NSString *linhaArquivo=[NSString stringWithFormat:@"\n%f %@*",[nRadio floatValue],url];
     
     [self escreverArquivo:linhaArquivo :self->nomeArquivoRadio];
 }
