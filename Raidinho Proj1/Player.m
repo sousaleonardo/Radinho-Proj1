@@ -57,7 +57,9 @@
         if ([self lerArquivo:self->nomeArquivoVideo]==nil) {
             //Não encontrou :(
             //Pega os arquivo padrão e adiciona no local! :]
-            NSArray *arquivoPadrao=[NSArray arrayWithContentsOfFile:caminhoDosVideos];
+            NSString* arquivoPadrao = [NSString stringWithContentsOfFile:caminhoDosVideos
+                                                                encoding:NSUTF8StringEncoding
+                                                                   error:NULL];
             
             [arquivoPadrao writeToFile:self->nomeArquivoVideo atomically:YES];
             
@@ -237,9 +239,8 @@
 }
 
 -(void)escreverArquivo:(NSString *)texto :(NSString*)nomeArquivo{
-    //MUDAR POIS ESTAMOS USANDO STRING!!! CABECA!
     //salva o arquivo
-    //NSMutableArray *arrayConteudoDinamico=[NSMutableArray arrayWithArray:[self lerArquivo :nomeArquivo]];
+
     NSString *stringArquivoExistente=[NSString stringWithContentsOfFile:self->nomeArquivoRadio
                                                                encoding:NSUTF8StringEncoding
                                                                   error:NULL];
