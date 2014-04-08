@@ -77,7 +77,12 @@
         
         self.player =[[AVPlayer alloc]init];
         self.nomeDaRadioAtual = [[NSString alloc]initWithFormat:@"%.2f",[self.estacoes[self->estacaoAtual] nEstacao] ];
-        self.nomeDoVideo = [[NSString alloc]initWithString:[self.videos[self->videoAtual]nome]];
+        
+        //Adicionado controle para evitar erro caso o user não tenha videos no aparelho
+        if ([self.videos count]>0) {
+            self.nomeDoVideo = [[NSString alloc]initWithString:[self.videos[self->videoAtual]nome]];
+        }
+        
     }
     
     return self;
@@ -234,13 +239,15 @@
 -(void)escreverArquivo:(NSString *)texto :(NSString*)nomeArquivo{
     //MUDAR POIS ESTAMOS USANDO STRING!!! CABECA!
     //salva o arquivo
-    NSMutableArray *arrayConteudoDinamico=[NSMutableArray arrayWithArray:[self lerArquivo :nomeArquivo]];
+    //NSMutableArray *arrayConteudoDinamico=[NSMutableArray arrayWithArray:[self lerArquivo :nomeArquivo]];
+    NSString *stringArquivoExistente=[NSString stringWithContentsOfFile:self->nomeArquivoRadio
+                                                               encoding:NSUTF8StringEncoding
+                                                                  error:NULL];
+
     
-    [arrayConteudoDinamico addObject:[NSString stringWithFormat:@"%@",texto]];
+    stringArquivoExistente=[stringArquivoExistente stringByAppendingString:texto];
     
-    NSArray *arquivoEscrever = arrayConteudoDinamico;
-    
-    BOOL success = [arquivoEscrever writeToFile:nomeArquivo atomically:YES];
+    BOOL success = [stringArquivoExistente writeToFile:nomeArquivo atomically:YES];
     NSAssert(success, @"writeToFile failed");
     
 }
@@ -252,7 +259,7 @@
 }
 
 -(void)adicionarUrlRadio:(NSNumber*)nRadio :(NSString *)url {
-    NSString *linhaArquivo=[NSString stringWithFormat:@"\n%f %@*",[nRadio floatValue],url];
+    NSString *linhaArquivo=[NSString stringWithFormat:@"\n%f %@*",[nRadio doubleValue],url];
     
     [self escreverArquivo:linhaArquivo :self->nomeArquivoRadio];
 }
