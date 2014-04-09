@@ -47,7 +47,6 @@
             //Atualiza o caminho para as radio
             caminhoDasEstacoes = self->nomeArquivoRadio;
             
-            [self testeAdicao];
         }else{
             //Ele ja tem o arquivo \o
             caminhoDasEstacoes=self->nomeArquivoRadio;
@@ -260,15 +259,9 @@
 }
 
 -(void)adicionarUrlRadio:(NSNumber*)nRadio :(NSString *)url {
-    NSString *linhaArquivo=[NSString stringWithFormat:@"\n%f %@*",[nRadio doubleValue],url];
+    NSString *linhaArquivo=[NSString stringWithFormat:@"\n%hd %@*",[nRadio shortValue],url];
     
     [self escreverArquivo:linhaArquivo :self->nomeArquivoRadio];
-}
-
--(void)testeAdicao{
-    NSString *teste=[NSString stringWithFormat:@"http://uk2.internet-radio.com:31216/"];
-    
-    [self adicionarUrlRadio:[NSNumber numberWithInt:1] :teste];
 }
 
 -(void)deletarArquivoConfig{

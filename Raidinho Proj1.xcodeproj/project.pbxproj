@@ -19,6 +19,7 @@
 		7557EAF918E34F4E00EFC208 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 7557EAF818E34F4E00EFC208 /* Player.m */; };
 		7557EAFB18E34FA600EFC208 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7557EAFA18E34FA600EFC208 /* AVFoundation.framework */; };
 		7557EAFD18E3695600EFC208 /* estacoes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7557EAFC18E3695600EFC208 /* estacoes.txt */; };
+		942C932B18F5B72300B9EF14 /* ViewAdicionarRadio.m in Sources */ = {isa = PBXBuildFile; fileRef = 942C932A18F5B72300B9EF14 /* ViewAdicionarRadio.m */; };
 		9436CE2A18EC8994007266C3 /* GestoCircular.m in Sources */ = {isa = PBXBuildFile; fileRef = 9436CE2918EC8994007266C3 /* GestoCircular.m */; };
 		9436CE2D18EC8AE9007266C3 /* RadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9436CE2C18EC8AE9007266C3 /* RadioViewController.m */; };
 		9436CE3118EC969C007266C3 /* chiado.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9436CE2F18EC969C007266C3 /* chiado.mp3 */; };
@@ -80,6 +81,8 @@
 		7557EAF818E34F4E00EFC208 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		7557EAFA18E34FA600EFC208 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7557EAFC18E3695600EFC208 /* estacoes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = estacoes.txt; sourceTree = "<group>"; };
+		942C932918F5B72300B9EF14 /* ViewAdicionarRadio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewAdicionarRadio.h; sourceTree = "<group>"; };
+		942C932A18F5B72300B9EF14 /* ViewAdicionarRadio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewAdicionarRadio.m; sourceTree = "<group>"; };
 		9436CE2818EC8994007266C3 /* GestoCircular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestoCircular.h; sourceTree = "<group>"; };
 		9436CE2918EC8994007266C3 /* GestoCircular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestoCircular.m; sourceTree = "<group>"; };
 		9436CE2B18EC8AE9007266C3 /* RadioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioViewController.h; sourceTree = "<group>"; };
@@ -220,6 +223,8 @@
 				7557EAF418E34A8000EFC208 /* Video.h */,
 				7557EAF718E34F4E00EFC208 /* Player.h */,
 				7557EAF818E34F4E00EFC208 /* Player.m */,
+				942C932918F5B72300B9EF14 /* ViewAdicionarRadio.h */,
+				942C932A18F5B72300B9EF14 /* ViewAdicionarRadio.m */,
 				7557EAF518E34A8000EFC208 /* Video.m */,
 				9457214F18E345F3004F5496 /* Images.xcassets */,
 				9457216C18E34A27004F5496 /* Estacao.h */,
@@ -414,6 +419,7 @@
 				7557EAF618E34A8000EFC208 /* Video.m in Sources */,
 				9457214818E345F3004F5496 /* AppDelegate.m in Sources */,
 				9436CE2D18EC8AE9007266C3 /* RadioViewController.m in Sources */,
+				942C932B18F5B72300B9EF14 /* ViewAdicionarRadio.m in Sources */,
 				7557EAF918E34F4E00EFC208 /* Player.m in Sources */,
 				9457214418E345F3004F5496 /* main.m in Sources */,
 			);
