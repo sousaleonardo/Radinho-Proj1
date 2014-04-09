@@ -20,12 +20,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qqT-Ya-kBX">
+                            <view alpha="0.79999999999999982" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qqT-Ya-kBX">
                                 <rect key="frame" x="20" y="78" width="280" height="383"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="play.png" translatesAutoresizingMaskIntoConstraints="NO" id="ath-bh-VcD">
-                                        <rect key="frame" x="117" y="168" width="47" height="47"/>
+                                        <rect key="frame" x="124" y="168" width="47" height="47"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="47" id="Voj-aK-2Sf"/>
@@ -36,7 +36,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="centerY" secondItem="ath-bh-VcD" secondAttribute="centerY" id="11T-Nv-V3e"/>
-                                    <constraint firstAttribute="centerX" secondItem="ath-bh-VcD" secondAttribute="centerX" id="kjD-KO-n9K"/>
+                                    <constraint firstAttribute="centerX" secondItem="ath-bh-VcD" secondAttribute="centerX" constant="-7.5" id="kjD-KO-n9K"/>
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="caixa_btns.png" translatesAutoresizingMaskIntoConstraints="NO" id="is1-BU-eLw">
@@ -167,7 +167,7 @@
                                 </constraints>
                             </imageView>
                             <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJj-Ou-um7">
-                                <rect key="frame" x="86" y="484" width="149" height="50"/>
+                                <rect key="frame" x="85" y="484" width="149" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.9490196704864502" green="0.7725490927696228" blue="0.55686277151107788" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
@@ -212,7 +212,7 @@
                                     <segue destination="nYx-ci-3ln" kind="modal" modalTransitionStyle="crossDissolve" id="fyJ-7R-b1n"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8TI-xK-omh">
+                            <view alpha="0.79999999999999982" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8TI-xK-omh">
                                 <rect key="frame" x="20" y="78" width="280" height="383"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -232,7 +232,7 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titulo.png" translatesAutoresizingMaskIntoConstraints="NO" id="SQp-XN-SSJ">
-                                <rect key="frame" x="39" y="35" width="215" height="30"/>
+                                <rect key="frame" x="40" y="35" width="215" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="215" id="0HK-Gl-QrL"/>
@@ -245,7 +245,7 @@
                             <constraint firstAttribute="trailing" secondItem="pwE-FM-oxV" secondAttribute="trailing" constant="20" id="22N-Q6-0iE"/>
                             <constraint firstAttribute="trailing" secondItem="ASK-uP-d9c" secondAttribute="trailing" constant="28" id="2ba-qC-jTS"/>
                             <constraint firstItem="q5Q-cQ-NrH" firstAttribute="top" secondItem="c4Q-Zq-mY5" secondAttribute="bottom" constant="34" id="3yH-Nb-Bn8"/>
-                            <constraint firstAttribute="trailing" secondItem="kJj-Ou-um7" secondAttribute="trailing" constant="85" id="A3n-cz-ObM"/>
+                            <constraint firstAttribute="trailing" secondItem="kJj-Ou-um7" secondAttribute="trailing" constant="86" id="A3n-cz-ObM"/>
                             <constraint firstItem="uiA-Lq-l7R" firstAttribute="leading" secondItem="sY5-sV-5dY" secondAttribute="leading" id="AtN-qv-IAg"/>
                             <constraint firstItem="ASK-uP-d9c" firstAttribute="top" secondItem="X2d-wf-QZf" secondAttribute="bottom" constant="15" id="Hfs-06-IKr"/>
                             <constraint firstAttribute="trailing" secondItem="uiA-Lq-l7R" secondAttribute="trailing" id="IdW-ZZ-9sf"/>
@@ -255,12 +255,12 @@
                             <constraint firstItem="q5Q-cQ-NrH" firstAttribute="top" secondItem="uiA-Lq-l7R" secondAttribute="bottom" id="Tx0-TA-CBz"/>
                             <constraint firstItem="pwE-FM-oxV" firstAttribute="leading" secondItem="sY5-sV-5dY" secondAttribute="leading" constant="20" id="WJY-mn-Edf"/>
                             <constraint firstItem="pwE-FM-oxV" firstAttribute="top" secondItem="X2d-wf-QZf" secondAttribute="bottom" id="b7F-K6-HUa"/>
-                            <constraint firstItem="SQp-XN-SSJ" firstAttribute="leading" secondItem="sY5-sV-5dY" secondAttribute="leading" constant="39" id="bCx-Wd-XXJ"/>
+                            <constraint firstItem="SQp-XN-SSJ" firstAttribute="leading" secondItem="sY5-sV-5dY" secondAttribute="leading" constant="40" id="bCx-Wd-XXJ"/>
                             <constraint firstAttribute="trailing" secondItem="8TI-xK-omh" secondAttribute="trailing" constant="20" id="eMe-uh-ZkC"/>
                             <constraint firstItem="kyP-BS-BRJ" firstAttribute="top" secondItem="8TI-xK-omh" secondAttribute="bottom" constant="8" id="fdX-sX-RHc"/>
                             <constraint firstItem="q5Q-cQ-NrH" firstAttribute="top" secondItem="kyP-BS-BRJ" secondAttribute="bottom" constant="20" id="jwb-58-DVU"/>
                             <constraint firstItem="CjJ-uI-rIC" firstAttribute="leading" secondItem="sY5-sV-5dY" secondAttribute="leading" constant="27" id="n1L-yx-CvR"/>
-                            <constraint firstItem="kJj-Ou-um7" firstAttribute="leading" secondItem="sY5-sV-5dY" secondAttribute="leading" constant="86" id="nCd-db-eEx"/>
+                            <constraint firstItem="kJj-Ou-um7" firstAttribute="leading" secondItem="sY5-sV-5dY" secondAttribute="leading" constant="85" id="nCd-db-eEx"/>
                             <constraint firstAttribute="trailing" secondItem="kyP-BS-BRJ" secondAttribute="trailing" constant="20" id="qHC-Pr-cYv"/>
                             <constraint firstItem="uiA-Lq-l7R" firstAttribute="top" secondItem="sY5-sV-5dY" secondAttribute="top" id="qhb-EL-MSy"/>
                             <constraint firstAttribute="bottom" secondItem="kJj-Ou-um7" secondAttribute="bottom" constant="34" id="taO-aT-uaX"/>
@@ -1232,16 +1232,70 @@
     </scenes>
     <resources>
         <image name="botao.png" width="90" height="90"/>
+        <image name="botao.png" width="90" height="90"/>
+        <image name="botao.png" width="90" height="90"/>
+        <image name="botao.png" width="90" height="90"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
+        <image name="caixa_btns.png" width="550" height="173"/>
         <image name="caixa_btns.png" width="550" height="173"/>
         <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="caixa_titulo.png" width="550" height="52"/>
+        <image name="circleGesure.png" width="120" height="155"/>
+        <image name="circleGesure.png" width="120" height="155"/>
         <image name="circleGesure.png" width="120" height="155"/>
         <image name="doubleTap.png" width="120" height="155"/>
         <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="fundo.png" width="600" height="800"/>
+        <image name="play.png" width="991" height="973"/>
         <image name="play.png" width="991" height="973"/>
         <image name="seta_mais.png" width="89" height="47"/>
+        <image name="seta_mais.png" width="89" height="47"/>
+        <image name="seta_mais.png" width="89" height="47"/>
+        <image name="seta_mais.png" width="89" height="47"/>
+        <image name="seta_mais.png" width="89" height="47"/>
+        <image name="seta_mais.png" width="89" height="47"/>
+        <image name="seta_menos.png" width="89" height="47"/>
+        <image name="seta_menos.png" width="89" height="47"/>
+        <image name="seta_menos.png" width="89" height="47"/>
+        <image name="seta_menos.png" width="89" height="47"/>
+        <image name="seta_menos.png" width="89" height="47"/>
         <image name="seta_menos.png" width="89" height="47"/>
         <image name="singleTap.png" width="120" height="155"/>
+        <image name="singleTap.png" width="120" height="155"/>
         <image name="squareGesure.png" width="120" height="155"/>
+        <image name="squareGesure.png" width="120" height="155"/>
+        <image name="titulo.png" width="958" height="113"/>
+        <image name="titulo.png" width="958" height="113"/>
+        <image name="titulo.png" width="958" height="113"/>
+        <image name="titulo.png" width="958" height="113"/>
+        <image name="titulo.png" width="958" height="113"/>
+        <image name="titulo.png" width="958" height="113"/>
+        <image name="titulo.png" width="958" height="113"/>
+        <image name="titulo.png" width="958" height="113"/>
+        <image name="titulo.png" width="958" height="113"/>
         <image name="titulo.png" width="958" height="113"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -1255,8 +1309,8 @@
         <segue reference="fyJ-7R-b1n"/>
         <segue reference="3EK-m9-gwJ"/>
         <segue reference="Rdf-Dn-NGx"/>
-        <segue reference="EBU-SW-Sgm"/>
-        <segue reference="gK5-Ln-jtu"/>
         <segue reference="ZDU-1N-xXI"/>
+        <segue reference="gK5-Ln-jtu"/>
+        <segue reference="EBU-SW-Sgm"/>
     </inferredMetricsTieBreakers>
 </document>
