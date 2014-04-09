@@ -35,7 +35,7 @@
 
 -(id)init;
 -(AVPlayer*)playEstacao;
--(void)playVideo : (UIView*)view;
+-(void)playVideo : (UIViewController*)view;
 -(void)trocarEstacao : (NSString*)fluxo;
 -(void)trocarVideo : (NSString*)fluxo;
 -(void)pausarVideo;

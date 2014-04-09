@@ -132,10 +132,10 @@
     [self setGestoReconizer:self.botaoEstacao :self.gestoSintonia :@selector(manipulaArray:) :@selector(playEstacao)];
     
     //Basicamente desliga as constraints
-    //[self.botaoEstacao setTranslatesAutoresizingMaskIntoConstraints:YES];
+    [self.botaoEstacao setTranslatesAutoresizingMaskIntoConstraints:YES];
     
     //Basicamente desliga as constraints
-    //[self.botaoVolume setTranslatesAutoresizingMaskIntoConstraints:YES];
+    [self.botaoVolume setTranslatesAutoresizingMaskIntoConstraints:YES];
     
     //Manter botao no angulo que estava
     [self rotacao:0.0f :[NSNumber numberWithInt:0]];
@@ -228,6 +228,13 @@
 -(void)trocaDeViewController{
     //Alterado para parar a radio antes de trocar de view :D
     [self.radioSom pause];
+    [self.somSintonizando pause];
+    //Basicamente desliga as constraints
+    [self.botaoEstacao setTranslatesAutoresizingMaskIntoConstraints:YES];
+    
+    //Basicamente desliga as constraints
+    [self.botaoVolume setTranslatesAutoresizingMaskIntoConstraints:YES];
+    
     [self performSegueWithIdentifier:self->segueID sender:Nil];
 }
 

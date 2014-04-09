@@ -14,6 +14,11 @@
 
 @implementation ViewController
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:NO];
+    [self.mudarVideo setTranslatesAutoresizingMaskIntoConstraints:NO];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -40,13 +45,12 @@
     [self.tituloDoVideo setTextAlignment:NSTextAlignmentCenter];
     
     self.botaoEstacao = self.mudarVideo;
-    [self.mudarVideo setTranslatesAutoresizingMaskIntoConstraints:NO];
+    
+    
+    
     
     //Adiciona o nome da segue que deve usar ParaRadioViewController
     self->segueID=[NSString stringWithFormat:@"ParaRadioViewController"];
-    
-    //Basicamente desliga as constraints
-    //[self.mudarVideo setTranslatesAutoresizingMaskIntoConstraints:YES];
     
     //Adiciona Gesto em L
     GestoEmL *gestoL =[[GestoEmL alloc]initWithTarget:self action:@selector(trocaDeViewController)];
@@ -64,10 +68,11 @@
     if ([self.player.playerView.moviePlayer  playbackState]  != MPMoviePlaybackStateStopped) {
         [self.player pausarVideo];
     }
+    
 }
 -(IBAction)playVideo:(UITapGestureRecognizer*)tap{
 
-    [self.player playVideo:super.view];
+    [self.player playVideo:self];
 }
 
 
@@ -86,7 +91,7 @@
         [self.tituloDoVideo setText:self.player.nomeDoVideo];
     }
     
-    //NSLog(@"%i",self->posicaoAtual);
+    
 }
 
 -(void)playEstacao{

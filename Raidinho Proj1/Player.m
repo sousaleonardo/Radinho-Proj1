@@ -158,7 +158,7 @@
     return self.player;
     
 }
--(void)playVideo : (UIView*)view{
+-(void)playVideo : (UIViewController*)view{
     
     Video *videoParaTocar =[self.videos objectAtIndex:self->videoAtual];
     
@@ -178,7 +178,7 @@
         [self.playerView.moviePlayer play];
     }
     
-    [view addSubview:self.playerView.view];
+    [view presentMoviePlayerViewControllerAnimated:self.playerView];
     
 }
 -(void)pausarVideo{
