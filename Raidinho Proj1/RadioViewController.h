@@ -11,6 +11,7 @@
 #import "Player.h"
 #import <AVFoundation/AVFoundation.h>
 #import "GestoEmL.h"
+#import "ViewAdicionarRadio.h"
 
 @interface RadioViewController : UIViewController <GestocircularDelegate>
 {
@@ -18,6 +19,16 @@
     CGFloat anguloBotaoVolume;
     CGFloat anguloBotaoSintonia;
     NSString *segueID;
+    ViewAdicionarRadio *viewAddUrl;
+    BOOL menuSuperiorAparece;
+    
+    CGRect screenRect; //bounds da
+    CGFloat screenWidth; //largura total da tela
+    CGFloat screenHeigth; // altura total da tela
+    CGFloat alturaMenuSuperior; //altura do menu
+    
+    //Contador radio
+    int contRadio;
 }
 
 @property (weak, nonatomic) IBOutlet UIImageView *botaoEstacao;

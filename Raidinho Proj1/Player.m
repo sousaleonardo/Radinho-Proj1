@@ -31,16 +31,17 @@
         self->nomeArquivoVideo=[NSString stringWithFormat:@"%@/Videos.txt",dirArquivo];
         
         //Deleta arquivo config REMOVER ANTES DE LANCAR A FInal
-        [self deletarArquivoConfig];
+        //[self deletarArquivoConfig];
         
         //Tenta ler do arquivo personalizado do user
-        if ([self lerArquivo:self->nomeArquivoRadio ] == Nil) {
+        //if ([self lerArquivo:self->nomeArquivoRadio ] == Nil) {
+        if (![self existeArquivoConfg:self->nomeArquivoRadio]) {
+            
             //Não encontrou :(
             //Pega os arquivo padrão e adiciona no local!0 :]
-           // NSArray *arquivoPadrao=[NSArray arrayWithContentsOfFile:caminhoDasEstacoes];
             NSString* arquivoPadrao = [NSString stringWithContentsOfFile:caminhoDasEstacoes
-                                                           encoding:NSUTF8StringEncoding
-                                                              error:NULL];
+                                                                encoding:NSUTF8StringEncoding
+                                                                   error:NULL];
             
             [arquivoPadrao writeToFile:self->nomeArquivoRadio atomically:YES];
             
@@ -53,22 +54,22 @@
         }
         
         //Agora com os de videos :s
-        if ([self lerArquivo:self->nomeArquivoVideo]==nil) {
-            //Não encontrou :(
-            //Pega os arquivo padrão e adiciona no local! :]
-            NSString* arquivoPadrao = [NSString stringWithContentsOfFile:caminhoDosVideos
-                                                                encoding:NSUTF8StringEncoding
-                                                                   error:NULL];
-            
-            [arquivoPadrao writeToFile:self->nomeArquivoVideo atomically:YES];
-            
-            //Atualiza o caminho para as radio
-            caminhoDosVideos = self->nomeArquivoVideo;
-        }else{
-            //Ele ja tem o arquivo \o
-            caminhoDosVideos=self->nomeArquivoVideo;
-        }
-        
+        /*if ([self lerArquivo:self->nomeArquivoVideo]==nil) {
+         //Não encontrou :(
+         //Pega os arquivo padrão e adiciona no local! :]
+         NSString* arquivoPadrao = [NSString stringWithContentsOfFile:caminhoDosVideos
+         encoding:NSUTF8StringEncoding
+         error:NULL];
+         
+         [arquivoPadrao writeToFile:self->nomeArquivoVideo atomically:YES];
+         
+         //Atualiza o caminho para as radio
+         caminhoDosVideos = self->nomeArquivoVideo;
+         }else{
+         //Ele ja tem o arquivo \o
+         caminhoDosVideos=self->nomeArquivoVideo;
+         }
+         */
         //Após isso inicializa normalmente
         
         [self inicializaVideo:caminhoDosVideos];
@@ -158,7 +159,7 @@
     return self.player;
     
 }
--(void)playVideo : (UIViewController*)view{
+-(void)playVideo : (UIView*)view{
     
     Video *videoParaTocar =[self.videos objectAtIndex:self->videoAtual];
     
@@ -178,7 +179,7 @@
         [self.playerView.moviePlayer play];
     }
     
-    [view presentMoviePlayerViewControllerAnimated:self.playerView];
+    [view addSubview:self.playerView.view];
     
 }
 -(void)pausarVideo{
@@ -239,15 +240,17 @@
 
 -(void)escreverArquivo:(NSString *)texto :(NSString*)nomeArquivo{
     //salva o arquivo
-
+    
     NSString *stringArquivoExistente=[NSString stringWithContentsOfFile:self->nomeArquivoRadio
                                                                encoding:NSUTF8StringEncoding
                                                                   error:NULL];
-
+    
     
     stringArquivoExistente=[stringArquivoExistente stringByAppendingString:texto];
     
-    BOOL success = [stringArquivoExistente writeToFile:nomeArquivo atomically:YES];
+    NSLog(stringArquivoExistente);
+    
+    BOOL success = [stringArquivoExistente writeToFile:self->nomeArquivoRadio atomically:YES];
     NSAssert(success, @"writeToFile failed");
     
 }
@@ -259,9 +262,15 @@
 }
 
 -(void)adicionarUrlRadio:(NSNumber*)nRadio :(NSString *)url {
-    NSString *linhaArquivo=[NSString stringWithFormat:@"\n%hd %@*",[nRadio shortValue],url];
+    NSLog(@"\n%i %@ *",[nRadio intValue],url);
+    NSString *linhaArquivo=[NSString stringWithFormat:@"\n%i %@*",[nRadio intValue],url];
     
     [self escreverArquivo:linhaArquivo :self->nomeArquivoRadio];
+    
+    //Cria uma estacao para att a lista;
+    Estacao *estacao = [[Estacao alloc]init:url :[nRadio floatValue]] ;
+    [self.estacoes addObject:estacao];
+    NSLog(@"oie");
 }
 
 -(void)deletarArquivoConfig{
@@ -270,6 +279,18 @@
     if([fileManager fileExistsAtPath:self->nomeArquivoRadio])
     {
         [fileManager removeItemAtPath:self->nomeArquivoRadio error:Nil];
+    }
+}
+
+-(BOOL)existeArquivoConfg:(NSString*)caminhoArquivo{
+    NSString* arquivoPadrao = [NSString stringWithContentsOfFile:caminhoArquivo
+                                                        encoding:NSUTF8StringEncoding
+                                                           error:NULL];
+    
+    if (arquivoPadrao == Nil) {
+        return NO;
+    }else{
+        return YES;
     }
 }
 

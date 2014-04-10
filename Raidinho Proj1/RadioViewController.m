@@ -68,6 +68,30 @@
     
     [self.view addGestureRecognizer:gestoL];
     
+    //Config Rects
+    screenRect=[[UIScreen mainScreen]bounds];
+    screenHeigth=screenRect.size.width;
+    screenWidth=screenRect.size.height;
+    alturaMenuSuperior = screenHeigth/4;
+    menuSuperiorAparece=NO;
+    
+    //Adicionar View para adicao de url personalizada
+    CGRect frameView=CGRectMake(0, -alturaMenuSuperior, screenWidth, alturaMenuSuperior) ;
+    self->viewAddUrl =[[ViewAdicionarRadio alloc]initWithTarget:frameView :self :@selector(adicionarUrl::)];
+    
+    [self.view addSubview:self->viewAddUrl];
+    
+    //Add gesto para chamar a view de adição de url
+    UISwipeGestureRecognizer *mostraViewAdd=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(mostraMenuSuperior)];
+    [mostraViewAdd setDirection:UISwipeGestureRecognizerDirectionDown];
+    [self.view addGestureRecognizer:mostraViewAdd];
+    
+    //Add gesto para esconder a view de adição de url
+    UISwipeGestureRecognizer *esconderMenuAdd=[[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(escondeMenuSuperior)];
+    [esconderMenuAdd setDirection:UISwipeGestureRecognizerDirectionUp];
+    [self.view addGestureRecognizer:esconderMenuAdd];
+    
+    self->contRadio=0;
 }
 
 - (void)didReceiveMemoryWarning
@@ -132,10 +156,10 @@
     [self setGestoReconizer:self.botaoEstacao :self.gestoSintonia :@selector(manipulaArray:) :@selector(playEstacao)];
     
     //Basicamente desliga as constraints
-    [self.botaoEstacao setTranslatesAutoresizingMaskIntoConstraints:YES];
+    //[self.botaoEstacao setTranslatesAutoresizingMaskIntoConstraints:YES];
     
     //Basicamente desliga as constraints
-    [self.botaoVolume setTranslatesAutoresizingMaskIntoConstraints:YES];
+    //[self.botaoVolume setTranslatesAutoresizingMaskIntoConstraints:YES];
     
     //Manter botao no angulo que estava
     [self rotacao:0.0f :[NSNumber numberWithInt:0]];
@@ -190,21 +214,28 @@
     //Comeca a tocar som de chiado
     [self.somSintonizando play];
     
-    if (self->posicaoAtual - [valor intValue] == 0) {
-        return;
-    }
-
-    if ([valor intValue] > 0) {
-        [self.player trocarEstacao:@"aumentar"];
-        self->posicaoAtual++;
-    }else if([valor intValue] < 0){
-        [self.player trocarEstacao:@"abaixar"];
-        self->posicaoAtual--;
+    //if (self->posicaoAtual - [valor intValue] == 0) {
+    //    return;
+    //}
+    
+    contRadio++;
+    
+    if (self->contRadio >3) {
+        if ([valor intValue] > 0) {
+            [self.player trocarEstacao:@"aumentar"];
+            //self->posicaoAtual++;
+        }else if([valor intValue] < 0){
+            [self.player trocarEstacao:@"abaixar"];
+            // self->posicaoAtual--;
+        }
+        
+        self->contRadio=0;
     }
     
-    if (self->posicaoAtual > 36) {
-        self->posicaoAtual=0;
-    }
+    
+    //if (self->posicaoAtual > 36) {
+    //    self->posicaoAtual=0;
+    //}
     
     
     [self.textoRadio setEditable:NO];
@@ -228,14 +259,58 @@
 -(void)trocaDeViewController{
     //Alterado para parar a radio antes de trocar de view :D
     [self.radioSom pause];
-    [self.somSintonizando pause];
-    //Basicamente desliga as constraints
-    [self.botaoEstacao setTranslatesAutoresizingMaskIntoConstraints:YES];
-    
-    //Basicamente desliga as constraints
-    [self.botaoVolume setTranslatesAutoresizingMaskIntoConstraints:YES];
-    
     [self performSegueWithIdentifier:self->segueID sender:Nil];
 }
 
+-(void)mostraMenuSuperior{
+    
+    CGPoint inicio = {0, -alturaMenuSuperior};
+    CGPoint fim = {screenWidth/2, alturaMenuSuperior/2};
+    
+    CABasicAnimation *anima = [CABasicAnimation animationWithKeyPath:@"position.y"];
+    anima.duration = 1;
+    anima.removedOnCompletion = YES;
+    
+    anima.fromValue = @(inicio.y);
+    anima.toValue = @(fim.y);
+    
+    self->viewAddUrl.layer.position = fim;
+    [self->viewAddUrl.layer addAnimation:anima forKey:@"position.y"];
+    
+    
+    //menu está visivel
+    menuSuperiorAparece = YES;
+}
+
+-(void)escondeMenuSuperior{
+    
+    
+    CGPoint inicio = {screenWidth/2, -alturaMenuSuperior};
+    CGPoint fim = {screenWidth/2, alturaMenuSuperior/2};
+    
+    CABasicAnimation *anima = [CABasicAnimation animationWithKeyPath:@"position.y"];
+    anima.duration = 1;
+    anima.removedOnCompletion = YES;
+    
+    anima.fromValue = @(fim.y);
+    anima.toValue = @(inicio.y);
+    
+    self->viewAddUrl.layer.position = inicio;
+    [self->viewAddUrl.layer addAnimation:anima forKey:@"position.y"];
+    
+    //menu NAO visível
+    menuSuperiorAparece = NO;
+    
+    [self.view endEditing:YES];
+}
+
+-(void)adicionarUrl:(NSString*)urlAdd :(NSNumber*)numEstacao{
+    [self.player adicionarUrlRadio:numEstacao :urlAdd];
+    
+    UIAlertView *adicionou=[[UIAlertView alloc]initWithTitle:Nil message:@"Url Adicionada!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil , nil];
+    
+    [adicionou show];
+    
+    [self escondeMenuSuperior];
+}
 @end

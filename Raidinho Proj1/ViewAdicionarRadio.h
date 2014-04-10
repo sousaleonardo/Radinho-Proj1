@@ -17,6 +17,7 @@
 }
 
 @property UITextField *urlEstacaoAdd;
-@property float numeroEstacao;
+@property UITextField *numeroEstacao;
 
+-(id)initWithTarget: (CGRect)frame :(id)_target :(SEL)_selAddUrl;
 @end
