@@ -284,6 +284,9 @@
 
 -(void)escondeMenuSuperior{
     
+    if (self->menuSuperiorAparece==NO) {
+        return;
+    }
     
     CGPoint inicio = {screenWidth/2, -alturaMenuSuperior};
     CGPoint fim = {screenWidth/2, alturaMenuSuperior/2};
